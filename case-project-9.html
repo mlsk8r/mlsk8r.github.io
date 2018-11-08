@@ -1,0 +1,138 @@
+
+<!doctype html>
+<html lang="en">
+
+<!--
+JavaScript 6th Edition
+Chapter 9
+Individual Case Project
+
+Author: Mike Lindberg
+Date: 10/30/18
+
+Filename: case-project-9.html
+-->
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="#">
+    <title>GIT 417: Adv Web Markup &amp; Scripting</title>
+    <link href="css/styles.css" rel="stylesheet">
+    <link href="css/cp-8.css" rel="stylesheet">
+    <style>
+      p.errorMsg {
+        display: none;
+        color: red;
+        text-align: left;
+        padding-left: 6em;
+
+    }
+    </style>
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      <a class="navbar-brand" href="index.html">GIT 418</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="case-project-7.html">Case Project-7</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="case-project-8.html">Case Project-8</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="case-project-9.html">Case Project-9</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="case-project-10.html">Case Project-10</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="case-project-11.html">Case Project-11</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="case-project-12.html">Case Project-12</a>
+          </li>
+        </ul>
+
+      </div>
+    </nav>
+
+    <div class="container">
+
+		<div class="row">
+      <p><img src="images/git-418-banner.jpg" alt="forging a knife"></p>
+    </div>
+
+    <!--==========================
+    Main Content Below
+    ===========================--->
+    <h1>Sign Up</h1>
+    <article>
+      <form>
+         <fieldset class="text">
+            <label for="uname">Username</label>
+            <input type="text" id="uname" />
+            <p id="usernameError" class="errorMsg"></p>
+            <label for="email">Email Address</label>
+            <input type="email" id="emailbox" />
+            <p id="emailError" class="errorMsg"></p>
+            
+            <label for="phone">Phone Number</label>
+            <input type="phone" id="phone" placeholder="ex. 555-555-555" />
+            <p id="phoneError" class="errorMsg"></p>
+            
+            <label for="pw1">Password</label>
+            <input type="password" id="pw1" />
+            <label for="pw2">Confirm Password</label>
+            <input type="password" id="pw2" />
+            <p id="passwordError" class="errorMsg"></p>
+         </fieldset>
+         <fieldset class="text">
+            <label for="comments">Comments:</label>
+            <textarea id="comments" name="comments" placeholder="Special requests..." style="height: 166px; width:40%; margin-top: 6px; margin-bottom: 16px;"></textarea>
+          </fieldset>
+         
+         <input type="button" id="createBtn" value="SIGN UP">
+      </form>
+   </article>
+
+    
+
+
+
+    </div><!-- /.container -->
+
+
+    
+
+
+
+
+
+
+    <footer class="bg-dark" >
+      <div class="container">
+        <div class="row">
+          <p>
+            2018. For Educational Purposes Only.
+          </p>
+        </div>
+      </div>
+
+
+      <script src="js/modernizr.custom.05819.js"></script>
+      <script src="js/cp-9.js"></script>
+    </footer>
+  </body>
+</html>

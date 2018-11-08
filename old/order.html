@@ -1,0 +1,160 @@
+
+<!doctype html>
+<html lang="en">
+
+<!--
+JavaScript 6th Edition
+Chapter 1
+Individual Case Project
+ 
+Author: Mike Lindberg
+Date: 3/12/18
+ 
+Filename: index.html
+-->
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="#">
+    <title>GIT 417: Adv Web Markup &amp; Scripting</title>
+    <link href="css/styles.css" rel="stylesheet">
+    <link href="css/order.css" rel="stylesheet">
+    <style type="text/css">
+      .container {
+          max-width: 960px;
+      }
+
+      #submitBtn {
+          font-size: 1.25em;
+          padding: 10px 15px;
+      }
+
+      #submitBtn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px 30px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      <a class="navbar-brand" href="index.html">Forging Metal</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="intro-to-forging.html">Forging Topics</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="security.html">Web Security</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="order.html">Order</a>
+          </li>
+        </ul>
+       
+      </div>
+    </nav>
+
+    <div class="container">
+
+  		
+
+  		<div class="row" style="margin:0px auto;">
+  			<article>
+          <h2>Damascus Steel Billet Order Form</h2>
+          <div id="errorMessage"></div>
+
+          <form novalidate>
+            <p><i><b>*Denotes a required field</b></i></p>
+             <fieldset id="deliveryinfo">
+                <legend>Shipping Information</legend>
+                <label for="nameinput">*Name</label>
+                <input type="text" id="nameinput" name="name" required="required" />
+                <label for="addrinput">*Address</label>
+                <input type="text" id="addrinput" name="address" required="required" />
+                <label for="cityinput">*City</label>
+                <input type="text" id="cityinput" name="city" required="required" />
+                <label for="emailinput">*Email</label>
+                <input type="email" id="emailinput" name="email" required="required" />
+                <label for="phoneinput">*Phone</label>
+                <input type="text" id="phoneinput" name="phone" required="required" />
+             </fieldset>
+             <fieldset id="orderinfo">
+                <legend>Billet Info</legend>
+                <fieldset id="sizebox">
+                   <legend>*Billet Size</legend>
+                   <select id="size" name="size" required="required">
+                      <option value="small">Small</option>
+                      <option value="medium">Medium</option>
+                      <option value="large">Large</option>
+                      <option value="XL">Xtra Large</option>
+                   </select>
+                </fieldset>
+                <fieldset id="crustbox">
+                   <legend>*Billet Thickness</legend>
+                   <input type="radio" name="billet" id="thin" value="Thin" />
+                   <label for="thin">Knife Grade</label>
+                   <input type="radio" name="billet" id="thick" value="Deep Dish" />
+                   <label for="thick">Industrial Grade</label>
+                </fieldset>
+                <fieldset id="toppingbox">
+                   <legend>Damascus Patterns</legend>
+                   <input type="checkbox" id="dragScale" name="toppings" value="Dragon Scale" />
+                   <label for="pepperoni">Dragon Scale</label>
+                   <input type="checkbox" id="rainDrop" name="toppings" value="Rain Drop" />
+                   <label for="sausage">Rain Drop</label>
+                   <input type="checkbox" id="ladder" name="toppings" value="Ladder" />
+                   <label for="greenpep">Ladder</label>
+                   <input type="checkbox" id="sanMai" name="toppings" value="San Mai" />
+                   <label for="onion">San Mai</label>
+                   <input type="checkbox" id="diamond" name="toppings" value="Diamond" />
+                   <label for="xcheese">Diamond</label>
+                </fieldset>
+             </fieldset>
+             <fieldset id="submitbutton">
+                <input type="submit" id="submitBtn" value="Place Order" />
+             </fieldset>
+          </form>
+       </article>
+       <p style="height:15em"></p>
+  		</div>
+
+    </div><!-- /.container -->
+
+
+
+     <footer class="bg-dark" >
+      <div class="container">
+        <div class="row">
+          <p>
+            2018. For Educational Purposes Only.
+          </p>
+        </div>
+      </div>  
+
+
+      <script src="js/modernizr.custom.05819.js"></script>
+      <script src="js/order.js"></script>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,141 @@
+
+<!doctype html>
+<html lang="en">
+
+<!--
+JavaScript 6th Edition
+Chapter 10
+Individual Case Project
+
+Author: Mike Lindberg
+Date: 11/05/18
+
+Filename: case-project-10.html
+-->
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="#">
+    <title>GIT 417: Adv Web Markup &amp; Scripting</title>
+    <link href="css/styles.css" rel="stylesheet">
+    <style>
+    .btn {
+      display: inline-block;
+      padding: 4px 10px;
+      margin: 2px;
+      line-height: 18px;
+      color: #333;
+      text-decoration: none;
+      text-shadow: 0 1px 1px rgba(255,255,255,.75);
+      vertical-align: middle;
+      background: #fff;
+      border: 1px solid #808284;
+      border-radius: 4px;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
+      cursor: pointer;
+      font-weight: 700;
+      letter-spacing: 0.035rem;
+      transition: all 300ms;
+    }
+
+    .btn:hover {
+      background: #8C1D40;
+      color: #fff;
+    }
+
+    .btn-large {
+        padding: 9px 14px;
+        font-size: 16px;
+        line-height: 24px;
+        border-radius: 5px;
+    }
+    </style>
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      <a class="navbar-brand" href="index.html">GIT 418</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="case-project-7.html">Case Project-7</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="case-project-8.html">Case Project-8</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="case-project-9.html">Case Project-9</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="case-project-10.html">Case Project-10</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="case-project-11.html">Case Project-11</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="case-project-12.html">Case Project-12</a>
+          </li>
+        </ul>
+
+      </div>
+    </nav>
+
+    <div class="container" style="margin-bottom:30em;">
+
+		<div class="row">
+      <p><img src="images/git-418-banner.jpg" alt="forging a knife"></p>
+    </div>
+    <h1>Your Current Location/Coordinates</h1>
+    <hr>
+    <h5 id="location" style="line-height:2rem;"></h5>
+    <p>Hello. Unfortunately most modern browsers won't allow the <strong><code><span style="font-size:1.058rem;">getCurrentPosition</span></code></strong> method to work if the site is running through HTTP instead of HTTPS. The ASU websrever does not run HTTPS.</p>
+    <p>One quick way to see that the code and page works is to <strong>download the zip folder by clicking the link below</strong>.</p> <p>The folder contains the page HTML file, css styles, and images. Open the folder and drag and drop the HTML file in to your browser window. Be sure to "allow" the location setting! Once you've done that you'll see that your location coordinates will show up on the page. Sorry for the hassle!</p>
+
+    <a style="margin-top:1em;" class="btn btn-large" href="cp-10.zip" download>
+      Download Zip Folder
+    </a>
+
+
+  </div><!-- /.container -->
+
+
+    <footer class="bg-dark" >
+      <div class="container">
+        <div class="row">
+          <p>
+            2018. For Educational Purposes Only.
+          </p>
+        </div>
+      </div>
+
+
+      <script src="js/modernizr.custom.05819.js"></script>
+      <script>
+        navigator.geolocation.getCurrentPosition(showLocation);
+
+        function showLocation(position) {
+          console.log("Longitude: " + position.coords.longitude);
+          console.log("Latitude: " + position.coords.latitude);
+
+          var result = document.getElementById("location");
+
+          result.innerHTML+=
+            "<strong>Latitude:</strong> " + position.coords.latitude
+            + "<br><strong>Longitude:</strong> " + position.coords.longitude
+          ;
+        }
+
+      </script>
+    </footer>
+  </body>
+</html>

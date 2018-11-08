@@ -1,0 +1,203 @@
+
+<!doctype html>
+<html lang="en">
+
+<!--
+JavaScript 6th Edition
+Chapter 7
+Individual Case Project
+
+Author: Mike Lindberg
+Date: 10/15/18
+
+Filename: index.html
+-->
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="#">
+    <title>GIT 417: Adv Web Markup &amp; Scripting</title>
+    <link href="css/styles.css" rel="stylesheet">
+    <style>
+      article {
+        background-color: #eee;
+        text-align: center;
+        padding: 2em;
+        width: 60%;
+        margin: 0px auto;
+        margin-bottom: 18em;
+        margin-top: 2em;
+      }
+
+      fieldset {
+        padding: 2em 0;
+      }
+
+      button {
+        background-color: #8c0b43;
+        color: #fff;
+        font-weight: bold;
+        padding: 0.6em;
+        letter-spacing: 0.038rem;
+        border: none;
+      }
+
+      input {
+        padding:.5em;
+        margin:1em;
+      }
+
+      #elapsedTimeResult {
+        font-weight: 900;
+      }
+
+      #errorMessage {
+        font-weight: 900;
+        color: red;
+      }
+
+      #button {
+        background-color: #8C1D40;
+        color: #fff;
+        font-weight: 700;
+        letter-spacing: 0.025rem;
+        border: none;
+        padding: 10px 17px;
+        margin: 0px auto;
+        margin-bottom: 2em;
+      }
+
+      #button:hover {
+        cursor: pointer;
+      }
+
+    </style>
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      <a class="navbar-brand" href="index.html">GIT 418</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="case-project-7.html">Case Project-7</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="case-project-8.html">Case Project-8</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="case-project-9.html">Case Project-9</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="case-project-10.html">Case Project-10</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="case-project-11.html">Case Project-11</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="case-project-12.html">Case Project-12</a>
+          </li>
+        </ul>
+
+      </div>
+    </nav>
+
+    <div class="container">
+
+		<div class="row">
+      <p><img src="images/git-418-banner.jpg" alt="forging a knife"></p>
+    </div>
+    <h1 style="text-align: center;margin-bottom: .5em;">Time Elapsed Calculator</h1>
+    <p>Please select a past date using the date picker field and then hit "Calculate". The calculator will then show you how much time has elapsed between the date you chose in the past and today.</p>
+    <article>
+      <input type="date" name="pastDate" id="pastDate" placeholder="yyyy-mm-dd" />
+      <input id="button" type="button" value="Calculate Elapsed Time" />
+      <p id="elapsedTimeResult">Time Elapsed: </p>
+      <p id="errorMessage"></p>
+    </article>
+
+
+    </div><!-- /.container -->
+
+
+    <footer class="bg-dark" >
+      <div class="container">
+        <div class="row">
+          <p>
+            2018. For Educational Purposes Only.
+          </p>
+        </div>
+      </div>
+
+
+      <script src="js/modernizr.custom.05819.js"></script>
+      <script>
+        let errorMessage = document.getElementById('errorMessage');
+
+        function timeElapsed(userPastDate, currentDate) {
+          // first check for errors and give an error message
+          // if the user chooses a date in the future give error message
+          if (userPastDate > currentDate) {
+            errorMessage.innerHTML = 'You must choose a date in the past!';
+            return false;
+          }
+          // set variables for past dates and current dates using get date methods
+          let pastYear = userPastDate.getFullYear();
+          let pastMonth = userPastDate.getMonth();
+          let pastDay = userPastDate.getDate();
+          let currentYear = currentDate.getFullYear();
+          let currentMonth = currentDate.getMonth();
+          let currentDay = currentDate.getDate();
+          // An array with the days in each month starting with January
+          let daysInEachMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+          // find diff. in years
+          let elapsedYears = currentYear - pastYear;
+          // calculate months
+          let elapsedMonths = (12 + currentMonth - pastMonth - (currentDay < pastDay ? 1 : 0)) % 12;
+          // calculate days
+          let elapsedDays = pastDay <= currentDay ? currentDay - pastDay : daysInEachMonth[(12 + currentMonth - 1) % 12] - pastDay + currentDay;
+          //return the calculations to be used with elapsedTime variable that calls timeElapsed function
+          return {
+            elapsedYears: elapsedYears,
+            elapsedMonths: elapsedMonths,
+            elapsedDays: elapsedDays
+          };
+        }
+
+        function calculateElapsedTime() {
+          let pastDate = document.getElementById('pastDate').value;
+          let today = new Date(); // set today as a new Date() method
+          // set variable to timeElapsed functin using user picked date and todays date as arguments
+          let elapsedTime = timeElapsed(new Date(pastDate), new Date(today));
+          let elapsedTimeResult = document.getElementById('elapsedTimeResult');
+
+          // clear the elapsed time result if the user gets an error
+          document.getElementById('elapsedTimeResult').innerHTML = '';
+          // if elapsedTime is true, give the answer and clear any error messages
+          if (elapsedTime) {
+            elapsedTimeResult.innerHTML =
+              'Time Elapsed:<br> ' + elapsedTime.elapsedYears + ' year/s<br> ' + elapsedTime.elapsedMonths + ' month/s<br>  ' + ' &amp; ' + elapsedTime.elapsedDays + ' day/s ';
+            errorMessage.innerHTML = '';
+          }
+        }
+        // create event listeners for the submit button
+        let submitButton = document.getElementById('button');
+        if (submitButton.addEventListener) {
+          submitButton.addEventListener("click", calculateElapsedTime, false);
+        } else if (submitButton.attachEvent) {
+          submitButton.attachEvent("onclick", calculateElapsedTime);
+        }
+      </script>
+    </footer>
+  </body>
+</html>

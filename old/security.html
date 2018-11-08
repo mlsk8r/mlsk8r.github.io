@@ -1,0 +1,114 @@
+
+<!doctype html>
+<html lang="en">
+
+<!--
+JavaScript 6th Edition
+Chapter 5
+Individual Case Project
+ 
+Author: Mike Lindberg
+Date: 3/14/18
+ 
+Filename: security.html
+-->
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="#">
+    <title>GIT 417: Adv Web Markup &amp; Scripting</title>
+    <link href="css/styles.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      <a class="navbar-brand" href="index.html">Forging Metal</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="intro-to-forging.html">Forging Topics</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="security.html">Web Security</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="order.html">Order</a>
+          </li>
+        </ul>
+       
+      </div>
+    </nav>
+
+    <div class="container">
+
+  		
+
+  		<div class="row">
+  			<div>
+          <p><img src="images/security.jpg" alt="forging a knife"></p>
+          <h1>Web Security Info</h1>
+          <p>The following information is using JavaScript web properties to list information about your web browser, computer operating system, monitor color depth, and your monitor display height in pixels. This information will be unique for each user and for each type of browser you choose. For example, you can open this web page in a different browser and you will see different information displayed about that browser.</p>
+          <p id="p1"></p>
+          <p id="p2"></p>
+          <p id="p3"></p>
+          <p id="p4"></p>
+          <p id="p5"></p>
+          <p id="p6"></p>
+  			</div>
+  		</div>
+
+      <div class="row">
+        <div>
+          <h2>Staying Safe Online</h2>
+          <h5>The following are links to websites that offer useful information about best practices for using the web safely and securely</h5>
+
+          <p><a href="https://securingtomorrow.mcafee.com/consumer/consumer-threat-notices/10-tips-stay-safe-online/"><strong>10 Tips to Stay Safe Online</strong></a> - McAfee, a leading company in web security and protection offers 10 pro-tips to users about how you can avoid hacks, scams, malware, and more!</p>
+          <p><a href="https://blog.finjan.com/browser-security-tips-guidelines-and-best-practices/"><strong>Browser Security - Tips, Guidelines and Best Practices</strong></a> - Finjan Cybersecurity offers some great tips on how to make your online experience safer by being a smart web user.</p>
+          <p><a href="https://www.itbusinessedge.com/slideshows/five-tips-for-safe-web-surfing-whether-at-your-desk-or-on-the-go.html"><strong>Five Tips for Safe Web Surfing, Whether at Your Desk or On-the-Go</strong></a> - IT Business Edge gives users a short and simple list of five ways you can surf the web and be secure.</p>
+          <p style="height:100px;"></p>
+        </div>
+      </div>
+
+    </div><!-- /.container -->
+
+
+
+     <footer class="bg-dark" >
+      <div class="container">
+        <div class="row">
+          <p>
+            2018. For Educational Purposes Only.
+          </p>
+        </div>
+      </div>  
+
+
+      <script src="js/modernizr.custom.05819.js"></script>
+      <script>
+        "use strict";
+        document.getElementById("p1").innerHTML = "<strong>Web browser name:</strong> " + navigator.appName;
+        document.getElementById("p2").innerHTML = "<strong>Web browser version:</strong> " + navigator.appVersion;
+        document.getElementById("p3").innerHTML = "<strong>Operating platform:</strong> " + navigator.platform;
+        document.getElementById("p4").innerHTML = "<strong>User agent:</strong> " + navigator.userAgent; 
+        document.getElementById("p5").innerHTML = "<strong>Screen color depth:</strong> " + screen.colorDepth;
+        document.getElementById("p6").innerHTML = "<strong>Height of display screen:</strong> " + screen.height;
+      </script>
+    </footer>
+  </body>
+</html>

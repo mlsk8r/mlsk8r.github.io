@@ -1,0 +1,147 @@
+/*============================================
+JavaScript 6th Edition
+Chapter 8
+Individual Case Project
+
+Author: Mike Lindberg
+Date: 10/24/18
+
+Filename: cp-8.css
+=============================================*/
+
+/*============================================
+Styles for the form for Case Project 8
+=============================================*/
+/* main content */
+article {
+   padding: 20px 20px 40px;
+   background: #eee;
+   position: relative;
+   overflow: auto;
+   margin-bottom: 3em;
+   margin-top: 1em;
+}
+
+article h2 {
+   font-size: 32px;
+   width: 441px;
+   text-align: center;
+   margin-bottom: 20px;
+}
+
+article h3 {
+   font-size: 24px;
+   font-weight: bold;
+   text-align: center;
+}
+
+article h4 {
+   font-size: 18px;
+   margin-top: 10px;
+   font-weight: bold;
+}
+
+/* profile section */
+#profile {
+   float: right;
+   width: 279px;
+   border: 1px solid black;
+   background: white;
+   padding: 20px;
+   background: rgb(216,217,219);
+   -moz-border-radius: 5px;
+   -webkit-border-radius: 5px;
+   border-radius: 5px;
+}
+
+#profile, #usernameSection, #emailSection, #lodgingsSection {
+   display: none;
+}
+
+#profile li, #profile p {
+   text-indent: 1em;
+   margin-top: 5px;
+}
+
+
+fieldset.text, fieldset.checks {
+   position: relative;
+   padding: 5px 30px 5px 0;
+   margin-right: 15px;
+}
+
+legend {
+   font-weight: bold;
+   font-size: 18px;
+   text-align: left;
+   padding-left: 1.4em;
+   margin-bottom: 0.5em;
+}
+
+legend span {
+   text-align: right;
+}
+
+input, label {
+   position: relative;
+   line-height: 1.2em;
+   display: block;
+}
+
+fieldset.checks input {
+   float: left;
+   clear: left;
+   margin-right: 5px;
+   margin-left: 5em;
+   font-size: 18px;
+}
+
+fieldset.checks label {
+   line-height: 1.2em;
+   margin-bottom: 4px;
+}
+
+fieldset.text label {
+   width: 10em;
+   text-align: right;
+   float: left;
+   clear: left;
+   margin: 5px 10px 0 0;
+   font-weight: bold;
+   font-size: 18px;
+}
+
+fieldset.text input {
+   margin: 7px 5px 0 0;
+}
+
+input[type=button] {
+   margin: 15px auto 0;
+   font-size: 16px;
+   background: rgb(202,230,233);
+   width: 9em;
+}
+
+p.errorMsg {
+   display: none;
+   color: red;
+   text-align: center;
+   font-weight: bold;
+   border: 2px solid red;
+   width: 600px;
+}
+
+
+
+#createBtn {
+  background-color: #8C1D40;
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: 0.025rem;
+    border: none;
+    padding: 10px 17px;
+    margin: 0px auto;
+    margin-bottom: 2em;
+}
+/*============================================
+=============================================*/

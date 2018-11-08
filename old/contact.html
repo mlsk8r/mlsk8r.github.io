@@ -1,0 +1,199 @@
+
+<!doctype html>
+<html lang="en">
+
+<!--
+JavaScript 6th Edition
+Chapter 1
+Individual Case Project
+ 
+Author: Mike Lindberg
+Date: 3/12/18
+ 
+Filename: index.html
+-->
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="#">
+    <title>GIT 417: Adv Web Markup &amp; Scripting</title>
+    <link href="css/styles.css" rel="stylesheet">
+
+    <style type="text/css" media="screen">
+        
+
+        input[type=text], select, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            resize: vertical;
+        }
+
+        input[type=button] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type=button]:hover {
+            background-color: #45a049;
+        }
+
+    </style>
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      <a class="navbar-brand" href="index.html">Forging Metal</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="intro-to-forging.html">Forging Topics</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="security.html">Web Security</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="order.html">Order</a>
+          </li>
+        </ul>
+       
+      </div>
+    </nav>
+
+    <div class="container">
+
+  		
+
+  		<div class="row">
+        <div class="col-md-12" style="margin-bottom: 15em;">
+          <h1>Contact Us</h1><br />
+          <p><strong>* Denotes a required field</strong></p>
+          <p id="warning-message" class="alert alert-error"></p><br />
+          <form action="/action_page.php">
+            <fieldset>
+              <label for="fname">*First Name</label>
+              <input type="text" id="fname" name="fname" placeholder="Your name..">  
+            </fieldset>
+            
+            <fieldset>
+              <label for="lname">*Last Name</label>
+              <input type="text" id="lname" name="lname" placeholder="Your last name..">
+            </fieldset>
+            
+            <fieldset>
+              <label for="subject">*Subject</label>
+              <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+            </fieldset>
+
+            <input type="button" id="submit" value="Submit">
+          </form>
+        </div>
+  			
+  		</div>
+
+    </div><!-- /.container -->
+
+
+
+     <footer class="bg-dark" >
+      <div class="container">
+        <div class="row">
+          <p>
+            2018. For Educational Purposes Only.
+          </p>
+        </div>
+      </div>  
+
+
+      <script src="js/modernizr.custom.05819.js"></script>
+    </footer>
+
+    <script>
+      // global variables tracking status of each form box
+      var firstNameComplete = true;
+      var lastNameComplete = true;
+      var messageBoxComplete = true;
+
+      // global variables referencing the input boxes
+      var firstNameBox = document.forms[0].fname;
+      var lastNameBox = document.forms[0].lname;
+      var messageBox = document.forms[0].subject;
+
+      // global variable referencing the warning element p
+      var warningMessage = document.getElementById("warning-message");
+
+      // verify first name box entry is not an empty string
+      function verifyInfoBoxes() {
+        var validity = true;
+        var messageText = "";
+        document.getElementById("warning-message").setAttribute("style", "display:none;"); // warning/alert section is hidden by default
+         try {
+            if (firstNameBox.value === "" || lastNameBox.value === "" || messageBox.value === "") {
+              throw "Please fill out all input boxes"
+            }
+         }
+         catch(message) {
+            validity = false;
+            messageText = message;
+            // display the alert box by setting the inline style to "block"
+            document.getElementById("warning-message").setAttribute("style", "display:block;"); 
+         }       
+         finally {
+            firstNameComplete = validity;
+            lastNameComplete = validity;
+            messageBoxComplete = validity;
+            warningMessage.innerHTML = messageText;
+            firstNameBox.value = "";
+            lastNameBox.value = "";
+            messageBox.value = "";
+         }
+      }
+
+
+      // create event listeners for all input elements
+      function createEventListeners() {
+        firstNameBox.value = "";
+        lastNameBox.value = "";
+        messageBox.value = "";
+        var sButton = document.getElementById("submit");
+
+        if (sButton.addEventListener) {
+          sButton.addEventListener("click", verifyInfoBoxes, false);
+        } else if (sButton.attachEvent) {
+          sButton.attachEvent("onclick", verifyInfoBoxes);
+        }
+      }
+
+      /* create event listeners when page finishes loading */
+      if (window.addEventListener) {
+         window.addEventListener("load", createEventListeners, false);
+      } else if (window.attachEvent) {
+         window.attachEvent("onload", createEventListeners);
+      }
+    </script>
+  </body>
+</html>
