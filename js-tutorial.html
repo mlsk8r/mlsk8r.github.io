@@ -1,0 +1,203 @@
+
+<!doctype html>
+<html lang="en">
+
+<!--
+JavaScript 6th Edition
+Final Project - JavaScript Tutorial
+
+Author: Mike Lindberg
+Date: 11/22/18
+
+Filename: js-tutorial.html
+-->
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="#">
+    <title>GIT 417: Adv Web Markup &amp; Scripting</title>
+    <link href="css/styles.css" rel="stylesheet">
+    <link rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/default.min.css">
+    <style>
+      body {
+        font-size: 1.1rem;
+      }
+      
+      .btn {
+        background-color: #8C1D40;
+        color: #fff;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.08rem;
+        border: none;
+        border-radius: 0;
+        padding: 14px 18px;
+        margin: 0px auto;
+        margin-bottom: 2em;
+      }
+
+      .btn:hover {
+        background: #d23153;
+        color: #fff;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      <a class="navbar-brand" href="index.html">GIT 418</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="case-project-7.html">Case Project-7</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="case-project-8.html">Case Project-8</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="case-project-9.html">Case Project-9</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="case-project-10.html">Case Project-10</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="case-project-11.html">Case Project-11</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="case-project-12.html">Case Project-12</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="js-tutorial.html">JavaScript Tutorial</a>
+          </li>
+        </ul>
+
+      </div>
+    </nav>
+
+    <div class="container">
+
+		<div class="row">
+      <p><img src="images/git-418-banner.jpg" alt="forging a knife"></p>
+    </div>
+
+    <h1 style="margin-bottom:13px;margin-top:1em;">Show and Hide Hidden Content with jQuery</h1>
+    <h3>a tutorial for beginners in jQuery</h3>
+    <hr /><br />
+
+    <p>With some planning and a fairly simple setup, you can use jQuery to quickly add and remove CSS classes to hide and show content. View the demo by clicking the button below to see the final results of this turtorial.</p>
+
+    <a href="js-tutorial-demo.html" class="btn">VIEW DEMO</a>
+    <p><strong>*This tutorials assumes that the reader has a working knowledge of HTML and CSS</strong></p>
+    <hr />
+
+    <h2>The HTML Setup</h2>
+    <p>The first thing we need to setup is our HTML document.</p>
+    <p>You will have visible page content and hidden page content. You will need to create seperate class for the div overlay that is hidden and for the open and close buttons.</p>
+
+    <pre><code>
+        &lt;!doctype html&gt;
+          &lt;html lang="en"&gt;
+          &lt;head&gt;&lt;/head&gt;
+          &lt;body&gt;
+          &lt;!--create the div overlay box--&gt;
+          &lt;div class="div-overlay"&gt;
+          &nbsp;&nbsp;&lt;!--Creates the div overlay content--&gt;
+          &nbsp;&nbsp;&lt;div class="div-content-overlay"&gt;
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;h2&gt;I'm a hidden div that is now visible&lt;/h2&gt;
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt; This is done using jQuery to add and remove css classes.&lt;/p&gt;
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;!--the close button--&gt;
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;button class="div-overlay-close"&gt;Close Me&lt;/button&gt;    
+          &nbsp;&nbsp;&lt;/div&gt;
+          &lt;/div&gt;
+          &lt;!--page content when the div overlay is hidden--&gt;
+          &lt;h2&gt;Example of How jQuery Can Show &amp; Hide Content&lt;/h2&gt;
+          &lt;button class="div-overlay-open"&gt;More Information&lt;/button&gt;
+          &lt;/body&gt;
+        &lt;/html&gt;
+      </code></pre>
+
+    <p>We will use the open and close buttons and their classes to trigger the hidden content to be visible with jQuery selectors.</p>
+    
+    
+    <br />
+    <h2>The CSS Setup</h2>
+    <p>You need to use CSS to hide the div-overlay and div-content-overlay elements. That way they are hidden by default on page load and later we can use jQuery to show the content by adding a new class. We hide the overlay content by changing the "visiblity" attribute to "hidden":</p>
+
+    <pre><code>
+      .div-overlay {
+      &nbsp;&nbsp;visibility: hidden;
+      }
+
+      .div-content-overlay {
+      &nbsp;&nbsp;visibility: hidden;
+      }
+    </code></pre>
+
+    <p>We don't want the hidden overlay content to be permanantly hidden. We want it to be visible when triggered by a button click.</p>
+    
+    <p>To do this we use and ability of jQuery to add and remove a CSS class called "active" when the open and close buttons are clicked. We create this CSS class in our style sheet ahead of time so that it's ready to be used when the jQuery adds or removed it.
+
+    <p>The example below shows our "div-overlay" and "div-content-overlay" classes with a new class of ".active" appended. We set the visiblity to "visible" now that we want them both to be active and seen.</p>
+    
+
+    <pre><code>
+      .div-overlay.active {
+      &nbsp;&nbsp;visibility: visible;
+      }
+
+      .div-content-overlay.active {
+      &nbsp;&nbsp;visibility: visible;
+      }
+    </code></pre>
+
+
+
+
+
+
+    <br />
+    <h2>The jQuery Setup</h2>
+
+    <pre><code>
+      //appends an "active" class to .div-overlay and .div-content-overlay when the button is clicked
+      $(".div-overlay-open").on("click", function(){
+      &nbsp;&nbsp;$(".div-overlay, .div-content-overlay").addClass("active");
+      });
+
+      //removes the "active" class when the "Close Me" button is clicked 
+      $(".div-overlay-close").on("click", function(){
+      &nbsp;&nbsp;$(".div-overlay, .div-content-overlay").removeClass("active");
+      });
+    </code></pre>
+
+
+
+
+
+    </div><!-- /.container -->
+
+
+    <footer class="bg-dark" >
+      <div class="container">
+        <div class="row">
+          <p>
+            2018. For Educational Purposes Only.
+          </p>
+        </div>
+      </div>
+
+
+      <script src="js/modernizr.custom.05819.js"></script>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script>
+    </footer>
+  </body>
+</html>

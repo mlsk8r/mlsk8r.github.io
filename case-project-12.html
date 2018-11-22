@@ -4,13 +4,13 @@
 
 <!--
 JavaScript 6th Edition
-Chapter 1
+Chapter 12
 Individual Case Project
 
 Author: Mike Lindberg
-Date: 3/12/18
+Date: 11/21/18
 
-Filename: index.html
+Filename: case-project-12.html
 -->
   <head>
     <meta charset="utf-8">
@@ -19,7 +19,38 @@ Filename: index.html
     <meta name="author" content="">
     <link rel="icon" href="#">
     <title>GIT 417: Adv Web Markup &amp; Scripting</title>
+
+
+
     <link href="css/styles.css" rel="stylesheet">
+    <style type="text/css" media="screen">
+
+
+        input[type=text], select, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            resize: vertical;
+        }
+
+        input[type=button] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type=button]:hover {
+            background-color: #45a049;
+        }
+
+    </style>
   </head>
 
   <body>
@@ -32,9 +63,6 @@ Filename: index.html
 
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Home</a>
-          </li>
           <li class="nav-item">
             <a class="nav-link" href="case-project-7.html">Case Project-7</a>
           </li>
@@ -53,6 +81,9 @@ Filename: index.html
           <li class="nav-item">
             <a class="nav-link" href="case-project-12.html">Case Project-12</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="js-tutorial.html">JavaScript Tutorial</a>
+          </li>
         </ul>
 
       </div>
@@ -62,6 +93,32 @@ Filename: index.html
 
 		<div class="row">
       <p><img src="images/git-418-banner.jpg" alt="forging a knife"></p>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12" style="margin-bottom: 15em;">
+        <h1>Contact Us</h1><br />
+        <p><strong>* Denotes a required field</strong></p>
+        <p id="warning-message" class="alert alert-error"></p><br />
+        <form action="/action_page.php">
+          <fieldset>
+            <label for="fname">*First Name</label>
+            <input type="text" id="fname" name="fname" placeholder="Your name..">
+          </fieldset>
+
+          <fieldset>
+            <label for="lname">*Last Name</label>
+            <input type="text" id="lname" name="lname" placeholder="Your last name..">
+          </fieldset>
+
+          <fieldset>
+            <label for="subject">*Subject</label>
+            <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+          </fieldset>
+
+          <input type="button" id="submit" value="Submit">
+        </form>
+      </div>
 
     </div>
 
@@ -79,6 +136,94 @@ Filename: index.html
 
 
       <script src="js/modernizr.custom.05819.js"></script>
+
     </footer>
+    <!-- jquery -->
+    <script src="js/jquery-3.3.1.min.js" ></script>
+    <script>
+       $(document).ready(function(){
+        var firstNameComplete = true;
+        var lastNameComplete = true;
+        var messageBoxComplete = true;
+
+        //var firstNameBox = document.forms[0].fname;
+        var firstNameBox = $("#fname")[0];
+        //var lastNameBox = document.forms[0].lname;
+        var lastNameBox = $("#lname")[0];
+        //var messageBox = document.forms[0].subject;
+        var messageBox = $("#subject")[0];
+
+        //var warningMessage = document.getElementById("warning-message");
+        var warningMessage = $("#warning-message");
+
+        function verifyInfoBoxes() {
+          var validity = true;
+          var messageText = "";
+          //document.getElementById("warning-message").setAttribute("style", "display:none;");
+          warningMessage.hide();
+
+          if(firstNameBox.value === "") {
+            $('#fname').css("border", "4px solid red");
+          } else {
+            $('#fname').css("border", "1px solid #eee");
+          }
+
+          if(lastNameBox.value === "") {
+            $('#lname').css("border", "4px solid red");
+          } else {
+            $('#lname').css("border", "1px solid #eee");
+          }
+
+          if(messageBox.value === "") {
+            $('#subject').css("border", "4px solid red");
+          } else {
+            $('#subject').css("border", "1px solid #eee");
+          }
+
+           try {
+              if (firstNameBox.value === "" || lastNameBox.value === "" || messageBox.value === "") {
+                throw ""
+              }
+           }
+           catch(message) {
+              validity = false;
+              messageText = message;
+                //document.getElementById("warning-message").setAttribute("style", "display:block;");
+                warningMessage.show();
+                warningMessage.html('Please fill out all highlighted fields');
+           }
+           finally {
+              firstNameComplete = validity;
+              lastNameComplete = validity;
+              messageBoxComplete = validity;
+              firstNameBox.value = "";
+              lastNameBox.value = "";
+              messageBox.value = "";
+           }
+        }
+
+
+        function createEventListeners() {
+          firstNameBox.value = "";
+          lastNameBox.value = "";
+          messageBox.value = "";
+          //var sButton = document.getElementById("submit");
+          var sButton = $("#submit")[0];
+
+          if (sButton.addEventListener) {
+            sButton.addEventListener("click", verifyInfoBoxes, false);
+          } else if (sButton.attachEvent) {
+            sButton.attachEvent("onclick", verifyInfoBoxes);
+          }
+        }
+
+        if (window.addEventListener) {
+           window.addEventListener("load", createEventListeners, false);
+        } else if (window.attachEvent) {
+           window.attachEvent("onload", createEventListeners);
+        }
+      });
+    </script>
+
   </body>
 </html>
