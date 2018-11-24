@@ -92,15 +92,14 @@ Filename: js-tutorial.html
     <h3>a tutorial for beginners in jQuery</h3>
     <hr /><br />
 
-    <p>With some planning and a fairly simple setup, you can use jQuery to quickly add and remove CSS classes to hide and show content. View the demo by clicking the button below to see the final results of this turtorial.</p>
+    <p>With some planning and a fairly simple setup, you can use jQuery to quickly add and remove CSS classes to hide and show content. View the demo below to see the final results of this turtorial.</p>
 
     <a href="js-tutorial-demo.html" class="btn">VIEW DEMO</a>
-    <p><strong>*This tutorials assumes that the reader has a working knowledge of HTML and CSS</strong></p>
+    <p><strong>*This tutorial assumes the reader has a working knowledge of HTML and CSS</strong></p>
     <hr />
 
     <h2>The HTML Setup</h2>
-    <p>The first thing we need to setup is our HTML document.</p>
-    <p>You will have visible page content and hidden page content. You will need to create seperate class for the div overlay that is hidden and for the open and close buttons.</p>
+    <p>We first want to setup our base HTML file. You will have visible page content and hidden page content. You will need to create seperate classes for the div overlay that is hidden and for the "open" and "close" buttons.</p>
 
     <pre><code>
         &lt;!doctype html&gt;
@@ -143,7 +142,7 @@ Filename: js-tutorial.html
 
     <p>We don't want the hidden overlay content to be permanantly hidden. We want it to be visible when triggered by a button click.</p>
     
-    <p>To do this we use and ability of jQuery to add and remove a CSS class called "active" when the open and close buttons are clicked. We create this CSS class in our style sheet ahead of time so that it's ready to be used when the jQuery adds or removed it.
+    <p>To do this we use an ability of jQuery to add and remove a CSS class called "active" when the open and close buttons are clicked. We create this CSS class in our style sheet ahead of time so that it's ready to be used when the jQuery adds or removed it.
 
     <p>The example below shows our "div-overlay" and "div-content-overlay" classes with a new class of ".active" appended. We set the visiblity to "visible" now that we want them both to be active and seen.</p>
     
@@ -159,12 +158,48 @@ Filename: js-tutorial.html
     </code></pre>
 
 
-
-
-
-
     <br />
     <h2>The jQuery Setup</h2>
+
+    <h4>Adding the jQuery Library</h4>
+
+    <p>First make sure you have the jQuery library linked to your HTML file.</p>
+
+    <p>You can do this similar to how you would link to a CSS file.</p>
+
+    <p>This first code snippet is a link to the <a href="https://jquery.com/download/">jquery-3.3.1.min.js</a> file tht you can download and store locally in your project folder.</p>
+
+    <pre><code>
+      &lt;script src="(filepath)/jquery-3.3.1.min.js" &gt;&lt;/script&gt;
+    </code></pre>
+
+    <p>This second code snippet is a way to link to the jquery file directly from the jquery code CDN.</p>
+
+    <pre><code>
+      &lt;script src="https://code.jquery.com/jquery-3.3.1.min.js" &gt;&lt;/script&gt;
+    </code></pre>
+
+    <p>It's up to you which way you want to access the jQuery library. Depending on your goals, either way works fine.</p>
+
+    <h4>The jQuery code</h4>
+
+    <p>We talked earlier about the ability jQuery has to add and remove a CSS class. We want to add and remove the "active" class we created earlier in the CSS setup when the <strong>open</strong> and <strong>close</strong> buttons are clicked.</p>
+
+    <pre><code>
+      .div-overlay.active {
+      &nbsp;&nbsp;visibility: visible;
+      }
+
+      .div-content-overlay.active {
+      &nbsp;&nbsp;visibility: visible;
+      }
+    </code></pre>
+
+    <p>Each of the statements below use the jQuery "on-click" method.</p>
+
+    <p>The first jQuery statement appends the "active" class to our hidden content when the "open" button is clicked. This will trigger our "active" css class and make the hidden content visible. The second jQuery statement will do the opposite of the first. It will remove the appended "active" class from the now visible content. This will make the content hidden again, or not visible.</p>
+
+    <p>Take a minute to look over the jQuery code and see if you can understand how it it works and what the code is doing.</p>
 
     <pre><code>
       //appends an "active" class to .div-overlay and .div-content-overlay when the button is clicked
@@ -172,11 +207,26 @@ Filename: js-tutorial.html
       &nbsp;&nbsp;$(".div-overlay, .div-content-overlay").addClass("active");
       });
 
+
       //removes the "active" class when the "Close Me" button is clicked 
       $(".div-overlay-close").on("click", function(){
       &nbsp;&nbsp;$(".div-overlay, .div-content-overlay").removeClass("active");
       });
     </code></pre>
+
+    <p>You can view the demo once again to see the final results of this tutorial.</p>
+
+    <a href="js-tutorial-demo.html" class="btn">VIEW DEMO</a>
+
+    <br />
+    <h2>Conclusion</h2>
+
+    <p>The are many ways to use jQuery to hide and show content. This is just one example of how to do this by adding and removing CSS classes when the jQuery code is triggered.</p>
+
+    <p>I encourage you to explore other ways this type of effect can be achieved and learn more about what jQuery can do. Happy coding!</p>
+    <br />
+    <br />
+    <br />
 
 
 
