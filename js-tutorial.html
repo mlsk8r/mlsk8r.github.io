@@ -43,6 +43,18 @@ Filename: js-tutorial.html
         background: #d23153;
         color: #fff;
       }
+
+      .alert-warning {
+          color: #000;
+          background-color: #ffe7e8;
+          border-left: 6px solid #e66465;
+          padding: 15px;
+      }
+
+      pre {
+          border-left: 6px solid #d23153;
+          margin: 1.4em 0;
+      }
     </style>
   </head>
 
@@ -95,7 +107,7 @@ Filename: js-tutorial.html
     <p>With some planning and a fairly simple setup, you can use jQuery to quickly add and remove CSS classes to hide and show content. View the demo below to see the final results of this turtorial.</p>
 
     <a href="js-tutorial-demo.html" class="btn">VIEW DEMO</a>
-    <p><strong>*This tutorial assumes the reader has a working knowledge of HTML and CSS</strong></p>
+    <p class="alert-warning" style="margin-bottom:0;"><strong>*IMPORTANT:</strong>This tutorial assumes the reader has a working knowledge of HTML and CSS</p>
     <hr />
 
     <h2>The HTML Setup</h2>
@@ -113,7 +125,7 @@ Filename: js-tutorial.html
           &nbsp;&nbsp;&nbsp;&nbsp;&lt;h2&gt;I'm a hidden div that is now visible&lt;/h2&gt;
           &nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt; This is done using jQuery to add and remove css classes.&lt;/p&gt;
           &nbsp;&nbsp;&nbsp;&nbsp;&lt;!--the close button--&gt;
-          &nbsp;&nbsp;&nbsp;&nbsp;&lt;button class="div-overlay-close"&gt;Close Me&lt;/button&gt;    
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;button class="div-overlay-close"&gt;Close Me&lt;/button&gt;
           &nbsp;&nbsp;&lt;/div&gt;
           &lt;/div&gt;
           &lt;!--page content when the div overlay is hidden--&gt;
@@ -124,8 +136,8 @@ Filename: js-tutorial.html
       </code></pre>
 
     <p>We will use the open and close buttons and their classes to trigger the hidden content to be visible with jQuery selectors.</p>
-    
-    
+
+
     <br />
     <h2>The CSS Setup</h2>
     <p>You need to use CSS to hide the div-overlay and div-content-overlay elements. That way they are hidden by default on page load and later we can use jQuery to show the content by adding a new class. We hide the overlay content by changing the "visiblity" attribute to "hidden":</p>
@@ -141,11 +153,11 @@ Filename: js-tutorial.html
     </code></pre>
 
     <p>We don't want the hidden overlay content to be permanantly hidden. We want it to be visible when triggered by a button click.</p>
-    
+
     <p>To do this we use an ability of jQuery to add and remove a CSS class called "active" when the open and close buttons are clicked. We create this CSS class in our style sheet ahead of time so that it's ready to be used when the jQuery adds or removed it.
 
     <p>The example below shows our "div-overlay" and "div-content-overlay" classes with a new class of ".active" appended. We set the visiblity to "visible" now that we want them both to be active and seen.</p>
-    
+
 
     <pre><code>
       .div-overlay.active {
@@ -208,7 +220,7 @@ Filename: js-tutorial.html
       });
 
 
-      //removes the "active" class when the "Close Me" button is clicked 
+      //removes the "active" class when the "Close Me" button is clicked
       $(".div-overlay-close").on("click", function(){
       &nbsp;&nbsp;$(".div-overlay, .div-content-overlay").removeClass("active");
       });
