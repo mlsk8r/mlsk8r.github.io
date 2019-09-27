@@ -2,3 +2,15 @@
   background-color: #f7f9fb;
   border:none;
 }
+
+hr.uu-short-red {
+    margin: 20px auto 40px 0px;
+    height: 4px;
+    width: 75px;
+    background: linear-gradient(-20deg, #750000, #CC0000);
+    border: none;
+}
+
+hr.uu-short-red.center {
+   margin: 0 auto;
+}
