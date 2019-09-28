@@ -14,3 +14,10 @@ hr.uu-short-red {
 hr.uu-short-red.center {
    margin: 0 auto;
 }
+
+
+#pg-10-7> .panel-row-style {
+    background-image: url(../img/footer-banner.jpg);
+    background-size: cover;
+    padding: 80px 30px 80px 30px;
+}
