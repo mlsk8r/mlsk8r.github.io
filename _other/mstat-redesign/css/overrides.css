@@ -1,0 +1,23 @@
+.bg-gray {
+  background-color: #f7f9fb;
+  border:none;
+}
+
+hr.uu-short-red {
+    background: linear-gradient(-20deg, #750000, #CC0000);
+    border: none;
+    height: 4px;
+    margin: 20px auto 40px 0px;
+    width: 75px;
+}
+
+hr.uu-short-red.center {
+   margin: 0 auto;
+}
+
+
+#pg-10-7> .panel-row-style {
+    background-image: url(../img/footer-banner.jpg);
+    background-size: cover;
+    padding: 80px 30px 80px 30px;
+}
