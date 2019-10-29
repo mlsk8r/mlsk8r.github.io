@@ -1,0 +1,514 @@
+/*===================================================================
+************************* CUSTOM STYLES CSS *************************
+====================================================================*/
+
+footer img {
+  margin: 1em 0 2em;
+}
+
+footer ul {
+    padding-left: 0;
+    list-style-type: none;
+    text-transform: uppercase;
+    font-size: .8em;
+    color: #003366;
+    margin-bottom: .2em;
+}
+
+.logotype {
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 700;
+  font-family: Proxima Nova;
+}
+
+.logotype span {
+  color: #107f8e;
+  font-weight: 300;
+}
+
+.home-section {
+    text-align: center;
+    height: 100%;
+    padding-top: 9em;
+    background: #f3f3f3;
+}
+
+.vision-section {
+    padding-top: 7em;
+    background: #107f8e;
+}
+
+.goal-section {
+    padding-top: 7em;
+    background: #ff6600;
+}
+
+#goal {
+    color:#fff;
+}
+
+.plan-section {
+    padding-top: 5.9em;
+    background: #f3f3f3;
+    margin-bottom: 6.5em;
+}
+
+.section-headings {
+    font-family: MiloWeb,Verdana,Geneva,sans-serif;
+    font-size: 2.7rem;
+    font-weight: 500;
+    color:#00265b;
+    margin-bottom: 1em;
+}
+
+.sub-headings {
+    font-family: MiloWeb,Verdana,Geneva,sans-serif;
+    font-size: 1.75rem;
+    font-weight: 500;
+    color:#00265b;
+    margin-bottom: 0.7em;
+}
+
+#goal-heading {
+    color:#fff;
+    font-weight: 700;
+}
+
+.article-paragraph {
+    font-size:1.25rem;
+    margin-bottom:1.6em;
+}
+
+.hero-slider-heading {
+    color: #fff;
+    font-family: MiloWeb,Verdana,Geneva,sans-serif;
+    font-size: 3.6em;
+    margin-bottom: 0em;
+}
+
+.hero-slider-heading-blue {
+    color: #00265b;
+    font-family: MiloWeb,Verdana,Geneva,sans-serif;
+    font-size: 3.6em;
+    margin-bottom: 0em;
+}
+
+.hero-slider-caption {
+    color: #fff;
+    margin-top: .5em;
+}
+
+.hero-slider-caption-blue {
+    color: #00265b;
+    margin-top: .5em;
+}
+
+.give-now-button {
+    background-color: #bd1f35;
+    border: 1px solid #bd1f35;
+    font-size: 2.1em;
+    margin-top: 1.8em;
+}
+
+#give-now-NAV {
+    float: right;
+    padding: 1.4em .02em;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.06rem;
+}
+
+#give-now-NAV:hover {
+    color:#b35c69;
+    text-decoration: underline;
+}
+
+#ua-logo {
+    padding: 12px 0px;
+    margin-right: 10.5em;"
+}
+
+.panel-paragraph {
+    max-width:87%;
+    /*font-size: 19px;*/
+    font-size: 1.25rem;
+    line-height: 1.5em;
+}
+
+.panel-ul {
+    max-width:88%;
+    /*font-size: 19px;*/
+    font-size: 1.2rem;
+    padding-left: 1.6em;
+}
+
+.panel-ul li {
+    padding-left: 0;
+    position: relative;
+}
+
+.panel-ul p {
+    margin:0px;
+    margin-left: 0.6em;
+    line-height: 1.4em;
+}
+
+ul.panel-ul > li:before {
+    position: absolute;
+    top: 8px;
+    left: -1em;
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-left: 4px solid #fff;
+    border-bottom: 5px solid transparent;
+    content:'';
+}
+
+.list-style-none {
+    list-style: none!important;
+    margin-bottom: 0.2em;
+}
+
+#the-plan-hero-banner {
+    height: 280px;
+    width: 100%;
+    background: url('../img/the-plan-hero-banner.jpg') no-repeat 50% 60%;
+    background-size: cover;
+}
+
+#quote-bar-blue {
+    width: 5.125em;
+    height: 0.38em;
+    background-color: #00265b;
+    margin-bottom: 2.2em;
+    margin-top:0.45em;
+}
+
+#quote-bar-white {
+    width: 5.125em;
+    height: 0.35em;
+    background-color: #fff;
+    margin-bottom: 2.2em;
+    margin-top:1.1em;
+}
+
+.article-padding {
+    padding-right: 29px;
+}
+
+.VP-name {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 0px;
+}
+
+.VP-title {
+    font-size: 1.2rem;
+    margin-bottom: 0px;
+}
+
+#simpleQuote3 .VP-title {
+  min-height: 3.5em;
+}
+
+
+.quote-section {
+    font-size: 1.34rem;
+    line-height: 1.43em;
+}
+
+.quote-section.blue {
+  height: 251px;
+  color:#00265b;
+}
+
+.quote-section.white {
+  height:235px;
+  color:#fff;
+}
+
+.textdeco-none {
+    text-decoration: none!important;
+}
+
+.sky-blue-BG {
+    background-color: #378cbc!important;
+}
+
+.blue-BG {
+    background-color: #1e5288!important;
+}
+
+
+
+/*===================================================================
+******************** BOOTSTRAP CSS OVERRIDES ************************
+====================================================================*/
+
+.h3, h3 {
+    font-size: 1.75rem;
+}
+
+.ua-brand-right-arrow {
+    font-size: 0.55rem;
+    margin-right: 2.3em;
+}
+
+
+
+
+/***  NAV   ***/
+.navbar {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.nav > li > a {
+    position: relative;
+    display: block;
+    padding: 20px 44px;
+}
+
+.navbar-default {
+    background-color: #231f20;
+    border-bottom:5px solid #107f8e!important;
+    border-top: none!important;
+}
+
+.navbar-nav>li>a {
+    line-height: 29px;
+}
+
+.navbar-toggle {
+    position: relative;
+    float: right;
+    padding: 9px 10px;
+    margin-top: 8px;
+    /* margin-bottom: 8px; */
+    border: 1px solid transparent;
+    border-radius: 0;
+}
+
+.navbar-toggle {
+     margin-bottom: 0px;
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+    color:#fff;
+    background-color: #00265b;
+}
+
+
+.navbar-default .navbar-nav>li>a {
+    color:#fff;
+}
+
+.navbar-default .navbar-nav>li>a:hover {
+   /* background-color: #18344b;*/
+}
+
+.navbar-default .navbar-brand {
+    color: #fff;
+    line-height: 1.7;
+}
+
+
+
+
+/***  BUTTONS   ***/
+.btn-group-lg>.btn, .btn-lg {
+    padding: 5px 26px;
+}
+
+
+
+
+
+/***  PANELS   ***/
+.panel-default {
+    border-color: transparent;
+    padding-bottom: 7px;
+}
+
+.panel-default {
+    background-color:#00265b;
+}
+
+.panel-hover:hover {
+    opacity: 0.48;
+    filter: alpha(opacity=48); /* For IE8 and earlier */
+}
+
+.panel-title {
+    /*font-size: 21px;*/
+    color:#fff;
+    font-size: 1.38rem;
+    font-weight: 500;
+}
+
+.panel-title .ua-brand-down-arrow {
+  font-size: .6em;
+}
+
+.panel-title-blue {
+    color: #81d2eb;
+    margin-bottom: 0.7em;
+}
+
+.panel-heading {
+    padding-top: 27px;
+    padding-bottom: 20px;
+}
+
+.panel-body {
+    color:#fff;
+    padding-top: 0px;
+}
+
+
+
+
+
+/***  CARDS   ***/
+.card {
+    border:none!important;
+    margin-bottom: 3.5em;
+    background-color:#1e5288;
+    width:300px;
+    height:375px;
+}
+
+.card-text {
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+
+
+
+/*===================================================================
+************************* MEDIA QUERIES *****************************
+====================================================================*/
+
+@media (min-width: 768px) {
+  .navbar-nav {
+      float: right;
+      margin: 0;
+  }
+}
+
+@media (min-width: 991px) {
+    footer ul li {
+        display: inline-block;
+        margin: 0 1em 0 0;
+        padding: 0 1em 0 0;
+        border-right: 1px solid #000;
+    }
+
+    footer ul li:last-child {
+        border: none;
+    }
+}
+
+@media (max-width: 991px) {
+    .card {
+        margin:auto;
+        border:none!important;
+        margin-bottom: 4em;
+        background-color:#3a5d82;
+        width:300px;
+        height:375px;
+    }
+
+    #mobile-darken {
+        filter: brightness(60%);
+    }
+
+    .panel-title-blue {
+        color: #81d2eb;
+        margin-bottom: 0.7em;
+        margin-top: 1.6em;
+    }
+
+    #ua-logo {
+        padding: 12px 0px;
+        margin-right: 1.5em;
+    }
+
+    .nav > li > a {
+        position: relative;
+        display: block;
+        padding: 20px 44px;
+    }
+}
+
+@media (max-width: 768px) {
+     footer ul {
+        margin-top: 2em;
+    }
+
+    .hero-slider-heading, .hero-slider-heading-blue {
+        font-size: 2rem;
+    }
+
+    .hero-slider-caption, .hero-slider-caption-blue {
+        font-size: 1.4rem;
+    }
+
+    #give-now-NAV {
+        float: right;
+        padding: 0em .02em;
+        padding-bottom: 0.5em;
+        padding-right: 0.8em;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 1.2rem;
+    }
+
+    #the-plan-hero-banner {
+        height: 220px;
+        width: 100%;
+        background: url(../img/the-plan-hero-banner.jpg) no-repeat 49% 61%;
+        background-size: cover;
+    }
+
+    .give-now-button {
+        background-color: #bd1f35;
+        border: 1px solid #bd1f35;
+        font-size: 2.1em;
+        margin-top: 0.7em;
+    }
+
+    #mobile-slider img {
+        height: 126%;
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+    }
+
+    #mobile-slider3 img {
+        height: 100%;
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+    }
+
+    #ua-logo {
+        margin-bottom: 0.7em;
+    }
+
+    .panel-paragraph {
+        max-width: 100%;
+    }
+
+    .panel-ul {
+        max-width: 100%;
+    }
+
+    .article-padding {
+        padding-right: 0px;
+    }
+
+}

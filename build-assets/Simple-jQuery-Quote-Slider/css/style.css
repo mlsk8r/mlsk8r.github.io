@@ -1,0 +1,41 @@
+/*
+  There is no damn license on this. Use it however you want to.
+  Adding it to your website ?? Send me a message on twitter, it can light up my day.
+
+  Prashanth Raghu on twitter -> http://twitter.com/prashanthraghu
+*/
+
+body{
+	background: #f7f7f4; /* Old browsers */
+	width:100%;
+  overflow:hidden;
+}
+
+ul#simpleQuote{
+	list-style-type:none;
+}
+
+ul#simpleQuote li{
+	font-family: 'Parisienne', cursive;
+	font-size: 30px;
+	width : 65%;
+}
+
+#container {
+  margin:150px auto;
+  max-width:960px
+}
+
+#author{
+	font-family: 'Parisienne', cursive;
+	font-size: 21px;
+	right: 0px;
+}
+
+
+.footer {
+	font-family: 'Ribeye Marrow' , cursive;
+	font-size: 18px;
+	margin-left : 12%;
+	margin-top: 26%;
+}
