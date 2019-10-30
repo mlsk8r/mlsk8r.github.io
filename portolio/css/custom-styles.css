@@ -15,6 +15,30 @@ footer ul {
     margin-bottom: .2em;
 }
 
+.hero-banner {
+  background: url('http://localhost/portfolio/img/hero-banner.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 350px;
+}
+
+.hero-text {
+  color: #fff;
+  font-size: 4rem;
+  font-weight: 900;
+  font-family: MiloWeb,Verdana,Geneva,sans-serif;
+  margin: 0;
+  padding-top: 2.1em;
+}
+
+.hero-subtext {
+  color: #fff;
+  font-weight: 100;
+  font-size: 2rem;
+  font-family: MiloWeb,Verdana,Geneva,sans-serif;
+  margin: 0;
+}
+
 .logotype {
   color: #fff;
   font-size: 1.6rem;
@@ -30,7 +54,7 @@ footer ul {
 .home-section {
     text-align: center;
     height: 100%;
-    padding-top: 9em;
+    margin-top: 50px;
     background: #f3f3f3;
 }
 
@@ -279,6 +303,7 @@ ul.panel-ul > li:before {
 
 .navbar-nav>li>a {
     line-height: 29px;
+    font-size: .9rem;
 }
 
 .navbar-toggle {
@@ -297,7 +322,7 @@ ul.panel-ul > li:before {
 
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
     color:#fff;
-    background-color: #00265b;
+    background-color: #107f8e;
 }
 
 
@@ -312,6 +337,11 @@ ul.panel-ul > li:before {
 .navbar-default .navbar-brand {
     color: #fff;
     line-height: 1.7;
+}
+
+.navbar-default .navbar-brand:hover {
+    color: #fff;
+    background-color: transparent;
 }
 
 
