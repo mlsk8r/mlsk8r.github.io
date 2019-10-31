@@ -42,20 +42,22 @@ footer ul {
 
 .logotype {
   color: #fff;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   font-weight: 700;
   font-family: 'Ubuntu', sans-serif;
+  letter-spacing: .07rem;
 }
 
 .logotype span {
   color: #107f8e;
   font-weight: 300;
+  letter-spacing: .0125rem;
 }
 
 .home-section {
-    height: 100%;
-    margin-top: 50px;
     background: #f3f3f3;
+    height: 100%;
+    padding-top: 50px;
 }
 
 .vision-section {
@@ -312,7 +314,7 @@ ul.panel-ul > li:before {
 
 .navbar-default .navbar-brand {
     color: #fff;
-    line-height: 1.7;
+    line-height: 1.75;
 }
 
 .navbar-default .navbar-brand:hover {
