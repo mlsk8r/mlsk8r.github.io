@@ -24,10 +24,19 @@
     justify-content: space-between;
 }
 
-
 .projects-element {
-  width: 350px;
-  padding-bottom: 2em;
+  width: 370px;
+  padding-bottom: 4em;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 25rem 1fr;
+  grid-gap: 4rem;
+}
+
+.about-element {
+
 }
 
 
@@ -36,5 +45,9 @@
   .methodology-grid {
     display: grid;
     grid-template-columns: 1fr;
+  }
+
+  .methodology-element {
+    padding: 0 .6em 2em .6em;
   }
 }

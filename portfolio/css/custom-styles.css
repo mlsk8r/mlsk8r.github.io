@@ -70,7 +70,7 @@ footer ul {
 .methodology h3 {
   color: #000;
   font-size: 1.6rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .methodology i {
@@ -98,7 +98,7 @@ footer ul {
 }
 
 .about-section {
-    padding-top: 4em;
+    padding: 4em 0 6em 0;
     background: #fff;
 }
 
@@ -264,7 +264,7 @@ ul.panel-ul > li:before {
 hr {
   border: none;
   border-bottom: .08rem solid #231f2026;
-  margin: 1rem 0 3rem 0;;
+  margin: 1rem 0 4rem 0;;
 }
 
 footer {
