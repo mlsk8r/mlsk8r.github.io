@@ -25,7 +25,7 @@ footer ul {
 
 .hero-text {
   color: #fff;
-  font-size: 4rem;
+  font-size: 3.7rem;
   font-weight: 900;
   font-family: 'Ubuntu', sans-serif;
   margin: 0 0 1.1rem 0;
@@ -33,7 +33,7 @@ footer ul {
 }
 
 .hero-subtext {
-  color: #fff;
+  color: #ff6600;
   font-weight: 100;
   font-size: 1.75rem;
   font-family: 'Ubuntu', sans-serif;
@@ -54,9 +54,13 @@ footer ul {
   letter-spacing: .0125rem;
 }
 
+.section-heading {
+    text-align: center;
+    color: #000;
+}
+
 .home-section {
     background: #f3f3f3;
-    height: 100%;
     padding-top: 50px;
 }
 
@@ -104,31 +108,6 @@ footer ul {
 .article-paragraph {
     font-size:1.25rem;
     margin-bottom:1.6em;
-}
-
-.give-now-button {
-    background-color: #bd1f35;
-    border: 1px solid #bd1f35;
-    font-size: 2.1em;
-    margin-top: 1.8em;
-}
-
-#give-now-NAV {
-    float: right;
-    padding: 1.4em .02em;
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 1.06rem;
-}
-
-#give-now-NAV:hover {
-    color:#b35c69;
-    text-decoration: underline;
-}
-
-#ua-logo {
-    padding: 12px 0px;
-    margin-right: 10.5em;"
 }
 
 .panel-paragraph {
@@ -245,12 +224,19 @@ ul.panel-ul > li:before {
 
 
 
+
 /*===================================================================
 ******************** BOOTSTRAP CSS OVERRIDES ************************
 ====================================================================*/
 
 .h3, h3 {
     font-size: 1.75rem;
+}
+
+hr {
+  border: none;
+  border-bottom: .08rem solid #231f2026;
+  margin: 1.5rem 0 3rem 0;
 }
 
 .ua-brand-right-arrow {
@@ -399,6 +385,11 @@ ul.panel-ul > li:before {
 /*===================================================================
 ************************* MEDIA QUERIES *****************************
 ====================================================================*/
+
+@media (max-width: 1230px) {
+.container {
+    padding: 0 2rem;
+}
 
 @media (min-width: 768px) {
   .navbar-nav {
