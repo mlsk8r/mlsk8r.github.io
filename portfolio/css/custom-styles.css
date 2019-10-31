@@ -16,26 +16,27 @@ footer ul {
 }
 
 .hero-banner {
-  background: url('http://localhost/portfolio/img/hero-banner.jpg');
+  background: url('http://localhost/mlsk8r.github.io/portfolio/img/hero-banner.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 350px;
+  min-height: 420px;
+  text-align: center;
 }
 
 .hero-text {
   color: #fff;
   font-size: 4rem;
   font-weight: 900;
-  font-family: MiloWeb,Verdana,Geneva,sans-serif;
-  margin: 0;
-  padding-top: 2.1em;
+  font-family: 'Ubuntu', sans-serif;
+  margin: 0 0 1.1rem 0;
+  padding-top: 2.5em;
 }
 
 .hero-subtext {
   color: #fff;
   font-weight: 100;
-  font-size: 2rem;
-  font-family: MiloWeb,Verdana,Geneva,sans-serif;
+  font-size: 1.75rem;
+  font-family: 'Ubuntu', sans-serif;
   margin: 0;
 }
 
@@ -43,7 +44,7 @@ footer ul {
   color: #fff;
   font-size: 1.6rem;
   font-weight: 700;
-  font-family: Proxima Nova;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 .logotype span {
@@ -52,7 +53,6 @@ footer ul {
 }
 
 .home-section {
-    text-align: center;
     height: 100%;
     margin-top: 50px;
     background: #f3f3f3;
@@ -79,7 +79,7 @@ footer ul {
 }
 
 .section-headings {
-    font-family: MiloWeb,Verdana,Geneva,sans-serif;
+    font-family: 'Ubuntu', sans-serif;
     font-size: 2.7rem;
     font-weight: 500;
     color:#00265b;
@@ -87,7 +87,7 @@ footer ul {
 }
 
 .sub-headings {
-    font-family: MiloWeb,Verdana,Geneva,sans-serif;
+    font-family: 'Ubuntu', sans-serif;
     font-size: 1.75rem;
     font-weight: 500;
     color:#00265b;
@@ -102,30 +102,6 @@ footer ul {
 .article-paragraph {
     font-size:1.25rem;
     margin-bottom:1.6em;
-}
-
-.hero-slider-heading {
-    color: #fff;
-    font-family: MiloWeb,Verdana,Geneva,sans-serif;
-    font-size: 3.6em;
-    margin-bottom: 0em;
-}
-
-.hero-slider-heading-blue {
-    color: #00265b;
-    font-family: MiloWeb,Verdana,Geneva,sans-serif;
-    font-size: 3.6em;
-    margin-bottom: 0em;
-}
-
-.hero-slider-caption {
-    color: #fff;
-    margin-top: .5em;
-}
-
-.hero-slider-caption-blue {
-    color: #00265b;
-    margin-top: .5em;
 }
 
 .give-now-button {
