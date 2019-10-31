@@ -1,0 +1,40 @@
+.display-flex {
+  display: flex;
+}
+
+.methodology-grid, .projects-grid {
+  display: flex;
+}
+
+
+.methodology-element {
+  padding: 0 3em 3em 3em;
+}
+
+.projects-grid {
+  display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+
+.projects-element {
+  width: 350px;
+  padding-bottom: 2em;
+}
+
+
+
+@media (max-width: 768px) {
+  .methodology-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
