@@ -16,7 +16,9 @@ footer ul {
 }
 
 .hero-banner {
-  background: url('http://localhost/mlsk8r.github.io/portfolio/img/hero-banner.jpg') center;
+  display: flex;
+  align-items: center;
+  background: url('http://localhost/mlsk8r.github.io/portfolio/img/hero-banner-3.jpg') center;
   background-repeat: no-repeat;
   background-size: cover;
   margin-bottom: 4em;
@@ -34,7 +36,6 @@ footer ul {
   font-weight: 900;
   font-family: 'Ubuntu', sans-serif;
   margin: 0 0 1.1rem 0;
-  padding-top: 4.2em;
 }
 
 .hero-subtext {
