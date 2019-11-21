@@ -18,15 +18,14 @@ footer ul {
 .hero-banner {
   display: flex;
   align-items: center;
-  background: url('http://localhost/mlsk8r.github.io/portfolio/img/hero-banner-3.jpg') center;
+  background: url('http://localhost/mlsk8r.github.io/portfolio/img/hero-banner.jpg') center;
   background-repeat: no-repeat;
   background-size: cover;
   margin-bottom: 4em;
-  min-height: 600px;
+  min-height: 700px;
   text-align: center;
   background-attachment: fixed;
   background-position: center;
-  background-repeat: no-repeat;
   background-size: cover;
 }
 
@@ -44,6 +43,7 @@ footer ul {
   font-size: 1.75rem;
   font-family: 'Ubuntu', sans-serif;
   margin: 0;
+  text-transform: lowercase;
 }
 
 .logotype {
@@ -96,6 +96,10 @@ footer ul {
 
 .projects-section hr {
   border-bottom: .08rem solid #666;
+}
+
+.project-container hr {
+  margin: 1rem 0 2rem 0;;
 }
 
 .projects-section .section-heading {
@@ -293,7 +297,7 @@ ul.panel-ul > li:before {
 hr {
   border: none;
   border-bottom: .08rem solid #231f2026;
-  margin: 1rem 0 4rem 0;;
+  margin: 1rem 0 4rem 0;
 }
 
 footer {

@@ -39,6 +39,15 @@
 
 }
 
+.content-main {
+  display: grid;
+  grid-template-columns: 1fr 18.5rem;
+  gap: 3.5rem;
+  padding-bottom: 4em;
+}
+
+
+
 
 
 @media (max-width: 768px) {
