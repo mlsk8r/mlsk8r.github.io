@@ -372,6 +372,18 @@ footer {
     border-top: none!important;
 }
 
+
+
+.navbar-default .navbar-toggle,
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:active,
+.navbar-default .navbar-toggle:focus
+ {
+    background-color: #107f8e;
+    border-color: #107f8e;
+    color: #fff;
+}
+
 .navbar-nav>li>a {
     line-height: 29px;
     font-size: .85rem;
@@ -534,8 +546,13 @@ footer {
 ====================================================================*/
 
 @media (max-width: 1230px) {
-.container {
-    padding: 0 2rem;
+  .container {
+      padding: 0 2rem;
+  }
+
+  .nav > li > a {
+      padding: 20px 22px;
+  }
 }
 
 @media (min-width: 768px) {
@@ -586,7 +603,7 @@ footer {
     .nav > li > a {
         position: relative;
         display: block;
-        padding: 20px 44px;
+        padding: 20px 22px;
     }
 }
 
@@ -595,50 +612,12 @@ footer {
         margin-top: 2em;
     }
 
-    .hero-slider-heading, .hero-slider-heading-blue {
-        font-size: 2rem;
+    .hero-text {
+      font-size: 2.5rem;
     }
 
-    .hero-slider-caption, .hero-slider-caption-blue {
-        font-size: 1.4rem;
-    }
-
-    #give-now-NAV {
-        float: right;
-        padding: 0em .02em;
-        padding-bottom: 0.5em;
-        padding-right: 0.8em;
-        text-decoration: none;
-        font-weight: 500;
-        font-size: 1.2rem;
-    }
-
-    #the-plan-hero-banner {
-        height: 220px;
-        width: 100%;
-        background: url(../img/the-plan-hero-banner.jpg) no-repeat 49% 61%;
-        background-size: cover;
-    }
-
-    .give-now-button {
-        background-color: #bd1f35;
-        border: 1px solid #bd1f35;
-        font-size: 2.1em;
-        margin-top: 0.7em;
-    }
-
-    #mobile-slider img {
-        height: 126%;
-        width: 100%;
-        background-size: cover;
-        background-position: center;
-    }
-
-    #mobile-slider3 img {
-        height: 100%;
-        width: 100%;
-        background-size: cover;
-        background-position: center;
+    .hero-subtext {
+      font-size: 1.2rem;
     }
 
     #ua-logo {
@@ -662,5 +641,10 @@ footer {
       font-size: 1.125rem;
       text-align: center;
       height: 74px;
+    }
+
+    .container>.navbar-header {
+      margin-right: -32px;
+      margin-left: -32px;
     }
 }
