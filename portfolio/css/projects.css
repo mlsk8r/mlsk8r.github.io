@@ -18,3 +18,16 @@
   font-weight: 700;
   font-size: 1.3rem;
 }
+
+.sidebar ul {
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  color: rgb(119, 119, 119);
+  background: rgb(238, 238, 238);
+  line-height: 2rem;
+}

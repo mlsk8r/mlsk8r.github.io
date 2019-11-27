@@ -372,8 +372,6 @@ footer {
     border-top: none!important;
 }
 
-
-
 .navbar-default .navbar-toggle,
 .navbar-default .navbar-toggle:hover,
 .navbar-default .navbar-toggle:active,
@@ -382,6 +380,8 @@ footer {
     background-color: #107f8e;
     border-color: #107f8e;
     color: #fff;
+    font-weight: 700;
+    letter-spacing: .08rem;
 }
 
 .navbar-nav>li>a {

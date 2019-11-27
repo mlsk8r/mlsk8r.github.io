@@ -6,7 +6,6 @@
   display: flex;
 }
 
-
 .methodology-element {
   padding: 0 4em 3em 4em;
 }
@@ -35,10 +34,6 @@
   grid-gap: 3rem;
 }
 
-.about-element {
-
-}
-
 .content-main {
   display: grid;
   grid-template-columns: 1fr 18.5rem;
@@ -62,9 +57,6 @@
   font-weight: 100;
   line-height: 1.4rem;
 }
-
-
-
 
 @media (max-width: 768px) {
   .methodology-grid {
