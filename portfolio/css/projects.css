@@ -11,3 +11,10 @@
 .sidebar-img {
   margin-bottom: 1.3em;
 }
+
+.sidebar h3,
+.project-h3 {
+  color: #107f8e;
+  font-weight: 700;
+  font-size: 1.3rem;
+}
