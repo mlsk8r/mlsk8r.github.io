@@ -36,9 +36,9 @@
 
 .content-main {
   display: grid;
-  grid-template-columns: 1fr 18.5rem;
-  gap: 3.5rem;
-  padding-bottom: 4em;
+  grid-template-columns: 1fr 18rem;
+  gap: 3rem;
+  padding-bottom: 3em;
 }
 
 .tldr-grid {
@@ -62,6 +62,16 @@
     display: flex;
     align-items: center;
     text-align: center;
+}
+
+@media (max-width: 998px) {
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-items: center;
+    padding:0;
+    grid-column-gap: 3rem;
+  }
 }
 
 @media (max-width: 768px) {
