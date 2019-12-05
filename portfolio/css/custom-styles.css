@@ -24,7 +24,7 @@
 }
 
 .fade-in {
-  animation: 2.4s fade-in ease-in-out;
+  animation: 2s fade-in ease-in-out;
   -webkit-animation-name: fade-in;
   animation-name: fade-in;
 }
