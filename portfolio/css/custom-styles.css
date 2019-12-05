@@ -643,6 +643,14 @@ footer {
         margin-top: 2em;
     }
 
+    .home-section {
+      padding-top: 135px;
+    }
+
+    .hero-banner {
+      min-height: 400px;
+    }
+
     .hero-text {
       font-size: 2.5rem;
     }
