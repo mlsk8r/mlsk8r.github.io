@@ -454,6 +454,7 @@ footer {
 .cta:hover {
   background: #FFF;
   color: #ff6600;
+  text-decoration: none;
 }
 
 .cta-alt {
@@ -464,6 +465,7 @@ footer {
 .cta-alt:hover {
   background: #fff;
   color: #107f8e;
+  text-decoration: none;
 }
 
 
