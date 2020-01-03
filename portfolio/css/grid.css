@@ -7,7 +7,7 @@
 }
 
 .methodology-element {
-  padding: 0 4em 3em 4em;
+  padding: 0 3em 1em 3em;
 }
 
 .projects-grid {
@@ -44,8 +44,8 @@
 .tldr-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  margin: 1rem 0px 3rem;
-  gap: 2rem;
+  margin: 1rem 0px 2rem;
+  gap: 1.5rem;
 }
 
 .tldr-grid p {
@@ -81,7 +81,7 @@
   }
 
   .methodology-element {
-    padding: 0 .6em 2em .6em;
+    padding: 0 .6em 1.5em .6em;
   }
 
   .projects-grid {

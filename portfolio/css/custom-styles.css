@@ -46,6 +46,14 @@ footer ul {
     margin-bottom: .2em;
 }
 
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.font-bold {
+  font-weight: 900;
+}
+
 .hero-banner {
   display: flex;
   align-items: center;
@@ -100,7 +108,7 @@ footer ul {
 
 .methodology {
   text-align: center;
-  padding-bottom: 6em;
+  padding-bottom: 3.5em;
 }
 
 .methodology h3 {
@@ -114,6 +122,11 @@ footer ul {
   font-size: 3rem;
   margin-right: 1rem;
 }
+
+.methodology-element p {
+    font-size: 1.125rem;
+}
+
 .home-section {
     background: #fff;
     padding-top: 50px;
@@ -662,6 +675,7 @@ footer {
 
     .hero-subtext {
       font-size: 1.2rem;
+      text-transform: unset;
     }
 
     #ua-logo {

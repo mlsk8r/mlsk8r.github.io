@@ -2,6 +2,10 @@
   margin-bottom: 1.3em;
 }
 
+.main li {
+  margin-bottom: .35rem;
+}
+
 .tldr h3 {
   font-size: 2.3rem;
   color: #107f8e;
