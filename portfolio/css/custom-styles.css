@@ -153,13 +153,18 @@ footer ul {
   letter-spacing: .04rem;
 }
 
-.projects-element a:hover {
-    text-decoration: none;
-}
 
 .projects-element a img {
-
   transition: all 300ms;
+}
+
+.projects-element a:hover {
+  text-decoration: none;
+}
+
+.projects-element a:hover h3 {
+  transition: color .26s;
+  color: #ff6600;
 }
 
 .projects-element a:hover img {
