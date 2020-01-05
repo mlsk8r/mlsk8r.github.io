@@ -49,9 +49,9 @@
 }
 
 .tldr-grid p {
-  color: rgb(119, 119, 119);
+  color: #777;
   margin: 0px;
-  background: rgb(238, 238, 238);
+  background: #eee;
   padding: .8rem 1.3rem;
   font-size: 1rem;
   font-weight: 100;
