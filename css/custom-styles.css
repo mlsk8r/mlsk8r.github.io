@@ -66,6 +66,7 @@ footer ul {
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
+  border-bottom: 8px solid #ff6600;
 }
 
 .hero-text {
@@ -185,10 +186,6 @@ footer ul {
   transition: all 300ms;
 }
 
-.projects-elements p {
-
-}
-
 .projects-element p:hover {
     text-decoration: none;
 }
@@ -218,131 +215,6 @@ footer ul {
     margin-bottom: 0.7em;
 }
 
-#goal-heading {
-    color:#fff;
-    font-weight: 700;
-}
-
-.article-paragraph {
-    font-size:1.25rem;
-    margin-bottom:1.6em;
-}
-
-.panel-paragraph {
-    max-width:87%;
-    /*font-size: 19px;*/
-    font-size: 1.25rem;
-    line-height: 1.5em;
-}
-
-.panel-ul {
-    max-width:88%;
-    /*font-size: 19px;*/
-    font-size: 1.2rem;
-    padding-left: 1.6em;
-}
-
-.panel-ul li {
-    padding-left: 0;
-    position: relative;
-}
-
-.panel-ul p {
-    margin:0px;
-    margin-left: 0.6em;
-    line-height: 1.4em;
-}
-
-ul.panel-ul > li:before {
-    position: absolute;
-    top: 8px;
-    left: -1em;
-    width: 0;
-    height: 0;
-    border-top: 5px solid transparent;
-    border-left: 4px solid #fff;
-    border-bottom: 5px solid transparent;
-    content:'';
-}
-
-.list-style-none {
-    list-style: none!important;
-    margin-bottom: 0.2em;
-}
-
-#the-plan-hero-banner {
-    height: 280px;
-    width: 100%;
-    background: url('../img/the-plan-hero-banner.jpg') no-repeat 50% 60%;
-    background-size: cover;
-}
-
-#quote-bar-blue {
-    width: 5.125em;
-    height: 0.38em;
-    background-color: #00265b;
-    margin-bottom: 2.2em;
-    margin-top:0.45em;
-}
-
-#quote-bar-white {
-    width: 5.125em;
-    height: 0.35em;
-    background-color: #fff;
-    margin-bottom: 2.2em;
-    margin-top:1.1em;
-}
-
-.article-padding {
-    padding-right: 29px;
-}
-
-.VP-name {
-    font-size: 1.2rem;
-    font-weight: 700;
-    margin-bottom: 0px;
-}
-
-.VP-title {
-    font-size: 1.2rem;
-    margin-bottom: 0px;
-}
-
-#simpleQuote3 .VP-title {
-  min-height: 3.5em;
-}
-
-
-.quote-section {
-    font-size: 1.34rem;
-    line-height: 1.43em;
-}
-
-.quote-section.blue {
-  height: 251px;
-  color:#00265b;
-}
-
-.quote-section.white {
-  height:235px;
-  color:#fff;
-}
-
-.textdeco-none {
-    text-decoration: none!important;
-}
-
-.sky-blue-BG {
-    background-color: #378cbc!important;
-}
-
-.blue-BG {
-    background-color: #1e5288!important;
-}
-
-
-
-
 /*===================================================================
 ******************** BOOTSTRAP CSS OVERRIDES ************************
 ====================================================================*/
@@ -363,14 +235,6 @@ footer {
     font-size: .9rem;
     padding: 2em 0 2em 0;
 }
-
-.ua-brand-right-arrow {
-    font-size: 0.55rem;
-    margin-right: 2.3em;
-}
-
-
-
 
 /***  NAV   ***/
 .navbar {
@@ -486,49 +350,6 @@ footer {
   text-decoration: none;
 }
 
-
-
-/***  PANELS   ***/
-.panel-default {
-    border-color: transparent;
-    padding-bottom: 7px;
-}
-
-.panel-default {
-    background-color:#00265b;
-}
-
-.panel-hover:hover {
-    opacity: 0.48;
-    filter: alpha(opacity=48); /* For IE8 and earlier */
-}
-
-.panel-title {
-    /*font-size: 21px;*/
-    color:#fff;
-    font-size: 1.38rem;
-    font-weight: 500;
-}
-
-.panel-title .ua-brand-down-arrow {
-  font-size: .6em;
-}
-
-.panel-title-blue {
-    color: #81d2eb;
-    margin-bottom: 0.7em;
-}
-
-.panel-heading {
-    padding-top: 27px;
-    padding-bottom: 20px;
-}
-
-.panel-body {
-    color:#fff;
-    padding-top: 0px;
-}
-
 .btn {
   font-size: 1rem;
   font-weight: 300;
@@ -568,25 +389,6 @@ footer {
 .btn-alt:hover {
   background: #ff6600;
 }
-
-
-
-
-
-/***  CARDS   ***/
-.card {
-    border:none!important;
-    margin-bottom: 3.5em;
-    background-color:#1e5288;
-    width:300px;
-    height:375px;
-}
-
-.card-text {
-    font-size: 1.3rem;
-    font-weight: 500;
-}
-
 
 .navbar-default .navbar-nav>li>a:focus {
   color: #fff;
