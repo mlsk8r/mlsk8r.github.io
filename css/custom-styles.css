@@ -46,6 +46,10 @@ footer ul {
     margin-bottom: .2em;
 }
 
+.border-gray {
+  border: 2px solid #231f2026;
+}
+
 .text-uppercase {
   text-transform: uppercase;
 }
@@ -133,6 +137,15 @@ footer ul {
     padding-top: 50px;
 }
 
+.design-examples-section {
+  padding-top: 8em;
+  padding-bottom: 10em;
+}
+
+.design-examples-section p {
+  margin-bottom: 1.4em;
+}
+
 .projects-section {
     padding-top: 4em;
     background: #f3f3f3;
@@ -184,6 +197,12 @@ footer ul {
 .projects-element a:hover img {
   transform: translateY(-5px);
   transition: all 300ms;
+}
+
+.projects-element.design-example-element a:hover img {
+  transform: translateY(-5px);
+  transition: all 300ms;
+  box-shadow: 0 9px 17px -7px #666;
 }
 
 .projects-element p:hover {
@@ -469,6 +488,11 @@ footer {
 
     .home-section {
       padding-top: 135px;
+    }
+
+    .design-examples-section {
+      padding-top: 8em;
+      padding-bottom: 17em
     }
 
     .hero-banner {

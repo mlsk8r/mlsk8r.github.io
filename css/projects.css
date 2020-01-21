@@ -40,3 +40,15 @@
   width: 100%;
   text-align: center;
 }
+
+.fancybox-grid {
+  margin-top: 2em;
+}
+
+.design-examples-section .content-main h2 {
+  margin-top: 1rem;
+}
+
+.design-examples-section .sidebar h3 {
+  margin-top: 1rem;
+}

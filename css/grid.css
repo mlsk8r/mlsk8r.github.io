@@ -28,6 +28,10 @@
   padding-bottom: 4em;
 }
 
+.projects-element.design-example-element {
+  max-width: 275px;
+}
+
 .about-grid {
   display: grid;
   grid-template-columns: 25rem 1fr;
