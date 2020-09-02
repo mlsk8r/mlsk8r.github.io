@@ -1,6 +1,6 @@
-/**************************
+/*****************************
 NEW CLASSES & ID's I ADDED
---------------------------
+------------------------------
 #requestItemHeader
 .subData
 .dataGlossary
@@ -8,7 +8,7 @@ NEW CLASSES & ID's I ADDED
 .dsaBlock
 .dsaBody
 .dsaItem
-**************************/
+******************************/
 
 body {
   margin:0;
@@ -38,10 +38,11 @@ body {
   box-shadow: none;
   color: #0E3264;
   font-family: "SourceSansPro", Helvetica, Arial, sans-serif;
-  font-size: 1.2em;
+  font-size: 18px;
   font-weight: bold;
   margin: 20px 0 15px 0;;
   padding: 0;
+  
 }
 
 #requestItem .two-col-row .data-col .form-field,
