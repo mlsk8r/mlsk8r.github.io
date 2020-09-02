@@ -1,0 +1,276 @@
+#container {
+  display: flex;
+  justify-content: space-around;
+  background-color: #E6E6E6;
+}
+#requestItemWrapper {
+  text-align: left;
+  width: 85%;
+  margin: 20px;
+  background-color: #fff;
+  -webkit-box-shadow: -2px 2px 7px 1px rgba(50, 50, 50, 0.22);
+  -moz-box-shadow: -2px 2px 7px 1px rgba(50, 50, 50, 0.22);
+  box-shadow: -2px 2px 7px 1px rgba(50, 50, 50, 0.22);
+}
+#requestItem {
+  margin: 25px;
+}
+#requestItem .riTitle {
+  color: #114477;
+  font-size: 24px;
+  margin: 0;
+  display: inline-block;
+}
+#requestItem .riData {
+  font-size: 14px;
+}
+#requestItem #print {
+  padding: 6px 16px;
+  margin-right: 20px;
+  position: relative;
+  float: right;
+  top: 10px;
+  font-weight: 600;
+  color: white;
+  background-color: #114477;
+  cursor: pointer;
+  -webkit-box-shadow: -2px 2px 7px 1px rgba(50, 50, 50, 0.22);
+  -moz-box-shadow: -2px 2px 7px 1px rgba(50, 50, 50, 0.22);
+  box-shadow: -2px 2px 7px 1px rgba(50, 50, 50, 0.22);
+}
+#requestItem .two-col-row span.label,
+#requestItem .two-col-row span.label,
+#requestItem .status span.label {
+  color: #224D7D;
+}
+#requestItem h3 {
+  display: inline-block;
+  font-size: 18px;
+  margin: 15px 0 10px 0;
+  padding: 3px 14px;
+  font-weight: 600;
+  color: #0E3264;
+  background-color: #fff;
+  border: rgba(14, 50, 100, 0.8) solid 2px;
+  font-family: 'Rokkitt', serif;
+  text-align: center;
+  -webkit-box-shadow: -2px 2px 7px 1px rgba(50, 50, 50, 0.22);
+  -moz-box-shadow: -2px 2px 7px 1px rgba(50, 50, 50, 0.22);
+  box-shadow: -2px 2px 7px 1px rgba(50, 50, 50, 0.22);
+  page-break-after: avoid;
+}
+#requestItem .coordinators {
+  margin-bottom: 0;
+}
+#requestItem .two-col-row.requester-sponsor {
+  font-size: 14px;
+}
+#requestItem .two-col-row.requester-sponsor .data-col {
+  padding: 10px;
+}
+#requestItem .two-col-row {
+  display: flex;
+  align-items: flex-start;
+}
+#requestItem .two-col-row .data-col {
+  display: inline-block;
+  width: 49%;
+  -webkit-margin-before: 0.25em;
+  -webkit-margin-after: 0.25em;
+}
+#requestItem .two-col-row .data-col h5 {
+  font-size: 13px;
+  font-weight: bold;
+  color: #114477;
+  margin: 0 0 3px 0;
+}
+#requestItem .two-col-row .data-col .form-field,
+#requestItem .subrequest .form-field,
+#requestItem .form-field {
+  font-size: 14px;
+  width: 85%;
+  margin-top: 0;
+  background-color: white;
+  padding: 5px;
+  border: rgba(50, 50, 50, 0.22) solid 1px;
+  -webkit-box-shadow: -2px 2px 7px 1px rgba(50, 50, 50, 0.22);
+  -moz-box-shadow: -2px 2px 7px 1px rgba(50, 50, 50, 0.22);
+  box-shadow: -2px 2px 7px 1px rgba(50, 50, 50, 0.22);
+  overflow: hidden;
+  page-break-before: avoid;
+}
+#requestItem .approver {
+  display: inline-block;
+  margin-right: 15%;
+  font-size: 12px;
+}
+#requestItem #dsas .subrequest {
+  padding: 10px;
+  margin-bottom: 15px;
+}
+.subrequestColor {
+  background-color: rgba(62, 91, 131, 0.2);
+}
+#requestItem .subrequest .subrequestNameWrapper .subrequestName {
+  margin: 0;
+  font-size: 16px;
+  color: #114477;
+}
+#requestItem .subrequest .status {
+  float: right;
+  margin-right: 20%;
+  margin-top: 15px;
+}
+.stewardLabel {
+  padding-left: 57px;
+}
+.custodianLabel {
+	padding-left: 65px;
+}
+@media print {
+  #container {
+    background-color: #fff;
+  }
+  #requestItem #print {
+    display: none;
+  }
+  #requestItem .two-col-row p,
+  #requestItem .subrequest .status {
+    font-size: 12px;
+  }
+  #requestItem .two-col-row .data-col .form-field,
+  #requestItem .three-col-row .data-col .form-field,
+  #requestItem .subrequest .form-field,
+  #requestItem .form-field {
+    border: none;
+    box-shadow: none;
+  }
+}
+11:10
+javascript:
+11:10
+function($scope, $http, $sce) {
+  /* widget controller */
+  var c = this;
+
+	var arrOrderedFormFields = [
+		"Description of Intended Use",
+		"Access Rights",
+		"Access Method",
+		"Impact on System",
+		"Additional Information Requested",
+		"Description of Application or Project",
+		"Necessity of Data",
+		"Scope and Control",
+		"Requested Information Map",
+		"Data Steward Response"
+	];
+	var requestedTerms = [];
+	var glossaries = [];
+	var attributes = [];
+	var dsaAttributes = [];
+	var dsas = [];
+	var policies = [];
+
+	$http.get('/api/bryu/infohub_domain_data/getRequestDetails/' + c.data.dsrId).then(function(response) {
+		var results = response.data.result.aaData[0];
+		c.data.title = results.assetName;
+		for(var rt in results.requestedTerms) {
+			var reqTermCommId = results.requestedTerms[rt].reqTermCommId;
+			var vocabName = results.requestedTerms[rt].reqTermVocabName;
+			var signifiers = results.requestedTerms[rt].reqTermSignifier;
+			if(glossaries.indexOf(vocabName) == -1) {
+				glossaries.push(vocabName);
+			}
+			//requestedTerms[vocabName].push(signifiers);
+			var termMap = {"vocabName" : vocabName, "signifiers" : signifiers, "reqTermCommId" : reqTermCommId};
+			requestedTerms.push(termMap);
+		}
+		for(var attr in results.attributes){
+			var signifier = results.attributes[attr].attrSignifier;
+			var value = results.attributes[attr].attrValue;
+			var attMap = {"attrSignifier" : signifier, "attrValue" : value};
+			attributes.push(attMap);
+		}
+		for(var p in results.policies) {
+			policies.push(results.policies[p]);
+		}
+		for(var agreements in results.dsas) {
+			var dsa = results.dsas[agreements];
+			dsa.custodian = dsa.custodianFirstName + " " + dsa.custodianLastName;
+			dsa.steward = dsa.stewardFirstName + " " + dsa.stewardLastName;
+			var dsaId = results.dsas[agreements].dsaId;
+			console.log(results.dsas[agreements]);
+			dataForDSA(dsaId);
+			dsas.push(dsa);
+		}
+
+		c.data.results = results;
+		c.data.arrOrderedFormFields = arrOrderedFormFields;
+		c.data.requestedTerms = requestedTerms;
+		c.data.glossaries = glossaries;
+		c.data.attributes = attributes;
+		c.data.dsas = dsas;
+		c.data.policies = policies;
+		c.data.virtualTables = results.necessaryVirtualTables;
+		c.data.samlResponses = results.necessarySamlResponses;
+		c.data.apis = results.necessaryApis;
+		c.data.tables = results.necessaryTables;
+		console.log(attributes['Application or Project Name']);
+		console.log(requestedTerms);
+		console.log(glossaries);
+		console.log(results);
+	});
+
+	dataForDSA = function (dsaId) {
+		$http.get('/api/bryu/infohub_domain_data/getRequestDetails/' + dsaId).then(function(response) {
+			var results = response.data.result.aaData[0];
+			for(var attr in results.attributes){
+				var signifier = results.attributes[attr].attrSignifier;
+				var value = results.attributes[attr].attrValue;
+				var attMap = {"attrSignifier" : dsaId + signifier, "attrValue" : value};
+				dsaAttributes.push(attMap);
+			}
+			c.data.dsaAttributes = dsaAttributes;
+		});
+	}
+
+	$scope.findAttrByKey = function(attributes, attrSignifier){
+		for(var attr in attributes){
+			if(attributes[attr].attrSignifier == attrSignifier){
+				var txt = document.createElement("textarea");
+				txt.innerHTML = attributes[attr].attrValue;
+				return txt.value;
+			}
+		}
+	}
+
+	$scope.findAttrByKeyNoEscape = function(attributes, attrSignifier){
+		for(var attr in attributes){
+			if(attributes[attr].attrSignifier == attrSignifier){
+				return $sce.trustAsHtml(attributes[attr].attrValue);
+			}
+		}
+	}
+
+	$scope.findDSAAttrByKey = function(attributes, attrSignifier){
+		for(var attr in attributes){
+			if(attributes[attr].attrSignifier == attrSignifier){
+				return attributes[attr].attrValue;
+			}
+		}
+	}
+
+	$scope.dsaGlossaryFoundRequired = function(requestedTerms, dsa){
+		for(var rt in requestedTerms){
+			if(requestedTerms[rt].reqTermCommId == dsa.dsaCommunityId){
+				return true;
+			}
+		}
+		return false;
+	}
+
+	c.print = function () {
+		window.print();
+	}
+}
