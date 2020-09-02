@@ -39,7 +39,7 @@ body {
   color: #0E3264;
   font-family: "SourceSansPro", Helvetica, Arial, sans-serif;
   font-size: 1.2em;
-  font-weight: 500;
+  font-weight: bold;
   margin: 20px 0 15px 0;;
   padding: 0;
 }
@@ -58,9 +58,14 @@ body {
 #requestItem #print {
   border: 2px solid #fff;
   box-shadow: none;
+  float: unset;
+  margin-left: auto;
+  margin-right: 0;
+  margin-bottom: 1em;
   padding: 6px 22px;
-  margin: 1em 0 0 0;
-  top: -16px;
+  text-align: center;
+  top: unset;
+  width: 50px;
 }
 
 #requestItem #print:hover {
