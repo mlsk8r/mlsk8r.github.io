@@ -1,0 +1,68 @@
+/* OVERRIDES CSS */
+
+
+
+.RichTextFullWidth-content b, .RichTextFullWidth-content strong {
+  font-size: 2.2rem;
+}
+
+.ContainerAbstract .container-column[data-vertically-align=center] {
+  align-items: unset;
+}
+
+.RichTextFullWidth-items h3 {
+  display: none;
+}
+
+.TwoColumnContainer-row.container.container-6-6.container-row {
+  margin-top: 48px;
+}
+
+.PromoCardImageOnTop-title {
+  margin: 0;
+}
+
+.PromoCardImageOnTop-content {
+  padding: 28px 30px;
+}
+
+.RichTextFullWidth-items p.cta-main-btn {
+  margin-top: -20px;
+}
+
+.ListImageSmall-items.list.list-1.list-items-1 {
+  max-width: 100%;
+    margin: 20px 0;
+}
+
+
+
+@media only screen and (min-width: 1440px) {
+  .PromoFullWidth, .PromoFullWidth-Large {
+    min-height: 320px;
+    padding: 40px 0;
+  }
+
+  .PromoFullWidth-content, .PromoFullWidth-Large-content {
+    max-width: 80%;
+  }
+
+  .RichTextFullWidth.promo-has-background .RichTextFullWidth-container {
+    padding: 2px 0;
+  }
+
+  .RichTextFullWidth {
+    margin: 0;
+  }
+}
+
+
+@media only screen and (min-width: 768px) {
+  .Enhancement {
+    margin: 0;
+  }
+
+  .PromoCardImageOnTop-content {
+    padding: 28px 30px;
+  }
+}
