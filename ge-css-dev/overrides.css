@@ -1,7 +1,5 @@
 /* OVERRIDES CSS */
 
-
-
 .RichTextFullWidth-content b, .RichTextFullWidth-content strong {
   font-size: 2.2rem;
 }
@@ -15,7 +13,7 @@
 }
 
 .TwoColumnContainer-row.container.container-6-6.container-row {
-  margin-top: 48px;
+  margin-top: 55px;
 }
 
 .PromoCardImageOnTop-title {
@@ -32,10 +30,64 @@
 
 .ListImageSmall-items.list.list-1.list-items-1 {
   max-width: 100%;
-    margin: 20px 0;
+  margin: 20px 0;
 }
 
+.promo-title-large {
+  font-size: 2.3rem;
+  font-weight: 100;
+  letter-spacing: .2rem;
+  line-height: 6rem;
+}
 
+.PromoFullWidth-title span {
+  font-size: 6rem;
+  font-weight: 700;
+  letter-spacing: .2rem;
+}
+
+.PromoImageSmallCircular-media .Image {
+  border: 4px solid #10a170;
+  border-radius: 50%;
+  padding: 7px;
+}
+
+.PromoImageSmall-description.promo-description {
+  background-color: white;
+  padding: 25px;
+}
+
+h4.cms-heading-h4 {
+  text-align: right;
+  margin: 0;
+}
+
+.PromoMetrics-title {
+  background: #002e5d;
+  border-radius: 50%;
+  color: #fff;
+  float: left;
+  font-size: 3.1rem;
+  height: 90px;
+  line-height: 90px;
+  margin: 0;
+  margin-right: 15px;
+  text-align: center;
+  width: 90px;
+}
+
+.ListMetrics-items-item {
+  border-right: none;
+}
+
+.PromoMetrics {
+  padding-top: 0;
+}
+
+.ListMetrics {
+  background-color: #fff;
+  padding-bottom: 100px;
+}
 
 @media only screen and (min-width: 1440px) {
   .PromoFullWidth, .PromoFullWidth-Large {
@@ -56,6 +108,12 @@
   }
 }
 
+@media only screen and (min-width: 1024px) {
+  .ListMetrics-items-item {
+    border-right: 2px solid #002e5d;
+  }
+}
+
 
 @media only screen and (min-width: 768px) {
   .Enhancement {
@@ -65,4 +123,6 @@
   .PromoCardImageOnTop-content {
     padding: 28px 30px;
   }
+
+
 }
