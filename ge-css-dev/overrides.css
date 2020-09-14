@@ -94,6 +94,23 @@ h4.cms-heading-h4 {
   padding: 28px 30px;
 }
 
+.PromoFullWidth-title span {
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: .2rem;
+}
+
+.promo-title-large {
+    font-size: 2.3rem;
+    font-weight: 100;
+    letter-spacing: 0.2rem;
+    line-height: 3.5rem;
+}
+
+.RichTextFullWidth.promo-has-background .RichTextFullWidth-container {
+    padding: 8px 0;
+}
+
 @media only screen and (min-width: 1440px) {
   .PromoFullWidth, .PromoFullWidth-Large {
     min-height: 320px;
@@ -110,6 +127,14 @@ h4.cms-heading-h4 {
 
   .RichTextFullWidth {
     margin: 0;
+  }
+
+  .PromoFullWidth-title span {
+      font-size: 6rem;
+  }
+
+  .promo-title-large {
+      line-height: 6rem;
   }
 }
 
@@ -133,5 +158,8 @@ h4.cms-heading-h4 {
     padding: 28px 30px;
   }
 
+  .PromoFullWidth-content, .PromoFullWidth-Large-content {
+    max-width: 80%;
+  }
 
 }
