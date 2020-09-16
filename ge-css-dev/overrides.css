@@ -115,6 +115,18 @@ h4.cms-heading-h4 {
   margin: 0;
 }
 
+.PromoFullWidth-description, .PromoFullWidth-Large-description {
+	display:block;
+}
+
+.ListMetrics-items-item:not(:first-child) div.PromoMetrics-description {
+	top: 35px;
+}
+
+.ListMetrics-items-item .PromoMetrics {
+	bottom: 14px;
+}
+
 @media only screen and (min-width: 1440px) {
   .PromoFullWidth, .PromoFullWidth-Large {
     min-height: 320px;
