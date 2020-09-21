@@ -616,17 +616,6 @@ h3.cms-heading-h3 {
     font-size: 30px;
 }
 
-h3.cms-heading-h3::after {
-  background-color: #fff;
-  bottom: 0;
-  content: "";
-  height: 2px;
-  position: absolute;
-  right: 44%;
-  top: 127%;
-  width: 70px;
-}
-
 .PromoCardImageOnTop-content .PromoCardImageOnTop-title.promo-title a:hover {
   text-decoration: underline;;
 }
@@ -639,9 +628,21 @@ h3.cms-heading-h3::after {
   max-width: 100%;
 }
 
+
 @media only screen and (min-width: 1024px) {
   .PromoIconOnTopLarge {
     max-width: 100%;
+  }
+
+  h3.cms-heading-h3::after {
+    background-color: #fff;
+    bottom: 0;
+    content: "";
+    height: 2px;
+    position: absolute;
+    right: 44%;
+    top: 127%;
+    width: 70px;
   }
 }
 
