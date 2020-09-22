@@ -582,7 +582,7 @@
 <!--############################
   OVERRIDES CSS
 ##############################-->
-<style>
+<style type="text/css">
 
 .RichTextFullWidth-content {
   max-width: 100%;
@@ -590,6 +590,23 @@
 
 .PromoIconOnTopLarge {
   max-width: 100%;
+}
+
+main div.RichTextFullWidth {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.RichTextFullWidth-items span.Enhancement {
+  margin-top: 0;
+}
+
+span.Enhancement figure.Figure {
+  width: 100vw;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
 }
 
 .PromoIconOnTopLarge-content {
@@ -628,6 +645,17 @@ h3.cms-heading-h3 {
   max-width: 100%;
 }
 
+.PromoCardBackground-media::before {
+  content: "";
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
 
 @media only screen and (min-width: 1024px) {
   .PromoIconOnTopLarge {
@@ -643,6 +671,14 @@ h3.cms-heading-h3 {
     right: 44%;
     top: 127%;
     width: 70px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .PromoFullWidth,
+  .PromoFullWidth-Large {
+    min-height: 320px;
+    padding: 40px 0;
   }
 }
 
@@ -692,7 +728,7 @@ h3.cms-heading-h3 {
 
 
                         <div class="Header-title">
-                            <a class="Link" href="https://genew.prod.brigham-young.psdops.com/" data-cms-ai="0"    >
+                            <a class="Link" href="index.html" data-cms-ai="0"    >
 
 
   General Education
@@ -875,6 +911,7 @@ h3.cms-heading-h3 {
 
       </div>
     </div>
+
 </div>
             </div>
 
@@ -1023,7 +1060,7 @@ h3.cms-heading-h3 {
 
             <div class="PromoCardBackground-media">
 
-    <img class="Image" alt="Why Are We Designing a New GE?" width="1920"  height="1440" src="img/why-are-we-designing-a-new-ge-box.jpg"
+    <img class="Image" alt="Why Are We Designing a New GE?" width="1920"  height="1440" src="https://brightspotcdn.byu.edu/dims4/default/82fc6f8/2147483647/strip/true/crop/1600x1200+0+0/resize/1920x1440!/quality/90/?url=https%3A%2F%2Fbrigham-young-brightspot.s3.amazonaws.com%2F41%2Ffc%2Fcd3d6e5e4bd5800e73b600f13619%2Fdscf0587.jpg"
     >
 
             </div>
