@@ -2,94 +2,99 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" media="all" href="https://cdn.byu.edu/theme-fonts/1.x.x/ringside/fonts.css">
-<link rel="stylesheet" media="all" href="https://cdn.byu.edu/theme-fonts/1.x.x/public-sans/fonts.css">
-<style>
-body {
-  background-color: #001c38;
-  margin: 0;
-  padding: 0;
-}
-
-h1 {
-  color: white;
-  text-align: center;
-  font-family: 'HCo Ringside Narrow SSm', Arial, sans-serif;
-  font-size: 4em;
-  margin: 20px 0;
-  text-transform: uppercase;
-}
-
-p {
-  color: #fff;
-  font-family: 'Public Sans', sans-serif;
-  font-size: 22px;
-  font-weight: 700;
-  letter-spacing: .03rem;
-  line-height: 2.2rem
-}
-
-hr {
-  width: 65%;
-}
-
-.center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-p.center a {
-  color: #fff;
-}
-
-.heading-bar {
-  background: #002e5d;
-  display: flex;
-  height: 69px;
-}
-
-.heading-bar a {
-  margin-left: 24px;
-}
-
-.heading-bar img {
-  padding: 24px 0;
-  width: 70px;
-}
-
-.white-bar {
-  background: #fff;
-  height: 48px;
-  margin-bottom: 120px;
-}
-
-p.site-name {
-  font-family: 'HCo Ringside Narrow SSm', Arial, sans-serif;
-  font-size: 24px;
-  font-weight: 500;
-  margin: 0;
-  padding: 20px;
-  margin-left: 15px;
-}
-
-.logotype {
-  margin-top: 80px;
-  width: 25%;
-}
-
-.container {
-  padding: 0 10%;
-}
-
-@media only screen and (max-width: 1024px) {
-  .logotype {
-    width: 50%;
+  <link rel="stylesheet" media="all" href="https://cdn.byu.edu/theme-fonts/1.x.x/ringside/fonts.css">
+  <link rel="stylesheet" media="all" href="https://cdn.byu.edu/theme-fonts/1.x.x/public-sans/fonts.css">
+  <style>
+  body {
+    background-color: #001c38;
+    margin: 0;
+    padding: 0;
   }
-}
 
-</style>
+  h1 {
+    color: white;
+    text-align: center;
+    font-family: 'HCo Ringside Narrow SSm', Arial, sans-serif;
+    font-size: 4em;
+    margin: 20px 0;
+    text-transform: uppercase;
+  }
+
+  p {
+    color: #fff;
+    font-family: 'Public Sans', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: .03rem;
+    line-height: 2.2rem
+  }
+
+  hr {
+    width: 65%;
+  }
+
+  #error-code {
+    text-align: right;
+  }
+
+  .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  p.center a {
+    color: #fff;
+  }
+
+  .heading-bar {
+    background: #002e5d;
+    display: flex;
+    height: 69px;
+  }
+
+  .heading-bar a {
+    margin-left: 24px;
+  }
+
+  .heading-bar img {
+    padding: 24px 0;
+    width: 70px;
+  }
+
+  .white-bar {
+    background: #fff;
+    height: 48px;
+    margin-bottom: 120px;
+  }
+
+  p.site-name {
+    font-family: 'HCo Ringside Narrow SSm', Arial, sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 27px;
+    margin: 0;
+    padding: 20px;
+    margin-left: 15px;
+  }
+
+  .logotype {
+    margin-top: 80px;
+    width: 25%;
+  }
+
+  .container {
+    padding: 0 10%;
+  }
+
+  @media only screen and (max-width: 1024px) {
+    .logotype {
+      width: 50%;
+    }
+  }
+  </style>
 </head>
+
 <body>
 <div class="heading-bar">
   <a aria-label="home page" href="https://byu.edu" target="_blank" data-cms-ai="0">
@@ -108,7 +113,7 @@ p.site-name {
 <div class="container">
   <p class="center">This site is only available to those using the campus network for the purpose of classroom overflow. If you have any questions about the use of this site, please reach out to the AV Services team at <a href="tel:18014227671">801-422-7671</a>.</p>
 
-  <p style="text-align:right;">
+  <p id="error-code">
     403 Access Restricted
   </p>
 </div>
