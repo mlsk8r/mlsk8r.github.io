@@ -593,6 +593,27 @@
     padding: 60px;
   }
 
+  .PromoIconOnTopLarge-content:hover img {
+    transform: translateY(-4px);
+    transition: all .3s;
+  }
+
+  .Page-main .PromoFullWidth .PromoFullWidth-container .PromoFullWidth-content {
+    background: rgba(255, 255, 255, 0.75);
+    padding: 20px;
+    padding-top: 10%;
+    padding-bottom: 10%;
+  }
+
+  .Page-main .PromoFullWidth {
+    padding: 0 45px;
+  }
+
+  .Page-main .PromoFullWidth-title a {
+    color: #002e5d;
+  }
+
+
 /* MEDIA QUERIES */
   @media only screen and (min-width: 1024px) {
     .Page-pageLead .PromoFullWidth-content,
@@ -611,6 +632,11 @@
     .PromoFullWidth-Large {
       height: 405px;
       min-height: 405px;
+    }
+
+    .PromoFullWidth-content,
+    .PromoFullWidth-Large-content {
+      max-width: 528px;
     }
   }
 </style>
