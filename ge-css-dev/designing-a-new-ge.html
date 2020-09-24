@@ -584,6 +584,10 @@
 ##############################-->
 <style type="text/css">
 
+.PromoFullWidth-container .PromoFullWidth-content .PromoFullWidth-title span {
+  font-size: 54px;
+}
+
 .RichTextFullWidth-content {
   max-width: 100%;
 }
@@ -656,6 +660,11 @@ h3.cms-heading-h3 {
   z-index: 1;
 }
 
+@media only screen and (max-width: 768px) {
+  .PromoFullWidth-container .PromoFullWidth-content .PromoFullWidth-title span {
+    font-size: 38px;
+  }
+}
 
 @media only screen and (min-width: 1024px) {
   .PromoIconOnTopLarge {
@@ -679,6 +688,11 @@ h3.cms-heading-h3 {
   .PromoFullWidth-Large {
     min-height: 320px;
     padding: 40px 0;
+  }
+
+  .PromoFullWidth-content,
+  .PromoFullWidth-Large-content {
+    max-width: 1170px;
   }
 }
 

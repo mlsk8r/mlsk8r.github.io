@@ -584,6 +584,21 @@
     margin-bottom: -28px;
   }
 
+  h3.cms-heading-h3 {
+    color: white;
+    font-size: 2em;
+    font-weight: 500;
+    margin: 0;
+  }
+
+  .RichTextFullWidth .RichTextFullWidth-container .RichTextFullWidth-content {
+    max-width: 1170px;
+  }
+
+  .Page-pageLead .PromoFullWidth-container .PromoFullWidth-content .PromoFullWidth-title a {
+    font-size: 54px;
+  }
+
   .PromoIconOnTopLarge-media a.Link img.Image {
     max-width: 43%;
     transition: all .3s;
@@ -616,6 +631,12 @@
 
 
 /* MEDIA QUERIES */
+  @media only screen and (max-width: 768px) {
+    .Page-pageLead .PromoFullWidth-container .PromoFullWidth-content .PromoFullWidth-title a {
+      font-size: 38px;
+    }
+  }
+
   @media only screen and (min-width: 1024px) {
     .Page-pageLead .PromoFullWidth-content,
     .Page-pageLead .PromoFullWidth-Large-content {
@@ -1430,9 +1451,7 @@
     .VideoEnhancement-meta {
     display: none;
 }
-    h3.cms-heading-h3 {
-    color: white;
-}
+
     .TabModule.TabsBorderBottom {
     padding-top: 0;
     padding-bottom: 0;
