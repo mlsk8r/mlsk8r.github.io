@@ -592,13 +592,46 @@
   color: #002e5d;
 }
 
+.PromoImageSmall.text-left.promo-has-dropshadow.image-left.promo-has-media.content-vertical-center.content-horizontal-left.article.image-top {
+  padding: 60px 30px;
+}
+
+.PromoImageSmall .PromoImageSmall-content .PromoImageSmall-title.promo-title {
+  align-items: self-end;
+  display: grid;
+  font-size: 40px;
+}
+
+.PromoImageSmall .PromoImageSmall-content .PromoImageSmall-title.promo-title a.Link {
+  color: #002e5d;
+  text-transform: uppercase;
+}
+
+.PromoImageSmallCircular-media .Image {
+  border: 4px solid #10a170;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+
 /* MEDIA QUERIES */
+@media only screen and (max-width: 768px) {
+  .PromoImageSmall .PromoImageSmall-content .PromoImageSmall-title.promo-title {
+    font-size: 28px;
+  }
+}
 
 @media only screen and (min-width: 768px) {
   .Page-contentWrapper div.Page-headingWrapper {
     padding: 100px 40px;
   }
+
+  .PromoImageSmall-content .PromoImageSmall-media {
+    max-width: 400px;
+    margin: 0 40px 0 0;
+  }
 }
+
 
 </style>
 
@@ -876,7 +909,7 @@
 
 
             <a class="Link" href="https://genew.prod.brigham-young.psdops.com/welcome-chip-oscarson"     aria-label="Introducing CHIP OSCARSON " aria-hidden="true" tabindex="-1" data-cms-ai="0">
-    <img class="Image lazyload" alt="Introducing CHIP OSCARSON " width="150"  height="150" src="https://brightspotcdn.byu.edu/dims4/default/fbf6dfa/2147483647/strip/true/crop/806x806+0+83/resize/150x150!/quality/100/?url=https%3A%2F%2Fbrigham-young-brightspot.s3.amazonaws.com%2F20%2Fde%2Fcf3c8b5a4d5f8709dcad819ba685%2Foscarson2.25.20-small.png"
+    <img class="Image lazyload" alt="Introducing CHIP OSCARSON " width="150"  height="150" src="img/chip-oscarson-resources-page.jpg"
     >
 </a>
 
@@ -1106,9 +1139,7 @@
 
 
         <div class="RawHtmlModule-html"><style>
-	.PromoImageSmall.text-left.promo-has-dropshadow.image-left.promo-has-media.content-vertical-center.content-horizontal-left.article.image-top {
-    padding-top: 40px;
-}
+
     a.btn {
     background-color: #10a170;
     border-color: #10a170;
