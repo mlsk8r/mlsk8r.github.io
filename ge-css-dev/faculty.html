@@ -583,7 +583,7 @@
 <!--############################
   OVERRIDES CSS
 ##############################-->
-<style>
+<style type="text/css">
 
 .RichTextFullWidth-content .RichTextFullWidth-items h2.cms-heading-h2 {
   margin: 0;
@@ -596,6 +596,36 @@ h2.cms-heading-h2 {
 .PromoFullWidth-title.promo-title-large a.Link {
   text-transform: uppercase;
 }
+
+.PromoIconOnTopLarge-media a.Link img.Image {
+  max-width: 43%;
+  transition: all .3s;
+}
+
+.ListIconOnTopLarge {
+  padding-top: 60px;
+}
+
+.PromoIconOnTopLarge-content:hover img {
+  transform: translateY(-4px);
+  transition: all .3s;
+}
+
+.Page-main .PromoFullWidth .PromoFullWidth-container .PromoFullWidth-content {
+  background: rgba(255, 255, 255, 0.75);
+  padding: 20px;
+  padding-top: 12%;
+  padding-bottom: 12%;
+}
+
+.Page-main .PromoFullWidth {
+  padding: 0 45px;
+}
+
+.Page-main .PromoFullWidth-title a {
+  color: #002e5d;
+}
+
 
 /* MEDIA QUERIES */
 @media only screen and (min-width: 1024px) {
@@ -621,9 +651,12 @@ h2.cms-heading-h2 {
   .RichTextFullWidth.promo-has-background .RichTextFullWidth-container {
     padding: 40px 5px;
   }
+
+  .PromoFullWidth-content,
+  .PromoFullWidth-Large-content {
+    max-width: 528px;
+  }
 }
-
-
 </style>
 
 </head>
@@ -917,7 +950,7 @@ h2.cms-heading-h2 {
 
 
                   <a class="Link" href="https://genew.prod.brigham-young.psdops.com/new-course-proposals"     aria-label="NEW COURSE PROPOSALS &amp; EXISTING COURSE REVIEWS" aria-hidden="true" tabindex="-1" data-cms-ai="0">
-    <img class="Image lazyload" alt="NEW COURSE PROPOSALS &amp; EXISTING COURSE REVIEWS"src="https://brightspotcdn.byu.edu/e2/ab/cfc524154f579d71d7aac2bdc753/proposals-blue.svg"
+    <img class="Image lazyload" alt="NEW COURSE PROPOSALS &amp; EXISTING COURSE REVIEWS"src="img/proposals-blue.svg"
     >
 </a>
 
@@ -952,7 +985,7 @@ h2.cms-heading-h2 {
 
 
                   <a class="Link" href="https://genew.prod.brigham-young.psdops.com/ge-matching-funds"     aria-label="GE MATCHING FUNDS" aria-hidden="true" tabindex="-1" data-cms-ai="0">
-    <img class="Image lazyload" alt="GE MATCHING FUNDS"src="https://brightspotcdn.byu.edu/42/64/e468916a4f9c9ef3d6cff9a96f7a/funds-blue.svg"
+    <img class="Image lazyload" alt="GE MATCHING FUNDS"src="img/funds-blue.svg"
     >
 </a>
 
@@ -987,7 +1020,7 @@ h2.cms-heading-h2 {
 
 
                   <a class="Link" href="https://genew.prod.brigham-young.psdops.com/general-education-professorship"     aria-label="GENERAL EDUCATION PROFESSORSHIP" aria-hidden="true" tabindex="-1" data-cms-ai="0">
-    <img class="Image lazyload" alt="GENERAL EDUCATION PROFESSORSHIP"src="https://brightspotcdn.byu.edu/7c/25/999030734ed99eb78a7dc7d41d75/professorship-blue.svg"
+    <img class="Image lazyload" alt="GENERAL EDUCATION PROFESSORSHIP"src="img/professorship-blue.svg"
     >
 </a>
 
@@ -1655,9 +1688,7 @@ h2.cms-heading-h2 {
     .PromoIconOnTopLarge-title.promo-title {
     color: #002e5d;
 }
-    .ListIconOnTopLarge {
-    padding-top: 0;
-}
+
 </style></div>
 
 
