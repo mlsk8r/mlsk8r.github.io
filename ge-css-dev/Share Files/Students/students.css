@@ -1,0 +1,99 @@
+
+h2.cms-heading-h2 {
+  margin-bottom: -28px;
+}
+
+h3.cms-heading-h3 {
+  color: white;
+  font-size: 2em;
+  font-weight: 500;
+  margin: 0;
+}
+
+.PromoFullWidth .btn {
+  text-transform: uppercase;
+}
+
+.RichTextFullWidth .RichTextFullWidth-container .RichTextFullWidth-content {
+  max-width: 1170px;
+}
+
+.Page-pageLead .PromoFullWidth-container .PromoFullWidth-content .PromoFullWidth-title a {
+  font-size: 54px;
+}
+
+.PromoIconOnTopLarge-media a.Link img.Image {
+  max-width: 160px;
+  transition: all .3s;
+}
+
+.ListIconOnTopLarge {
+  padding: 60px;
+}
+
+.PromoIconOnTopLarge-content:hover img {
+  transform: translateY(-4px);
+  transition: all .3s;
+}
+
+.Page-main .PromoFullWidth .PromoFullWidth-container .PromoFullWidth-content {
+  background: rgba(255, 255, 255, 0.75);
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  padding: 40px;
+}
+
+.Page-main .PromoFullWidth {
+  padding: 0 45px;
+}
+
+.Page-main .PromoFullWidth-title a {
+  color: #002e5d;
+}
+
+.RichTextFullWidth-container .RichTextFullWidth-content .RichTextFullWidth-items p {
+  font-size: 20px;
+  margin-bottom: 4px;
+}
+
+
+/* MEDIA QUERIES */
+@media only screen and (max-width: 768px) {
+  .Page-pageLead .PromoFullWidth-container .PromoFullWidth-content .PromoFullWidth-title a {
+    font-size: 38px;
+  }
+
+  .PromoIconOnTopLarge {
+    margin-bottom: 20px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .Page-pageLead .PromoFullWidth-content,
+  .Page-pageLead .PromoFullWidth-Large-content {
+    max-width: 1170px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .Page-pageLead .PromoFullWidth-content,
+  .Page-pageLead .PromoFullWidth-Large-content {
+    max-width: 1170px;
+  }
+
+  .PromoFullWidth,
+  .PromoFullWidth-Large {
+    height: 405px;
+    min-height: 405px;
+  }
+
+  .PromoFullWidth-content,
+  .PromoFullWidth-Large-content {
+    max-width: 528px;
+  }
+
+  .RichTextFullWidth.promo-has-background .RichTextFullWidth-container {
+    padding: 40px 5px;
+  }
+}

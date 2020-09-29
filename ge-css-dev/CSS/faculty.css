@@ -1,0 +1,112 @@
+
+.RichTextFullWidth-content .RichTextFullWidth-items h2.cms-heading-h2 {
+  margin: 0;
+}
+
+.PromoFullWidth .btn {
+  text-transform: uppercase;
+}
+
+.RichTextFullWidth-items span.Enhancement a.Link.btn {
+  text-transform: uppercase;
+}
+
+h2.cms-heading-h2 {
+  margin-bottom: -28px;
+}
+
+.PromoFullWidth-title.promo-title-large a.Link {
+  text-transform: uppercase;
+}
+
+.PromoIconOnTopLarge-media a.Link img.Image {
+  max-width: 160px;
+  transition: all .3s;
+}
+
+.ListIconOnTopLarge {
+  padding-top: 60px;
+}
+
+.PromoIconOnTopLarge-content:hover img {
+  transform: translateY(-4px);
+  transition: all .3s;
+}
+
+.Page-main .PromoFullWidth .PromoFullWidth-container .PromoFullWidth-content {
+  background: rgba(255, 255, 255, 0.75);
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  padding: 40px;
+}
+
+.Page-main .PromoFullWidth {
+  padding: 0 45px;
+}
+
+.Page-main .PromoFullWidth-title a {
+  color: #002e5d;
+}
+
+.Page-pageLead .PromoFullWidth-container .PromoFullWidth-content .PromoFullWidth-title a {
+  font-size: 54px;
+}
+
+.TabModule-tabs.TabsBorderBottom-tabs .TabModule-tab .TabModule-tab-label.TabsBorderBottom-tab-label {
+  font-size: 17px;
+  letter-spacing: .02rem;
+}
+
+
+/* MEDIA QUERIES */
+@media only screen and (max-width: 768px) {
+  .Page-pageLead .PromoFullWidth-container .PromoFullWidth-content .PromoFullWidth-title a {
+    font-size: 38px;
+  }
+
+  .PromoIconOnTopLarge {
+    margin-bottom: 20px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .TabModule-tabs.TabsBorderBottom-tabs .TabModule-tab .TabModule-tab-label.TabsBorderBottom-tab-label {
+    font-size: 15px;
+    letter-spacing: .02rem;
+  }
+
+  .TabModule-tabs.TabsBorderBottom-tabs .TabModule-tab.TabsBorderBottom-tab{
+    margin: 0 5px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .Page-pageLead .PromoFullWidth-content,
+  .Page-pageLead .PromoFullWidth-Large-content {
+    max-width: 1170px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+
+  .Page-pageLead .PromoFullWidth-content,
+  .Page-pageLead .PromoFullWidth-Large-content {
+    max-width: 1170px;
+  }
+
+  .PromoFullWidth,
+  .PromoFullWidth-Large {
+    height: 405px;
+    min-height: 405px;
+  }
+
+  .RichTextFullWidth.promo-has-background .RichTextFullWidth-container {
+    padding: 40px 5px;
+  }
+
+  .PromoFullWidth-content,
+  .PromoFullWidth-Large-content {
+    max-width: 528px;
+  }
+}
