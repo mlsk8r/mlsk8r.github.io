@@ -570,7 +570,7 @@
   <style type="text/css">
 
     span.Enhancement {
-      margin-top: 0;
+      margin-top: 35px;
     }
 
     .Enhancement figure.Figure {
@@ -578,7 +578,7 @@
     }
 
     .Enhancement figure img {
-      width: 75%;
+      width: 250px;
       border-radius: 50%;
       border: 5px solid #10A170;
       padding: 11px;
@@ -593,14 +593,16 @@
     }
 
     .Tabs-tabs-container.tabs-on-left .Tabs-tabs:not(.TabsEmbedded-tabs) {
-      flex-basis: 250px;
+      flex-basis: 0;
     }
 
     .Tabs-tabs-container.tabs-on-left .Tabs-tab {
       border-radius: 7px;
+      margin: 6px;
       margin-bottom: 20px;
       box-shadow: 0px 2px 5px 1px rgba(0,0,0,0.15);
-
+      max-width: 205px;
+      padding: 10px 15px;
     }
 
     .Tabs-tabs-container.tabs-on-left .Tabs-tab:hover {
@@ -632,6 +634,10 @@
       padding: 30px 0;
     }
 
+    .TabModule-tabs-container, .TabsEmbedded-tabs-container {
+        margin-top: 10px;
+    }
+
     @media only screen and (max-width: 768px) {
       .Tabs-tabs-container.tabs-on-left .Tabs-tabs:not(.TabsEmbedded-tabs) {
         flex-basis: 0;
@@ -640,17 +646,35 @@
       span.Enhancement {
         margin-top: 20px;
       }
+
+      .TabModule-tabs-container, .TabsEmbedded-tabs-container {
+        margin-top: 0;
+      }
+
+      .TabModule-tabs-container, .TabsEmbedded-tabs-container {
+          margin-top: 0px;
+      }
     }
 
     @media only screen and (min-width: 768px) {
       .Tabs-tabs-container.tabs-on-left .Tabs-tabs:not(.TabsEmbedded-tabs) {
-        flex-basis: 250px;
+        flex-basis: 0;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
       }
 
       .Tabs-tabs-container.tabs-on-left .Tabs-tab {
         border-radius: 7px;
+        margin: 6px;
         margin-bottom: 20px;
         box-shadow: 0px 2px 5px 1px rgba(0,0,0,0.15);
+        max-width: 205px;
+        padding: 10px 15px;
+      }
+
+      .Tabs-tabs-container.tabs-on-left {
+        flex-direction: column;
       }
     }
 
@@ -669,6 +693,7 @@
         margin-top: 0;
       }
     }
+
   </style>
 
 </head>
