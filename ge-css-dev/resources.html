@@ -1,7 +1,7 @@
 
 <!DOCTYPE html>
 <html class="Page " lang="en" itemscope
-    itemtype="http://schema.org/WebPage">
+    itemtype="http://schema.org/WebPage" >
 
 <head>
     <meta charset="UTF-8">
@@ -155,7 +155,7 @@
 
 
 
-    <link data-cssvarsponyfill="true" class="Webpack-css" rel="stylesheet" href="https://brightspotcdn.byu.edu/resource/0000016b-03b0-db48-a7fb-2bb898240000/styleguide/All.min.8c1720c985e180530ac69580c0fce63b.gz.css">
+    <link data-cssvarsponyfill="true" class="Webpack-css" rel="stylesheet" href="https://brightspotcdn.byu.edu/resource/0000016b-03b0-db48-a7fb-2bb898240000/styleguide/All.min.07a0093c2e840c90671c0d3cf0dbb34d.gz.css">
 
     <style>.Footer .RichTextModule-items p {
     text-transform: none;
@@ -176,6 +176,8 @@
 .Header-search-button .sr-only {
     color: #fff;
 }</style>
+<style>.EventCalendarSidebar-toggleExpanded a {
+    color: var(--primaryLinkColor);</style>
 
 
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5"><title>Resources</title><link rel="canonical" href="https://genew.prod.brigham-young.psdops.com/resources"><meta name="brightspot.contentId" content="00000173-e9ef-def5-a7f3-fbffe4890000"><link rel="apple-touch-icon"sizes="180x180"href="/apple-touch-icon.png">
@@ -306,7 +308,7 @@
 
         fontFamily = fontFamily.split(' ').join('+');
         var link = document.createElement('link');
-        link.setAttribute('href', '//fonts.googleapis.com/css?family=' + fontFamily + ':400,400i,700,700i');
+        link.setAttribute('href', '//fonts.googleapis.com/css2?family=' + fontFamily + ':wght@300;400;700&display=swap');
         var relList = link.relList;
         if (relList && relList.supports('preload')) {
         link.setAttribute('as', 'style');
@@ -323,9 +325,11 @@
 
     loadGoogleFont('Public Sans')
 
+    loadGoogleFont('Roboto')
+    loadGoogleFont('Noto+Sans')
 </script>
 
-    <script src="https://brightspotcdn.byu.edu/resource/0000016b-03b0-db48-a7fb-2bb898240000/styleguide/All.min.2275ec02031c76fc78e6ba4551be8966.gz.js"></script>
+    <script src="https://brightspotcdn.byu.edu/resource/0000016b-03b0-db48-a7fb-2bb898240000/styleguide/All.min.90ca3c45318467ec850ca844723875e1.gz.js"></script>
 
 
     <svg xmlns="http://www.w3.org/2000/svg" style="display:none"class="icons-map">
@@ -446,6 +450,9 @@
     <symbol id="icon-follow" viewBox="0 0 512 512">
         <path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm144 276c0 6.6-5.4 12-12 12h-92v92c0 6.6-5.4 12-12 12h-56c-6.6 0-12-5.4-12-12v-92h-92c-6.6 0-12-5.4-12-12v-56c0-6.6 5.4-12 12-12h92v-92c0-6.6 5.4-12 12-12h56c6.6 0 12 5.4 12 12v92h92c6.6 0 12 5.4 12 12v56z"></path>
     </symbol>
+    <symbol id="icon-unfollow"viewBox="0 0 13 13">
+        <path d="M57.74 178.63c0 .156-.127.283-.283.283h-7.914c-.156 0-.282-.127-.282-.283v-2.26c0-.156.126-.283.282-.283h7.914c.156 0 .282.127.282.283v2.26zM47 177.5c0 3.584 2.916 6.5 6.5 6.5s6.5-2.916 6.5-6.5-2.916-6.5-6.5-6.5-6.5 2.916-6.5 6.5z" transform="translate(-567 -1044) translate(520 873)"/>
+    </symbol>
 
     <symbol id="icon-youtube" viewBox="0 0 1792 1792">
       <path d="M711 1128l484-250-484-253v503zm185-862q168 0 324.5 4.5t229.5 9.5l73 4q1 0 17 1.5t23 3 23.5 4.5 28.5 8 28 13 31 19.5 29 26.5q6 6 15.5 18.5t29 58.5 26.5 101q8 64 12.5 136.5t5.5 113.5v176q1 145-18 290-7 55-25 99.5t-32 61.5l-14 17q-14 15-29 26.5t-31 19-28 12.5-28.5 8-24 4.5-23 3-16.5 1.5q-251 19-627 19-207-2-359.5-6.5t-200.5-7.5l-49-4-36-4q-36-5-54.5-10t-51-21-56.5-41q-6-6-15.5-18.5t-29-58.5-26.5-101q-8-64-12.5-136.5t-5.5-113.5v-176q-1-145 18-290 7-55 25-99.5t32-61.5l14-17q14-15 29-26.5t31-19.5 28-13 28.5-8 23.5-4.5 23-3 17-1.5q251-18 627-18z"/>
@@ -562,114 +569,18 @@
 
 <link rel="stylesheet" media="all" href="https://cdn.byu.edu/theme-fonts/1.x.x/ringside/fonts.css">
 <link rel="stylesheet" media="all" href="https://cdn.byu.edu/theme-fonts/1.x.x/public-sans/fonts.css">
-
 <!--############################
   OVERRIDES CSS
 ##############################-->
-<style type="text/css">
+<style>
+.PromoImageSmall-media.usingPromoOverride a img {
+  border: 4px solid #10a170;
+  padding: 10px;
+}
 
-  a.Link.btn {
-    text-transform: uppercase;
-  }
-
-  .PromoFullWidth-cta.promo-cta a.btn {
-    text-transform: uppercase;
-  }
-
-  .Page-contentWrapper div.Page-headingWrapper {
-    text-align: left;
-    background-position: center 69%;
-  }
-
-  .Page-contentWrapper .Page-headingWrapper .Page-titleSection {
-    max-width: 1170px;
-  }
-
-  .Page-main .PromoFullWidth .PromoFullWidth-container .PromoFullWidth-content {
-    background: rgba(255, 255, 255, 0.75);
-    display: flex;
-    justify-content: center;
-    height: 100%;
-    padding: 40px;
-  }
-
-  .Page-main .PromoFullWidth {
-    padding: 0 45px;
-  }
-
-  .Page-main .PromoFullWidth-title a {
-    color: #002e5d;
-  }
-
-  .PromoImageSmall.text-left.promo-has-dropshadow.image-left.promo-has-media.content-vertical-center.content-horizontal-left.article.image-top {
-    padding: 60px 30px;
-  }
-
-  .PromoImageSmall .PromoImageSmall-content .PromoImageSmall-title.promo-title {
-    align-items: flex-end;
-    display: flex;
-    font-size: 40px;
-  }
-
-  .PromoImageSmall .PromoImageSmall-content .PromoImageSmall-title.promo-title a.Link {
-    color: #002e5d;
-    text-transform: uppercase;
-  }
-
-  .PromoImageSmall .PromoImageSmallCircular-media .Image {
-    border: 5px solid #10a170;
-    border-radius: 50%;
-    padding: 16px;
-  }
-
-  .ListImageSmall .PromoImageSmallCircular-media .Image{
-    border: 4px solid #10a170;
-    border-radius: 50%;
-    padding: 10px;
-  }
-
-  .container-fixed-small, .ListImageLarge-items, .ListImageMedium-items, .ListImageSmall-items {
-    margin-top: 30px;
-    max-width: 1170px;
-  }
-
-  .Page-titleSection h1.Page-pageHeading {
-    font-size: 54px;
-  }
-
-
-  /* MEDIA QUERIES */
-  @media only screen and (max-width: 768px) {
-    .PromoImageSmall .PromoImageSmall-content .PromoImageSmall-title.promo-title {
-      font-size: 28px;
-    }
-
-    .Page-contentWrapper div.Page-headingWrapper {
-      text-align: center;
-    }
-
-    .Page-titleSection h1.Page-pageHeading {
-      font-size: 38px;
-    }
-
-    .PromoImageSmall .PromoImageSmallCircular-media .Image {
-      border: 4px solid #10a170;
-      padding: 7px;
-    }
-  }
-
-  @media only screen and (min-width: 768px) {
-    .Page-contentWrapper div.Page-headingWrapper {
-      padding: 130px 40px;
-    }
-
-    .PromoImageSmall-content .PromoImageSmall-media {
-      max-width: 400px;
-      margin: 0 40px 0 0;
-    }
-  }
 
 </style>
+
 
 </head>
 
@@ -714,7 +625,7 @@
 
 
                         <div class="Header-title">
-                            <a class="Link" href="index.html" data-cms-ai="0"    >
+                            <a class="Link" href="https://genew.prod.brigham-young.psdops.com/" data-cms-ai="0"    >
 
 
   General Education
@@ -763,7 +674,7 @@
                     <div class="SiteNavigationItem" >
     <div class="SiteNavigationItem-text">
 
-            <a class="SiteNavigationItem-text-link " href="students.html" data-cms-ai="0">Students</a>
+            <a class="SiteNavigationItem-text-link " href="https://genew.prod.brigham-young.psdops.com/students" data-cms-ai="0">Students</a>
 
 
     </div>
@@ -779,7 +690,7 @@
                     <div class="SiteNavigationItem" >
     <div class="SiteNavigationItem-text">
 
-            <a class="SiteNavigationItem-text-link " href="faculty.html" data-cms-ai="0">Faculty</a>
+            <a class="SiteNavigationItem-text-link " href="https://genew.prod.brigham-young.psdops.com/faculty" data-cms-ai="0">Faculty</a>
 
 
     </div>
@@ -795,7 +706,7 @@
                     <div class="SiteNavigationItem" >
     <div class="SiteNavigationItem-text">
 
-            <a class="SiteNavigationItem-text-link " href="designing-a-new-ge.html" data-cms-ai="0">Designing a New GE</a>
+            <a class="SiteNavigationItem-text-link " href="https://genew.prod.brigham-young.psdops.com/designing-a-new-ge" data-cms-ai="0">Designing a New GE</a>
 
 
     </div>
@@ -827,7 +738,7 @@
                     <div class="SiteNavigationItem" >
     <div class="SiteNavigationItem-text">
 
-            <a class="SiteNavigationItem-text-link " href="contact-us.html" data-cms-ai="0">Contact Us</a>
+            <a class="SiteNavigationItem-text-link " href="https://genew.prod.brigham-young.psdops.com/contact-us" data-cms-ai="0">Contact Us</a>
 
 
     </div>
@@ -843,7 +754,7 @@
                     <div class="SiteNavigationItem isCurrent" >
     <div class="SiteNavigationItem-text">
 
-            <a class="SiteNavigationItem-text-link " href="resources.html" data-cms-ai="0">Resources</a>
+            <a class="SiteNavigationItem-text-link " href="https://genew.prod.brigham-young.psdops.com/resources" data-cms-ai="0">Resources</a>
 
 
     </div>
@@ -900,6 +811,7 @@
 
 
 
+
                 </div>
             </div>
 
@@ -915,10 +827,11 @@
 
                         <div class="PromoImageSmall
  text-left promo-has-dropshadow    image-left    promo-has-media  content-vertical-center  content-horizontal-left  article image-top "
+    data-image-style-circular
     >
     <span class="Anchor" id="promo-introducing-chip-oscarson" ></span>
 
-  <div class="PromoImageSmall-content">
+    <div class="PromoImageSmall-content">
 
 
 
@@ -930,27 +843,33 @@
 
 
 
-      <div class="PromoImageSmall-authorNameAndDate promo-author">
+          <div class="PromoImageSmall-authorNameAndDate promo-author">
 
     <div class="PromoImageSmall-nameAndDate promo-nameAndDate ">
 
         <span class="date">August 18, 2020 07:40 AM</span>
     </div>
 
-      </div>
+          </div>
 
 
 
-      <div class="PromoImageSmall-media PromoImageSmallCircular-media">
+
+                <div class="PromoImageSmall-media usingPromoOverride">
 
 
-            <a class="Link" href="https://genew.prod.brigham-young.psdops.com/welcome-chip-oscarson"     aria-label="Introducing CHIP OSCARSON " aria-hidden="true" tabindex="-1" data-cms-ai="0">
-    <img class="Image lazyload" alt="Introducing CHIP OSCARSON " width="150"  height="150" src="img/chip-oscarson-resources-page.jpg"
+
+
+                                <a class="Link" href="https://genew.prod.brigham-young.psdops.com/welcome-chip-oscarson"     aria-label="Introducing CHIP OSCARSON " aria-hidden="true" tabindex="-1" data-cms-ai="0">
+    <img class="Image lazyload" alt="Introducing CHIP OSCARSON " width="150"  height="150" src="https://brightspotcdn.byu.edu/dims4/default/43971b9/2147483647/strip/true/crop/500x500+0+0/resize/150x150!/quality/100/?url=https%3A%2F%2Fbrigham-young-brightspot.s3.amazonaws.com%2F00%2F61%2F0a6b10134c4cb2c82925c5bd711a%2Fchip-oscarson-resources-page.jpg"
     >
 </a>
 
 
-      </div>
+
+
+                </div>
+
 
 
 
@@ -960,7 +879,11 @@
 
   NEW ASSOCIATE DEAN FOR UNDERGRADUATE EDUCATION
   <br>
-  <br><span class="Enhancement display-inline"><a class="Link btn" href="#" data-cms-ai="0"    >Read More</a></span>
+  <br>
+
+        <span class="Enhancement display-inline"><a class="Link btn" href="https://genew.prod.brigham-young.psdops.com/welcome-chip-oscarson" data-cms-ai="0"    >READ MORE</a></span>
+
+
 
 
 
@@ -968,9 +891,8 @@
     </div>
 
 
-
 		<div class="clear-fix"></div>
-  </div>
+    </div>
 </div>
 
                         <div class="PromoFullWidth
@@ -1000,7 +922,7 @@
 
 
 
-                <a class="btn "  aria-label="UNDERGRADUATE EDUCATION&#x27;S STATEMENT ON DIVERSITY &amp; BELONGING" tabindex="-1" href="#"  target="_blank" data-cms-ai="0"> Read More </a>
+                <a class="btn "  aria-label="UNDERGRADUATE EDUCATION&#x27;S STATEMENT ON DIVERSITY &amp; BELONGING" tabindex="-1" href="https://ugrad.byu.edu/undergraduate-educations-statement-on-inclusion-and-diversity"  target="_blank" data-cms-ai="0"> READ MORE </a>
 
 
 
@@ -1015,7 +937,10 @@
                         <div class="ListImageSmall "
 
 
->
+
+
+    data-image-style-circular>
+
   <span class="Anchor" id="list-null" ></span>
 
 
@@ -1031,7 +956,9 @@
 
         <div class="ListImageSmall-items-item">
 
-          <div class="PromoImageSmall
+
+
+                    <div class="PromoImageSmall
  text-left promo-has-dropshadow    image-left    promo-has-media  content-vertical-center  content-horizontal-left  image-top "
     >
     <span class="Anchor" id="promo-vince-wilding" ></span>
@@ -1053,10 +980,15 @@
       <div class="PromoImageSmall-media PromoImageSmallCircular-media">
 
 
-            <span class="Link" aria-label="Vince Wilding">
+
+
+                      <span class="Link" aria-label="Vince Wilding">
     <img class="Image lazyload" alt="" width="150"  height="150" src="https://brightspotcdn.byu.edu/dims4/default/536b440/2147483647/strip/true/crop/200x200+0+0/resize/150x150!/quality/100/?url=https%3A%2F%2Fbrigham-young-brightspot.s3.amazonaws.com%2Fe7%2Fa1%2F3b42e57b4db0932eec576340401c%2Fdownload-2.jpg"
     >
 </span>
+
+
+
 
 
       </div>
@@ -1073,7 +1005,11 @@
   <br>
   <br>Professor of Chemical Engineering and Associate Dean of the College of Engineering, Vince Wilding, addresses what it means to fix a general education program.
   <br>
-  <br><span class="Enhancement display-inline"><a class="Link btn" href="https://genew.prod.brigham-young.psdops.com/00000173-fe87-de3c-ad73-ff8f04530000/dear-faculty-wilding-6-22-pdf" data-cms-ai="0"    >Read document here</a></span>
+  <br>
+
+        <span class="Enhancement display-inline"><a class="Link btn" href="https://genew.prod.brigham-young.psdops.com/00000173-fe87-de3c-ad73-ff8f04530000/dear-faculty-wilding-6-22-pdf" data-cms-ai="0"    >READ DOCUMENT HERE</a></span>
+
+
 
 
 
@@ -1088,13 +1024,17 @@
 
 
 
+
+
             <div class="ListImageSmall-hr"></div>
 
         </div>
 
         <div class="ListImageSmall-items-item">
 
-          <div class="PromoImageSmall
+
+
+                    <div class="PromoImageSmall
  text-left promo-has-dropshadow    image-left    promo-has-media  content-vertical-center  content-horizontal-left  image-top "
     >
     <span class="Anchor" id="promo-rex-nielson" ></span>
@@ -1116,10 +1056,15 @@
       <div class="PromoImageSmall-media PromoImageSmallCircular-media">
 
 
-            <span class="Link" aria-label="Rex Nielson">
+
+
+                      <span class="Link" aria-label="Rex Nielson">
     <img class="Image lazyload" alt="" width="150"  height="150" src="https://brightspotcdn.byu.edu/dims4/default/ba18ede/2147483647/strip/true/crop/212x212+0+10/resize/150x150!/quality/100/?url=https%3A%2F%2Fbrigham-young-brightspot.s3.amazonaws.com%2F6d%2Fc0%2F9c4094264ca985030809e349193a%2Fnielson-rex-1609-91-6-1-1-214x300-2.jpg"
     >
 </span>
+
+
+
 
 
       </div>
@@ -1136,7 +1081,11 @@
   <br>
   <br>Associate Professor Rex Nielson (Spanish and Portuguese) addresses questions about why now is a good time to redesign GE and how a GE redesign may affect current course offerings.
   <br>
-  <br><span class="Enhancement display-inline"><a class="Link btn" href="https://genew.prod.brigham-young.psdops.com/00000173-fe85-d9f7-aff3-ffedb67a0000/dear-colleague-letter-nielson-1-pdf" data-cms-ai="0"    >Read the document here</a></span>
+  <br>
+
+        <span class="Enhancement display-inline"><a class="Link btn" href="https://genew.prod.brigham-young.psdops.com/00000173-fe85-d9f7-aff3-ffedb67a0000/dear-colleague-letter-nielson-1-pdf" data-cms-ai="0"    >READ DOCUMENT HERE</a></span>
+
+
 
 
 
@@ -1148,6 +1097,8 @@
 		<div class="clear-fix"></div>
   </div>
 </div>
+
+
 
 
 
@@ -1175,7 +1126,9 @@
 
 
         <div class="RawHtmlModule-html"><style>
-
+	.PromoImageSmall.text-left.promo-has-dropshadow.image-left.promo-has-media.content-vertical-center.content-horizontal-left.article.image-top {
+    padding-top: 40px;
+}
     a.btn {
     background-color: #10a170;
     border-color: #10a170;
@@ -1190,6 +1143,98 @@
     a.btn:hover {
     background-color: #ffffff;
     color: #10a170;
+}
+.Page-contentWrapper div.Page-headingWrapper {
+  text-align: left;
+  background-position: center 69%;
+}
+
+.Page-contentWrapper .Page-headingWrapper .Page-titleSection {
+  max-width: 1170px;
+}
+
+.Page-main .PromoFullWidth .PromoFullWidth-container .PromoFullWidth-content {
+  background: rgba(255, 255, 255, 0.75);
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  padding: 40px;
+}
+
+.Page-main .PromoFullWidth {
+  padding: 0 45px;
+}
+
+.Page-main .PromoFullWidth-title a {
+  color: #002e5d;
+}
+
+.PromoImageSmall.text-left.promo-has-dropshadow.image-left.promo-has-media.content-vertical-center.content-horizontal-left.article.image-top {
+  padding: 60px 30px;
+}
+
+.PromoImageSmall .PromoImageSmall-content .PromoImageSmall-title.promo-title {
+  align-items: flex-end;
+  display: flex;
+  font-size: 40px;
+}
+
+.PromoImageSmall .PromoImageSmall-content .PromoImageSmall-title.promo-title a.Link {
+  color: #002e5d;
+  text-transform: uppercase;
+}
+
+.PromoImageSmall .PromoImageSmallCircular-media .Image {
+  border: 5px solid #10a170;
+  border-radius: 50%;
+  padding: 16px;
+}
+
+.ListImageSmall .PromoImageSmallCircular-media .Image{
+  border: 4px solid #10a170;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.container-fixed-small, .ListImageLarge-items, .ListImageMedium-items, .ListImageSmall-items {
+  margin-top: 30px;
+  max-width: 1170px;
+}
+
+.Page-titleSection h1.Page-pageHeading {
+  font-size: 54px;
+}
+
+
+/* MEDIA QUERIES */
+@media only screen and (max-width: 768px) {
+  .PromoImageSmall .PromoImageSmall-content .PromoImageSmall-title.promo-title {
+    font-size: 28px;
+  }
+
+  .Page-contentWrapper div.Page-headingWrapper {
+    text-align: center;
+  }
+
+  .Page-titleSection h1.Page-pageHeading {
+    font-size: 38px;
+  }
+
+  .PromoImageSmall .PromoImageSmallCircular-media .Image {
+    border: 4px solid #10a170;
+    padding: 7px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .Page-contentWrapper div.Page-headingWrapper {
+    padding: 130px 40px;
+  }
+
+  .PromoImageSmall-content .PromoImageSmall-media {
+    max-width: 400px;
+    margin: 0 40px 0 0;
+  }
 }
 </style></div>
 
@@ -1225,8 +1270,16 @@
         <div class="RichTextModule-items RichTextBody"><p>
   General Education
   <br>350 MSRB
-  <br><span class="Enhancement display-inline"><a class="Link" href="mailto:gened@byu.edu" target="_blank" data-cms-ai="0"    >gened@byu.edu<svg class="icon icon-external-link"><use xlink:href="#icon-external-link"/></svg></a></span>
-  <br><span class="Enhancement display-inline"><a class="Link" href="tel:8014226818" target="_blank" data-cms-ai="0"    >801-422-6818<svg class="icon icon-external-link"><use xlink:href="#icon-external-link"/></svg></a></span>
+  <br>
+
+        <span class="Enhancement display-inline"><a class="Link" href="mailto:gened@byu.edu" target="_blank" data-cms-ai="0"    >gened@byu.edu<svg class="icon icon-external-link"><use xlink:href="#icon-external-link"/></svg></a></span>
+
+
+  <br>
+
+        <span class="Enhancement display-inline"><a class="Link" href="tel:8014226818" target="_blank" data-cms-ai="0"    >801-422-6818<svg class="icon icon-external-link"><use xlink:href="#icon-external-link"/></svg></a></span>
+
+
 
 </p>
 
@@ -1381,6 +1434,17 @@
 
 </div>
 
+
+                        <div class="Footer-privacyPolicy">
+
+
+
+
+        <span class="Enhancement display-inline"><a class="Link" href="http://www.byu.edu/privacy" target="_blank" data-cms-ai="0"    >Privacy Notice<svg class="icon icon-external-link"><use xlink:href="#icon-external-link"/></svg></a></span>
+
+
+
+</div>
 
                 </div>
             </div>
