@@ -179,7 +179,7 @@
 }
 
 .Header-search-button .sr-only {
-    color: #fff;
+    color: transparent;
 }
 
 .flickity-prev-next-button:hover {
@@ -623,7 +623,7 @@
 <!-- CSS OVERRIDES -->
 <style>
   .Carousel.published-carousel:not(.List):not(.lead-carousel).full-width, .LeadCarousel.published-carousel:not(.List):not(.lead-carousel).full-width, .ListCarousel.published-carousel:not(.List):not(.lead-carousel).full-width, .ListCarouselHeadline.published-carousel:not(.List):not(.lead-carousel).full-width, .ListCarouselQuoteFullWidth.published-carousel:not(.List):not(.lead-carousel).full-width {
-    margin-top: -36px;
+    margin-top: -68px;
   }
 
   .Carousel.published-carousel:not(.List):not(.lead-carousel) .CarouselSlide-media img, .LeadCarousel.published-carousel:not(.List):not(.lead-carousel) .CarouselSlide-media img, .ListCarousel.published-carousel:not(.List):not(.lead-carousel) .CarouselSlide-media img, .ListCarouselHeadline.published-carousel:not(.List):not(.lead-carousel) .CarouselSlide-media img, .ListCarouselQuoteFullWidth.published-carousel:not(.List):not(.lead-carousel) .CarouselSlide-media img {
@@ -632,7 +632,7 @@
   }
 
   .Carousel.published-carousel:not(.List):not(.lead-carousel) .CarouselSlide-media, .LeadCarousel.published-carousel:not(.List):not(.lead-carousel) .CarouselSlide-media, .ListCarousel.published-carousel:not(.List):not(.lead-carousel) .CarouselSlide-media, .ListCarouselHeadline.published-carousel:not(.List):not(.lead-carousel) .CarouselSlide-media, .ListCarouselQuoteFullWidth.published-carousel:not(.List):not(.lead-carousel) .CarouselSlide-media {
-    background: #fff;
+    background: transparent;
   }
 
   .flickity-button {
@@ -648,8 +648,32 @@
     border: 3px solid #303a42;
   }
 
-  .CarouselSlide-media-wrapper, .ListCarousel-items .ListCarousel-items-item-media-wrapper {
+  .Carousel.published-carousel:not(.List):not(.lead-carousel) .CarouselSlide-media, .LeadCarousel.published-carousel:not(.List):not(.lead-carousel) .CarouselSlide-media, .ListCarousel.published-carousel:not(.List):not(.lead-carousel) .CarouselSlide-media, .ListCarouselHeadline.published-carousel:not(.List):not(.lead-carousel) .CarouselSlide-media, .ListCarouselQuoteFullWidth.published-carousel:not(.List):not(.lead-carousel) .CarouselSlide-media {
+    width: 88%;
+    background: transparent;
+  }
 
+  .Carousel .flickity-viewport, .LeadCarousel .flickity-viewport, .ListCarousel .flickity-viewport, .ListCarouselHeadline .flickity-viewport, .ListCarouselQuoteFullWidth .flickity-viewport {
+    background: transparent;
+  }
+
+  .flickity-prev-next-button {
+    transform: translateY(-100%) translateX(110%);
+  }
+
+  .flickity-prev-next-button:hover {
+    transform: translateY(-100%) translateX(110%);
+  }
+
+/* MEDIA QUERIES*/
+  @media screen and (max-width: 768px) {
+    .flickity-prev-next-button {
+      transform: translateY(-64%) translateX(85%);
+    }
+
+    .flickity-prev-next-button:hover {
+      transform: translateY(-64%) translateX(85%);
+    }
   }
 </style>
 
