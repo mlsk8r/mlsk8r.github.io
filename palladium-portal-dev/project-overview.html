@@ -620,6 +620,62 @@
     </symbol>
 </svg>
 
+<!-- CSS OVERRIDES -->
+<style>
+  .Carousel.published-carousel:not(.List):not(.lead-carousel).full-width, .LeadCarousel.published-carousel:not(.List):not(.lead-carousel).full-width, .ListCarousel.published-carousel:not(.List):not(.lead-carousel).full-width, .ListCarouselHeadline.published-carousel:not(.List):not(.lead-carousel).full-width, .ListCarouselQuoteFullWidth.published-carousel:not(.List):not(.lead-carousel).full-width {
+    margin-top: -68px;
+  }
+
+  .Carousel.published-carousel:not(.List):not(.lead-carousel) .CarouselSlide-media img, .LeadCarousel.published-carousel:not(.List):not(.lead-carousel) .CarouselSlide-media img, .ListCarousel.published-carousel:not(.List):not(.lead-carousel) .CarouselSlide-media img, .ListCarouselHeadline.published-carousel:not(.List):not(.lead-carousel) .CarouselSlide-media img, .ListCarouselQuoteFullWidth.published-carousel:not(.List):not(.lead-carousel) .CarouselSlide-media img {
+    width: 100%;
+    border: 3px solid #eee;
+  }
+
+  .Carousel.published-carousel:not(.List):not(.lead-carousel) .CarouselSlide-media, .LeadCarousel.published-carousel:not(.List):not(.lead-carousel) .CarouselSlide-media, .ListCarousel.published-carousel:not(.List):not(.lead-carousel) .CarouselSlide-media, .ListCarouselHeadline.published-carousel:not(.List):not(.lead-carousel) .CarouselSlide-media, .ListCarouselQuoteFullWidth.published-carousel:not(.List):not(.lead-carousel) .CarouselSlide-media {
+    background: transparent;
+  }
+
+  .flickity-button {
+    position: initial;
+    margin-top: -5px;
+  }
+
+  .Carousel .flickity-prev-next-button svg, .LeadCarousel .flickity-prev-next-button svg, .ListCarousel .flickity-prev-next-button svg, .ListCarouselHeadline .flickity-prev-next-button svg, .ListCarouselQuoteFullWidth .flickity-prev-next-button svg {
+    fill: #303a42;
+  }
+
+  .Carousel .flickity-prev-next-button, .LeadCarousel .flickity-prev-next-button, .ListCarousel .flickity-prev-next-button, .ListCarouselHeadline .flickity-prev-next-button, .ListCarouselQuoteFullWidth .flickity-prev-next-button {
+    border: 3px solid #303a42;
+  }
+
+  .Carousel.published-carousel:not(.List):not(.lead-carousel) .CarouselSlide-media, .LeadCarousel.published-carousel:not(.List):not(.lead-carousel) .CarouselSlide-media, .ListCarousel.published-carousel:not(.List):not(.lead-carousel) .CarouselSlide-media, .ListCarouselHeadline.published-carousel:not(.List):not(.lead-carousel) .CarouselSlide-media, .ListCarouselQuoteFullWidth.published-carousel:not(.List):not(.lead-carousel) .CarouselSlide-media {
+    width: 88%;
+    background: transparent;
+  }
+
+  .Carousel .flickity-viewport, .LeadCarousel .flickity-viewport, .ListCarousel .flickity-viewport, .ListCarouselHeadline .flickity-viewport, .ListCarouselQuoteFullWidth .flickity-viewport {
+    background: transparent;
+  }
+
+  .flickity-prev-next-button {
+    transform: translateY(-100%) translateX(110%);
+  }
+
+  .flickity-prev-next-button:hover {
+    transform: translateY(-100%) translateX(110%);
+  }
+
+/* MEDIA QUERIES*/
+  @media screen and (max-width: 768px) {
+    .flickity-prev-next-button {
+      transform: translateY(-64%) translateX(85%);
+    }
+
+    .flickity-prev-next-button:hover {
+      transform: translateY(-64%) translateX(85%);
+    }
+  }
+</style>
 
 </head>
 
@@ -849,23 +905,485 @@
 
 
 
-    <div class="Page-contentWrapper" style="height: 800px;">
-      <div style="max-width: 1170px; margin: 0px auto; padding: 100px 30px 30px 30px;">
-          <h1><a href="homepage.html">Homepage Hero Banner</a></h1>
-          <br />
-          <h1><a href="project-overview.html">Project Overview Slider</a></h1>
+    <div class="Page-contentWrapper">
+
+            <div class="Page-headingWrapper"  style="background-image:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),  url('https://brightspotcdn.byu.edu/dims4/default/6c3b987/2147483647/strip/true/crop/5616x3744+0+0/resize/1920x1280!/quality/90/?url=https%3A%2F%2Fbrigham-young-brightspot.s3.amazonaws.com%2Fc9%2F50%2F0ce4ec4f461b90187259c1ca4f24%2Fcompass-surrounded-by-mountain-gear-tools-on-woode-a63eklv.jpeg');
+    background-position:right center;">
+
+
+<style>
+
+
+    .title-section svg,
+    .title-section svg path {
+      fill: #ffffff !important;
+    }
+
+		.title-section svg {
+			opacity: 0.8 !important;
+		}
+    .title-section svg:hover {
+      opacity: 1 !important;
+    }
+
+    --leadTextColor: #ffffff;
+
+
+
+</style>
+
+                <div class="Page-titleSection " style="--primaryTextColor: #ffffff;">
+
+    <h1 class="Page-pageHeading" itemprop="headline">Project Overview</h1>
+
+
+
+
+
+                </div>
+            </div>
+
+
+
+
+
+
+        <div class="Page-content">
+
+            <main class="Page-main">
+
+
+                        <div class="RichTextFullWidth
+ text-left promo-has-dropshadow    image-left    content-vertical-center  content-horizontal-left ">
+    <span class="Anchor" id="richtext-technology-has" ></span>
+    <div class="RichTextFullWidth-container container-fixed">
+        <div class="RichTextFullWidth-content">
+
+
+  <div class="RichTextFullWidth-items "><p>
+   Technology has become an integral part of each CES institution. For CES to continue to serve the students and communities effectively CES must implement a new identity and access management solution. Currently, many of the foundational business processes and supporting technology platforms are inefficient, disconnected, and often duplicative.
+  <br>
+  </p>
+
+ <p class="cms-textAlign-left">
+    Working together in a balanced and thoughtful manner, CES must remove unneeded and duplicative technology, minimize isolated, highly customized IT systems, adopt industry standards and best practices, retain key talent, and align common business processes. Following the 5 pillars and their guidelines, CES will provide a new solution that will provide enhanced support for the inspired missions of each CES institution.
+  </p>
+  <p class="cms-textAlign-center">
+   <h4 class="cms-heading-h4">Our Mission and Vision:</h4>
+  </p><p>Establish a modern Digital Identity &amp; Access (IAM) platform that offers CES institutions and their constituents IAM capabilities that will advance teaching and learning, enhance educational experiences, foster enrollment, and support unified collaborations in alignment with CES’ mission and strategic objectives, while preserving the unique mission of each institution.
+
+
+</p></div>
+
+        </div>
+
+    </div>
+</div>
+
+
+<div class="Carousel carousel-container full-width  ">
+    <span class="Anchor" id="gallery-overview-presentation" ></span>
+
+    <div class="gallery-module-meta">
+      <div class="Carousel-title list-title">Overview Presentation</div>
+      <div class="Carousel-description list-description"></div>
+    </div>
+
+
+	<div class="Carousel-wrapper">
+		<div class="Carousel-slides ">
+
+
+
+            <div class="CarouselSlide" data-slide="0">
+
+
+      <div class="CarouselSlide-media">
+          <div class="CarouselSlide-media-wrapper">
+                      <img alt=""
+          src=https://brightspotcdn.byu.edu/dims4/default/d80dacc/2147483647/strip/true/crop/1024x576+0+0/resize/800x450!/quality/90/?url=https%3A%2F%2Fbrigham-young-brightspot.s3.amazonaws.com%2F50%2Fec%2F177aab7c43ec9f5216276c607820%2Foverview1024-1.jpg
+          data-flickity-lazyload-src=https://brightspotcdn.byu.edu/dims4/default/d80dacc/2147483647/strip/true/crop/1024x576+0+0/resize/800x450!/quality/90/?url=https%3A%2F%2Fbrigham-young-brightspot.s3.amazonaws.com%2F50%2Fec%2F177aab7c43ec9f5216276c607820%2Foverview1024-1.jpg
+          >
+          </div>
+      </div>
+
+
+
+      <div class="CarouselSlide-info" >
+
+          <div class="CarouselSlide-length-meta">
+            1 of 4
+          </div>
+
+
+
+          <div class="CarouselSlide-title promo-title-small" itemprop="name" >
+            Overview1024_1.jpg
+          </div>
+
+
+
 
 
 
 
       </div>
 
+
+</div>
+
+
+            <div class="CarouselSlide" data-slide="1">
+
+
+      <div class="CarouselSlide-media">
+          <div class="CarouselSlide-media-wrapper">
+                      <img alt=""
+          src=https://brightspotcdn.byu.edu/dims4/default/e01a48d/2147483647/strip/true/crop/1024x576+0+0/resize/800x450!/quality/90/?url=https%3A%2F%2Fbrigham-young-brightspot.s3.amazonaws.com%2Fcc%2F91%2F76b8b93f4e9eaba4bf49535461ca%2Foverview1024-2.jpg
+          data-flickity-lazyload-src=https://brightspotcdn.byu.edu/dims4/default/e01a48d/2147483647/strip/true/crop/1024x576+0+0/resize/800x450!/quality/90/?url=https%3A%2F%2Fbrigham-young-brightspot.s3.amazonaws.com%2Fcc%2F91%2F76b8b93f4e9eaba4bf49535461ca%2Foverview1024-2.jpg
+          >
+          </div>
+      </div>
+
+
+
+      <div class="CarouselSlide-info" >
+
+          <div class="CarouselSlide-length-meta">
+            2 of 4
+          </div>
+
+
+
+          <div class="CarouselSlide-title promo-title-small" itemprop="name" >
+            Overview1024_2.jpg
+          </div>
+
+
+
+
+
+
+
+      </div>
+
+
+</div>
+
+
+            <div class="CarouselSlide" data-slide="2">
+
+
+      <div class="CarouselSlide-media">
+          <div class="CarouselSlide-media-wrapper">
+                      <img alt=""
+          src=https://brightspotcdn.byu.edu/dims4/default/365825d/2147483647/strip/true/crop/1024x576+0+0/resize/800x450!/quality/90/?url=https%3A%2F%2Fbrigham-young-brightspot.s3.amazonaws.com%2F75%2Fd5%2F07af2cce4560b489107ae8f4e6d1%2Foverview1024-4.jpg
+          data-flickity-lazyload-src=https://brightspotcdn.byu.edu/dims4/default/365825d/2147483647/strip/true/crop/1024x576+0+0/resize/800x450!/quality/90/?url=https%3A%2F%2Fbrigham-young-brightspot.s3.amazonaws.com%2F75%2Fd5%2F07af2cce4560b489107ae8f4e6d1%2Foverview1024-4.jpg
+          >
+          </div>
+      </div>
+
+
+
+      <div class="CarouselSlide-info" >
+
+          <div class="CarouselSlide-length-meta">
+            3 of 4
+          </div>
+
+
+
+          <div class="CarouselSlide-title promo-title-small" itemprop="name" >
+            Overview1024_4.jpg
+          </div>
+
+
+
+
+
+
+
+      </div>
+
+
+</div>
+
+
+            <div class="CarouselSlide" data-slide="3">
+
+
+      <div class="CarouselSlide-media">
+          <div class="CarouselSlide-media-wrapper">
+                      <img alt=""
+          src=https://brightspotcdn.byu.edu/dims4/default/f622ff1/2147483647/strip/true/crop/1024x576+0+0/resize/800x450!/quality/90/?url=https%3A%2F%2Fbrigham-young-brightspot.s3.amazonaws.com%2Fd7%2F16%2F86163f5e4a93b8d17be6cc5a375d%2Foverview1024-5.jpg
+          data-flickity-lazyload-src=https://brightspotcdn.byu.edu/dims4/default/f622ff1/2147483647/strip/true/crop/1024x576+0+0/resize/800x450!/quality/90/?url=https%3A%2F%2Fbrigham-young-brightspot.s3.amazonaws.com%2Fd7%2F16%2F86163f5e4a93b8d17be6cc5a375d%2Foverview1024-5.jpg
+          >
+          </div>
+      </div>
+
+
+
+      <div class="CarouselSlide-info" >
+
+          <div class="CarouselSlide-length-meta">
+            4 of 4
+          </div>
+
+
+
+          <div class="CarouselSlide-title promo-title-small" itemprop="name" >
+            Overview1024_5.jpg
+          </div>
+
+
+
+
+
+
+
+      </div>
+
+
+</div>
+
+
+
+
+		</div>
+
+		<div class="Carousel-controls">
+			<button class="btn-carousel btn-carousel-small btn-primary carousel-prev" aria-label="Previous" disabled>
+				<svg class="visible"><use xlink:href="#arrow-left-large"></use></svg>
+				<svg class="invisible"><use xlink:href="#arrow-left-large-hover"></use></svg>
+			</button>
+
+			<div class="carousel-counter">
+				<span class="current-index">
+					1
+				</span>
+					of
+				<span class="last-index">
+					4
+				</span>
+			</div>
+
+			<button class="btn-carousel btn-carousel-small btn-primary carousel-next" aria-label="Next">
+				<svg class="visible"><use xlink:href="#arrow-right-large"></use></svg>
+				<svg class="invisible"><use xlink:href="#arrow-right-large-hover"></use></svg>
+			</button>
+		</div>
+	</div>
+</div>
+
+
+
+
+<div class="ListCardTextOnly   "
+
+
+>
+  <span class="Anchor" id="list-null" ></span>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="ListCardTextOnly-items list-items container list list-3 list-items-3">
+
+            <div class="ListCardTextOnly-items-item list-items-item">
+
+              <div class="PromoCardTextOnly PromoAbstract
+ text-left promo-has-dropshadow    image-left    content-vertical-center  content-horizontal-left  oneOffPage text-center show-external-icon"
+  >
+
+
+    <div class="PromoCardTextOnly-topBar" ></div>
+
+
+  <div class="PromoCardTextOnly-content">
+
+
+
+
+
+
+
+    <div class="PromoCardTextOnly-title promo-title ">
+        <a class="Link" href="https://palladium.byu.edu/guiding-principles" data-cms-ai="0"    >Guiding Principles</a>
     </div>
 
 
 
 
-    <footer class="Footer" itemscope itemtype="https://schema.org/WPFooter" style="position: absolute; bottom: 0; width: 100%;">
+
+    <div class="PromoCardTextOnly-description  promo-description">
+
+
+   View the progress in relation to the guiding principles of the project
+  <br>
+  <br>
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+  </div>
+</div>
+
+
+            </div>
+
+            <div class="ListCardTextOnly-items-item list-items-item">
+
+              <div class="PromoCardTextOnly PromoAbstract
+ text-left promo-has-dropshadow    image-left    content-vertical-center  content-horizontal-left  oneOffPage text-center show-external-icon"
+  >
+
+
+    <div class="PromoCardTextOnly-topBar" ></div>
+
+
+  <div class="PromoCardTextOnly-content">
+
+
+
+
+
+
+
+    <div class="PromoCardTextOnly-title promo-title ">
+        <a class="Link" href="https://palladium.byu.edu/project-overview" data-cms-ai="0"    >Overview</a>
+    </div>
+
+
+
+
+
+    <div class="PromoCardTextOnly-description  promo-description">
+
+
+   You are here!
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+  </div>
+</div>
+
+
+            </div>
+
+            <div class="ListCardTextOnly-items-item list-items-item">
+
+              <div class="PromoCardTextOnly PromoAbstract
+ text-left promo-has-dropshadow    image-left    content-vertical-center  content-horizontal-left  oneOffPage text-center show-external-icon"
+  >
+
+
+    <div class="PromoCardTextOnly-topBar" ></div>
+
+
+  <div class="PromoCardTextOnly-content">
+
+
+
+
+
+
+
+    <div class="PromoCardTextOnly-title promo-title ">
+        <a class="Link" href="https://palladium.byu.edu/progress-dashboard" data-cms-ai="0"    >Progress</a>
+    </div>
+
+
+
+
+
+    <div class="PromoCardTextOnly-description  promo-description">
+
+
+   View the progress of the project in a dashboard
+  <br>
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+  </div>
+</div>
+
+
+            </div>
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+            </main>
+
+
+
+
+        </div>
+    </div>
+
+
+
+
+    <footer class="Footer" itemscope itemtype="https://schema.org/WPFooter">
 
         <div class="Footer-contentBottom">
             <div class="Footer-container">
