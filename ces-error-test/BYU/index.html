@@ -8,7 +8,15 @@
 
   body {
     margin: 0;
+    min-height:100vh;
     padding: 0;
+    position: relative;
+  }
+
+  body::after {
+    content: '';
+    display: block;
+    height: 200px; /* Set same as footer's height for sticky footer*/
   }
 
   h1 {
@@ -32,6 +40,11 @@
   }
 
   footer {
+    background-color: #002e5d;
+    bottom: 0;
+    height: 200px;
+    position: absolute;
+    width: 100%;
   }
 
   .center {
@@ -127,11 +140,11 @@
 </div>
 
 
-<!-- #################################################################################
-FOOTER IS COMMENTED OUT. YOU MAY WANT TO ADD YOUR OWN INSTITUTE FOOTER FOR THIS PAGE
-###################################################################################-->
+<!-- #########################################################################
+FOOTER CAN BE UPDATED TO YOUR INSTITUTE FOOTER. CSS WILL NEED UPDATED AS WELL
+############################################################################-->
 
-<!-- <footer></footer> -->
+<footer></footer>
 
 </body>
 
