@@ -13,18 +13,71 @@
 <style>
 
   h1 {
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 900;
+      color: #020202;
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 900;
+      text-align: center;
+    }
+
+  h1::before {
+    background: url(alert/alert-megaphone.png) no-repeat center center/cover;
+    background-size: 87%;
+    content: '';
+    display: inline-block;
+    height: 92px;
+    margin-bottom: -31px;
+    margin-right: 10px;
+    width: 100px;
   }
 
   p {
+    color: #020202;
     font-family: 'Merriweather', serif;
-    font-weight: 700;
+    font-weight: 500;
     line-height: 28px;
+    padding-top: 1em;
+    padding-bottom: .6em;
+  }
+
+  a {
+    color: #fff;
+    font-family: 'Merriweather', serif;
+    font-weight: 500;
   }
 
   img {
     width: 100%;
+  }
+
+  .container {
+    margin: 0px auto;
+    max-width: 1000px;
+    padding: 0 50px;
+    padding-top: 1.5em;
+  }
+
+  .btn-block {
+    text-align: center;
+    margin: 6em 0;
+  }
+
+  .btn {
+    background: #006eb6;
+    border: 3px solid #006eb6;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 900;
+    padding: .8em 1.5em;
+    transition: all .2s;
+    letter-spacing: .05em;
+  }
+
+  .btn:hover {
+    background: #fff;
+    border: 3px solid #006eb6;
+    color: #006eb6;
   }
 
 </style>
@@ -32,15 +85,15 @@
 </head>
 
 <body>
-  <h1>Announcement</h1>
-  <p>
-    BYU now uses your Church Account to sign in to your MyBYU account. When signing in to your MyBYU account, you will be redirected to the Church Account sign in page. You will sign in and verify your identity using your churchofjesuschrist.org username and password. After signing in to your Church Account, you will be redirected back to your MyBYU portal.
-  </p>
+  <div class="container">
+    <h1>Announcement</h1>
+    <p>BYU now uses your Church Account to sign in to your MyBYU account. When signing in to your MyBYU account, you will be redirected to the Church Account sign in page. You will sign in and verify your identity using your churchofjesuschrist.org username and password. After signing in to your Church Account, you will be redirected back to your MyBYU portal.</p>
 
- <img class="" src="announcement.jpg">
+   <img class="" src="announcement-graphic.jpg">
 
- <div class="btn-block"><a class="btn">I Need Help</a></div>
-</div>
+   <div class="btn-block"><a class="btn">Continue</a></div>
+  </div>
+
 
 </body>
 
