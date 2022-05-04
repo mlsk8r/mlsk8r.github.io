@@ -12,15 +12,19 @@
 <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
 <style>
 
-  h1 {
+  h1, h2 {
       color: #020202;
       font-family: 'Open Sans', sans-serif;
       font-weight: 900;
       text-align: center;
     }
 
+  h1 {
+    font-size: 38px;
+  }
+
   h1::before {
-    background: url(alert/alert-megaphone.png) no-repeat center center/cover;
+    background: url(img/alert-megaphone.png) no-repeat center center/cover;
     background-size: 87%;
     content: '';
     display: inline-block;
@@ -30,19 +34,26 @@
     width: 100px;
   }
 
+  h2 {
+    font-size: 24px;
+    margin-top: 50px;
+    text-align: left;
+  }
+
   p {
     color: #020202;
     font-family: 'Merriweather', serif;
     font-weight: 500;
     line-height: 28px;
-    padding-top: 1em;
-    padding-bottom: .6em;
+    padding-top: 0px;
+    padding-bottom: 12px;
   }
 
   a {
     color: #fff;
     font-family: 'Merriweather', serif;
     font-weight: 500;
+    text-decoration: none;
   }
 
   img {
@@ -58,7 +69,7 @@
 
   .btn-block {
     text-align: center;
-    margin: 6em 0;
+    margin: 50px 0;
   }
 
   .btn {
@@ -87,11 +98,14 @@
 <body>
   <div class="container">
     <h1>Announcement</h1>
-    <p>BYU now uses your Church Account to sign in to your MyBYU account. When signing in to your MyBYU account, you will be redirected to the Church Account sign in page. You will sign in and verify your identity using your churchofjesuschrist.org username and password. After signing in to your Church Account, you will be redirected back to your MyBYU portal.</p>
 
-   <img class="" src="announcement-graphic.jpg">
+    <h2>BYU Idaho now uses Church Account to sign in to your BYU Idaho Portal</h2>
 
-   <div class="btn-block"><a class="btn">Continue</a></div>
+    <p>When signing in to your BYU Idaho portal, you will be redirected to the Church Account sign in page. You will sign in and verify your identity using your <strong>churchofjesuschrist.org</strong> username and password. After signing in to your Church Account, you will be redirected back to your MyBYU portal.</p>
+
+   <img class="" src="img/graphic.jpg">
+
+   <div class="btn-block"><a href="byui-home" class="btn">Continue</a></div>
   </div>
 
 
