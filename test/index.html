@@ -7,19 +7,142 @@
 <link rel="stylesheet" media="all" href="https://cdn.byu.edu/theme-fonts/1.x.x/ringside/fonts.css">
 <link rel="stylesheet" media="all" href="https://cdn.byu.edu/theme-fonts/1.x.x/public-sans/fonts.css">
 <script src="../ErrorScript.js"></script>
+
 <style>
+
+  body {
+    margin: 0;
+  }
+
+  h1, h2 {
+
+      font-family: HCo Ringside Narrow SSm,Arial,Helvetica,sans-serif;
+      font-weight: 900;
+      text-align: center;
+    }
+
+  h1 {
+    color: #fff;
+    font-size: 44px;
+    margin: 0;
+  }
+
+  h1::before {
+    background: url(img/alert-megaphone-white.png) no-repeat center center/cover;
+    background-size: 87%;
+    content: '';
+    display: inline-block;
+    height: 92px;
+    margin-bottom: -31px;
+    margin-right: 10px;
+    width: 100px;
+  }
+
+  h2 {
+    color: #020202;
+    font-size: 30px;
+    margin-top: 18px;
+    text-align: left;
+  }
+
+  p {
+    color: #020202;
+    font-family: Public Sans;
+    font-weight: 500;
+    line-height: 32px;
+    padding-top: 0px;
+    padding-bottom: 28px;
+    font-size: 20px;
+  }
+
+  a {
+    color: #fff;
+    font-family: 'Merriweather', serif;
+    font-weight: 500;
+    text-decoration: none;
+  }
 
   img {
     width: 100%;
   }
 
+  .container {
+    margin: 0px auto;
+    max-width: 1170px;
+    padding: 0 50px;
+    padding-top: 1.5em;
+  }
+
+  .bar-container {
+    margin: 0px auto;
+    max-width: 1170px;
+    padding-top: 16px;
+  }
+
+  .btn-block {
+    text-align: center;
+    margin: 65px 0;
+    margin-top: 80px;
+  }
+
+  .btn {
+    background: #002e5d;
+    border: 3px solid #002e5d;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 900;
+    padding: .8em 1.5em;
+    transition: all .2s;
+    letter-spacing: .05em;
+  }
+
+  .btn:hover {
+    background: #fff;
+    border: 3px solid #002e5d;
+    color: #002e5d;
+  }
+
+  .blue-bar {
+    background: #002e5d;
+    width: 100%;
+    height: 130px;
+    padding: 0;
+  }
+
+
 </style>
+
+
 
 </head>
 
 <body>
+  <div class="blue-bar">
+    <div class="bar-container">
+      <h1>Announcement!</h1>
+    </div>
 
-    <a href="byu-home"><img class="" src="announcement.jpg"></a>
+  </div>
+  <div class="container">
+    <h2>BYU Account Sign-in Has a New Look!</h2>
+
+    <p>
+      Account sign-in now redirects to the <strong>churchofjesuschrist.org</strong> sign in page. Sign in with your Church Account username and password. You will then be redirected back to BYU's website.
+      <br /><br />
+      Don't have a Church Account? No problem! Click the "Sign Up" link on the Church's sign-in page and follow the steps to create a new account.
+    </p>
+
+   <img class="" src="announcement-graphic.jpg">
+
+   <div class="btn-block"><a href="byu-home" class="btn">Continue</a></div>
+  </div>
+  <br />
+  <br />
+  <br />
+  <br />
+
 
 </body>
 
