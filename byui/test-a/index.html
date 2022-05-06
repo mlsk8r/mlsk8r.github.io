@@ -12,20 +12,25 @@
 <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
 <style>
 
+  body {
+    margin: 0;
+  }
+
   h1, h2 {
-      color: #020202;
+
       font-family: 'Open Sans', sans-serif;
       font-weight: 900;
       text-align: center;
     }
 
   h1 {
-    font-size: 42px;
-    margin-top: 5px;
+    color: #fff;
+    font-size: 44px;
+    margin: 0;
   }
 
   h1::before {
-    background: url(img/alert-megaphone.png) no-repeat center center/cover;
+    background: url(img/alert-megaphone-white.png) no-repeat center center/cover;
     background-size: 87%;
     content: '';
     display: inline-block;
@@ -36,8 +41,9 @@
   }
 
   h2 {
+    color: #020202;
     font-size: 30px;
-    margin-top: 60px;
+    margin-top: 18px;
     text-align: left;
   }
 
@@ -47,7 +53,7 @@
     font-weight: 500;
     line-height: 34px;
     padding-top: 0px;
-    padding-bottom: 40px;
+    padding-bottom: 28px;
     font-size: 20px;
   }
 
@@ -67,6 +73,12 @@
     max-width: 1170px;
     padding: 0 50px;
     padding-top: 1.5em;
+  }
+
+  .bar-container {
+    margin: 0px auto;
+    max-width: 1170px;
+    padding-top: 16px;
   }
 
   .btn-block {
@@ -94,24 +106,35 @@
     color: #006eb6;
   }
 
+  .blue-bar {
+    background: #006eb6;
+    width: 100%;
+    height: 130px;
+    padding: 0;
+  }
+
 </style>
 
 </head>
 
 <body>
-  <div class="container">
-    <h1>Announcement!</h1>
+  <div class="blue-bar">
+    <div class="bar-container">
+      <h1>Announcement!</h1>
+    </div>
 
-    <h2>Account Sign In is Getting a New Look!</h2>
+  </div>
+  <div class="container">
+    <h2>BYUI Account Sign-in Has a New Look!</h2>
 
     <p>
-      Account sign in now redirects to the <strong>churchofjesuschrist.org</strong> sign in page. Sign in with your Church Account username and password. You will then be redirected back to BYU's website.
+      Account sign-in now redirects to the <strong>churchofjesuschrist.org</strong> sign in page. Sign in with your Church Account username and password. You will then be redirected back to BYUI's website.
       <br /><br />
-      Don't have a Church Account? No problem! Click the "Sign Up" link and create an account on the Church's sign in page.
+      Don't have a Church Account? No problem! Click the "Sign Up" link on the Church's sign-in page and create an account.
 
       <!-- When signing in to your BYU Idaho portal, you will be redirected to the Church Account sign in page. You will sign in and verify your identity using your <strong>churchofjesuschrist.org</strong> username and password. After signing in with your Church Account, you will be redirected back to your BYU Idaho portal.--></p>
 
-   <img class="" src="img/graphic.jpg">
+   <img class="" src="img/graphic-2.jpg">
 
    <div class="btn-block"><a href="byui-home" class="btn">Continue</a></div>
   </div>
