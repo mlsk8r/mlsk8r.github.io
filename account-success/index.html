@@ -19,9 +19,9 @@
   h1 {
     color: #222;
     font-family: 'Roboto', sans-serif;
-    font-size: 30px;
+    font-size: 28px;
     font-weight: 900;
-    margin-bottom: 40px;
+    margin-bottom: 64px;
   }
 
   h2 {
@@ -34,7 +34,24 @@
 
   p {
     font-size: 22px;
-    font-weight: 900;
+    font-weight: 500;
+    line-height: 30px;
+  }
+
+  .alert-info {
+    background: #b3f2ff;
+    color: #000;
+    border-left: 12px solid #006073;
+    margin:20px auto;
+    padding:30px;
+    position:relative;
+    border-radius:5px;
+    box-shadow:0 0 10px 5px #ddd;
+    text-align: left;
+  }
+
+  .success-green {
+    color: #007508;
   }
 
   .center {
@@ -43,9 +60,13 @@
     margin-right: auto;
   }
 
+  .left-align {
+    text-align: left;
+  }
+
   .container {
     margin: 0px auto;
-    max-width: 1200px;
+    max-width: 1000px;
     padding: 40px 30px;
     text-align: center;
   }
@@ -70,9 +91,9 @@
   }
 
   .logo {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     margin-top: 25px;
-    width: 18%;
+    width: 20%;
   }
 
   @media (max-width: 600px) {
@@ -99,9 +120,10 @@
 
   <div class="container">
     <img class="logo" alt="Institute logo" src="logo.png"></img>
-    <h1>Step 1 of your account creation has been completed successfully!</h1>
-    <h2>STEP 2</h2>
-    <p>You will receive another email shortly. Please follow the instructions in that email to complete your account activation.</p>
+    <h1 class="success-green">Step 1 of your account creation has been completed successfully!</h1>
+
+    <p class="alert-info"><strong>STEP 2:</strong> You will receive another email shortly with a temporary password. Please follow the instructions in that email to reset your temporary password.</p>
+
   </div>
 
 </body>
