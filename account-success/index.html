@@ -21,6 +21,20 @@
     font-family: 'Roboto', sans-serif;
     font-size: 30px;
     font-weight: 900;
+    margin-bottom: 40px;
+  }
+
+  h2 {
+    color: #222;
+    font-family: 'Roboto', sans-serif;
+    font-size: 28px;
+    font-weight: 900;
+    margin-bottom: 0px;
+  }
+
+  p {
+    font-size: 22px;
+    font-weight: 900;
   }
 
   .center {
@@ -31,7 +45,7 @@
 
   .container {
     margin: 0px auto;
-    max-width: 1000px;
+    max-width: 1200px;
     padding: 40px 30px;
     text-align: center;
   }
@@ -55,6 +69,12 @@
     color: #343434;
   }
 
+  .logo {
+    margin-bottom: 20px;
+    margin-top: 25px;
+    width: 18%;
+  }
+
   @media (max-width: 600px) {
     h1 {
       font-size: 24px;
@@ -65,6 +85,12 @@
       padding: 10px;
     }
   }
+
+  @media only screen and (max-width: 800px) {
+    .logo {
+      width: 40%;
+    }
+  }
 </style>
 
 </head>
@@ -72,11 +98,10 @@
 <body>
 
   <div class="container">
-    <h1>Your account has been created successfully.</h1>
-    <br />
-    <br />
-
-    <a class="btn btn-block" href="#">Go to Ensign Homepage</a>
+    <img class="logo" alt="Institute logo" src="logo.png"></img>
+    <h1>Step 1 of your account creation has been completed successfully!</h1>
+    <h2>STEP 2</h2>
+    <p>You will receive another email shortly. Please follow the instructions in that email to complete your account activation.</p>
   </div>
 
 </body>
