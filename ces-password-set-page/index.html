@@ -1,0 +1,231 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+<style>
+  body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  h1 {
+    color: #000;
+    font-family: 'Roboto', sans-serif;
+    font-size: 26px;
+    font-weight: 900;
+    margin-bottom: 30px;
+  }
+
+  h2 {
+    color: #222;
+    font-family: 'Roboto', sans-serif;
+    font-size: 28px;
+    font-weight: 900;
+    margin-bottom: 0px;
+  }
+
+  p {
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 30px;
+  }
+
+  .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .left-align {
+    text-align: left;
+  }
+
+  .right-align {
+    text-align: right;
+  }
+
+  .container {
+    margin: 0px auto;
+    max-width: 1000px;
+    padding: 40px 30px;
+    text-align: center;
+  }
+
+  .btn {
+    background: #006248;
+    border: 3px solid #006248;
+    border-radius: 6px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 900;
+    letter-spacing: 0.065rem;
+    padding: 16px 20px;
+    transition: all .2s;
+  }
+
+  .btn:hover {
+    background: #fff;
+    border: 3px solid #006248;
+    color: #343434;
+  }
+
+  .logo {
+    margin-bottom: 30px;
+    margin-top: 30px;
+    width: 22%;
+  }
+
+  @media (max-width: 600px) {
+    h1 {
+      font-size: 24px;
+    }
+
+    .btn {
+      font-size: 18px;
+      padding: 10 14px;
+    }
+  }
+
+  @media only screen and (max-width: 800px) {
+    .logo {
+      width: 40%;
+    }
+  }
+
+  input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 8px;
+    margin: 8px 0;
+  }
+
+  form {
+    width: 450px;
+    margin: 0px auto;
+    text-align: left;
+    padding: 10px;
+  }
+
+  form div {
+    text-align: right;
+  }
+  label {
+    color: #53575B;
+    font-weight: 900;
+  }
+
+  svg {
+    width: 24px;
+    height: 24px;
+    margin-left: 6px;
+  }
+
+  .password-div {
+    text-align: left;
+    display: flex;
+    align-items: center;
+  }
+
+
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  #info {
+  display: block;
+  position: absolute;
+  background-color: #fff;
+  border: 1px solid rgb(208, 211, 211);
+  border-radius: 2px;
+  box-shadow: rgb(0 0 0 / 20%) 0px 8px 16px 0px;
+  padding: 15px;
+  z-index: 3;
+  text-align: left;
+  width: 240px;
+}
+
+.dropdown:hover #info {
+  display: block;
+}
+
+#info ul {
+  margin: 0px;
+  margin-bottom: 10px; 
+  list-style-type: disc;
+}
+</style>
+
+</head>
+
+<body>
+
+  <div class="container">
+    <img class="logo" alt="Institute logo" src="logo.png"></img>
+    <h1>Set New Password</h1>
+
+    <form class="form">
+      <div class="password-div">
+        <label>Password</label>
+        <div class="dropdown">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="presentation" ><path fill="#157493" d="M8.772 9.672h1.336c.041-.557.24-.999.597-1.324.357-.326.83-.489 1.418-.489.584 0 1.049.16 1.395.477.346.318.52.719.52 1.203 0 .417-.097.766-.29 1.047-.192.281-.515.56-.968.836-.537.318-.933.664-1.188 1.039-.255.375-.38.82-.375 1.336v.719h1.367v-.508c0-.412.089-.749.266-1.012.177-.263.513-.54 1.008-.832.5-.302.897-.673 1.191-1.113.294-.44.442-.968.442-1.582 0-.808-.306-1.48-.918-2.02-.612-.539-1.41-.808-2.395-.808-1.099 0-1.93.294-2.496.882-.565.589-.868 1.305-.91 2.149zm3.234 8.469c.318 0 .577-.102.778-.305.2-.203.3-.464.3-.781 0-.323-.1-.586-.3-.79-.2-.203-.46-.304-.778-.304-.317 0-.578.101-.781.305-.203.203-.305.466-.305.789 0 .317.102.578.305.78.203.204.464.306.781.306zM12 20.5a8.5 8.5 0 1 0 0-17 8.5 8.5 0 0 0 0 17zm0 1.5C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"> </path></svg>
+        <!--icon to be hovered-->
+          <div id="info">
+            For your password, use:
+              <ul>
+                <li>Minimum of 8 characters</li>
+                <li>Letters and numbers</li>
+                <li>Optional special characters:<br />\ ' " ! @ # $ % ^ & * ( )</li>
+              </ul>
+
+            Do Not Include:
+              <ul>
+                <li>Commonly used phrases</li>
+                <li>Your name or username</li>
+                <li>Your email address</li>
+              </ul>
+
+          </div>
+       </div>
+      </div>
+
+
+
+
+
+
+
+
+        <input type="password" id="password" required>
+
+
+
+
+
+        <br /><br /><br />
+        <label>Confirm Password</label>
+        <input type="password" id="confirm_password" required>
+        <br /><br />
+        <hr />
+
+          <div>
+            <button type="submit" class="form-btn">Confirm</button>
+          </div>
+
+    </form>
+
+  </div>
+
+</body>
+
+</html>
