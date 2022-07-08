@@ -87,7 +87,7 @@
   form {
     max-width: 450px;
     margin: 0px auto;
-    padding: 10px;
+    padding: 20px;
     text-align: left;
   }
 
@@ -180,6 +180,13 @@
     top: 12px;
   }
 
+  .form-container {
+    border: 1px solid #ddd;
+    margin: 0 auto;
+    padding: 20px 30px;
+    width: 54%;
+  }
+
   @media (max-width: 600px) {
     h1 {
       font-size: 24px;
@@ -195,8 +202,17 @@
     .logo {
       width: 40%;
     }
+
+    .form-container {
+      width: 100%;
+      padding: 0px;
+    }
   }
 </style>
+
+<script>
+
+</script>
 
 </head>
 
@@ -206,65 +222,85 @@
     <img class="logo" alt="Institute logo" src="logo.png"></img>
     <h1>Set New Password</h1>
 
-    <form class="form">
-      <div class="password-div">
-        <label style="margin-right: 5px;">Password</label>
-        <div class="dropdown">
-          <!-- ? Question mark SVG icon -->
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="presentation"><path fill="#157493" d="M8.772 9.672h1.336c.041-.557.24-.999.597-1.324.357-.326.83-.489 1.418-.489.584 0 1.049.16 1.395.477.346.318.52.719.52 1.203 0 .417-.097.766-.29 1.047-.192.281-.515.56-.968.836-.537.318-.933.664-1.188 1.039-.255.375-.38.82-.375 1.336v.719h1.367v-.508c0-.412.089-.749.266-1.012.177-.263.513-.54 1.008-.832.5-.302.897-.673 1.191-1.113.294-.44.442-.968.442-1.582 0-.808-.306-1.48-.918-2.02-.612-.539-1.41-.808-2.395-.808-1.099 0-1.93.294-2.496.882-.565.589-.868 1.305-.91 2.149zm3.234 8.469c.318 0 .577-.102.778-.305.2-.203.3-.464.3-.781 0-.323-.1-.586-.3-.79-.2-.203-.46-.304-.778-.304-.317 0-.578.101-.781.305-.203.203-.305.466-.305.789 0 .317.102.578.305.78.203.204.464.306.781.306zM12 20.5a8.5 8.5 0 1 0 0-17 8.5 8.5 0 0 0 0 17zm0 1.5C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"></path></svg>
+    <div class="form-container">
+      <form class="form">
+        <div class="password-div">
+          <label style="margin-right: 5px;">Password</label>
+          <div class="dropdown">
+            <!-- ? Question mark SVG icon -->
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="presentation"><path fill="#157493" d="M8.772 9.672h1.336c.041-.557.24-.999.597-1.324.357-.326.83-.489 1.418-.489.584 0 1.049.16 1.395.477.346.318.52.719.52 1.203 0 .417-.097.766-.29 1.047-.192.281-.515.56-.968.836-.537.318-.933.664-1.188 1.039-.255.375-.38.82-.375 1.336v.719h1.367v-.508c0-.412.089-.749.266-1.012.177-.263.513-.54 1.008-.832.5-.302.897-.673 1.191-1.113.294-.44.442-.968.442-1.582 0-.808-.306-1.48-.918-2.02-.612-.539-1.41-.808-2.395-.808-1.099 0-1.93.294-2.496.882-.565.589-.868 1.305-.91 2.149zm3.234 8.469c.318 0 .577-.102.778-.305.2-.203.3-.464.3-.781 0-.323-.1-.586-.3-.79-.2-.203-.46-.304-.778-.304-.317 0-.578.101-.781.305-.203.203-.305.466-.305.789 0 .317.102.578.305.78.203.204.464.306.781.306zM12 20.5a8.5 8.5 0 1 0 0-17 8.5 8.5 0 0 0 0 17zm0 1.5C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"></path></svg>
 
-          <!-- Hidden password requirement info box on hover -->
-          <div id="info">
-            <strong>For your password, use:</strong>
-              <ul>
-                <li>Minimum of 8 characters</li>
-                <li>Letters and numbers</li>
-                <li>Optional special characters:<br />\ ' " ! @ # $ % ^ & * ( )</li>
-              </ul>
-              <br />
-            <strong>Do Not Include:</strong>
-              <ul>
-                <li>Commonly used phrases</li>
-                <li>Your name or username</li>
-                <li>Your email address</li>
-              </ul>
-          </div>
-       </div>
-      </div>
+            <!-- Hidden password requirement info box on hover -->
+            <div id="info">
+              <strong>For your password, use:</strong>
+                <ul>
+                  <li>Minimum of 8 characters</li>
+                  <li>Letters and numbers</li>
+                  <li>Optional special characters:<br />\ ' " ! @ # $ % ^ & * ( )</li>
+                </ul>
+                <br />
+              <strong>Do Not Include:</strong>
+                <ul>
+                  <li>Commonly used phrases</li>
+                  <li>Your name or username</li>
+                  <li>Your email address</li>
+                </ul>
+            </div>
+         </div>
+        </div>
 
-      <div class="password-div">
-        <input type="password" id="password" required>
-        <!-- Eye icon to toggle between password visibility -->
-        <button type="button" onclick="showPassword()"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="presentation" style="width: 28px; height: 28px;"> <path fill="#4A4A4A" d="M8.948 8.722c-2.426.99-4.408 3.135-5.382 5.946-.134.387-.528.58-.879.433-.35-.148-.526-.582-.392-.969C3.852 9.64 7.675 6.62 12 6.62s8.148 3.02 9.705 7.513c.134.387-.041.82-.392.969-.351.147-.745-.046-.879-.433-.974-2.81-2.956-4.956-5.382-5.946A4.001 4.001 0 0 1 12 15.306a4.001 4.001 0 0 1-3.052-6.584z"> </path></svg></button>
-      </div>
-      <br /><br /><br />
+        <div class="password-div">
+          <input type="password" id="password" required>
+          <!-- Eye icon to toggle between password visibility -->
+          <button type="button" onclick="showPassword()"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="presentation" style="width: 28px; height: 28px;"> <path fill="#4A4A4A" d="M8.948 8.722c-2.426.99-4.408 3.135-5.382 5.946-.134.387-.528.58-.879.433-.35-.148-.526-.582-.392-.969C3.852 9.64 7.675 6.62 12 6.62s8.148 3.02 9.705 7.513c.134.387-.041.82-.392.969-.351.147-.745-.046-.879-.433-.974-2.81-2.956-4.956-5.382-5.946A4.001 4.001 0 0 1 12 15.306a4.001 4.001 0 0 1-3.052-6.584z"> </path></svg></button>
+        </div>
+        <br /><br /><br />
 
-      <label>Confirm Password</label>
-      <input type="password" id="confirm_password" required>
-      <br /><br />
-      <hr />
+        <label>Confirm Password</label>
+        <input type="password" id="confirmPassword" required>
+        <br /><br />
+        <hr />
 
-      <div>
-        <button type="submit" class="form-btn">Set Password</button>
-      </div>
+        <div>
+          <button type="submit" class="form-btn" onclick="checkPasswordMatch()">Set Password</button>
+        </div>
 
-    </form>
+      </form>
+    </div>
+
 
   </div>
 
 </body>
 
 <footer>
-  <!-- Javascript to toggle password visibility -->
+
   <script>
+    //Toggle password view
     function showPassword() {
-      var x = document.getElementById("password");
-      if (x.type === "password") {
+      var x = document.querySelector('#password');
+      var y = document.querySelector('#confirmPassword');
+      if (x.type === "password" && y.type ==="password"){
         x.type = "text";
+        y.type = "text";
       } else {
         x.type = "password";
+        y.type = "password";
       }
     }
+
+      //Check that both Password and Confirm Password fields match
+      function checkPasswordMatch() {
+        var password = document.querySelector('#password');
+        var confirm = document.querySelector('#confirmPassword');
+
+        if (confirm.value === password.value) {
+          confirm.setCustomValidity('');
+        } else {
+          confirm.setCustomValidity('Passwords do not match');
+        }
+      }
+
   </script>
 </footer>
 
