@@ -16,7 +16,7 @@
 <link rel="stylesheet" type="text/css" href="./index_files/okta-sign-in.min.css">
 
 <!-- Customizable css theme options. Link your own stylesheet or override styles inline. -->
-<link rel="stylesheet" type="text/css" href="https://id.churchofjesuschrist.org/signin/verify/okta/password">
+<link rel="stylesheet" type="text/css" href="https://id.churchofjesuschrist.org/">
 
 <!-- styles for custom sign in -->
 <link rel="stylesheet" type="text/css" href="./index_files/custom-signin.bb8f4ce4363dd17160adb27f2ab5f478.css">
@@ -34,6 +34,7 @@
         display: grid;
         grid-template-rows: auto 1fr auto;
         grid-template-columns: 100%;
+        background: #fff;
       }
 
       p:not(#PFfooterLegal p) {
@@ -1041,9 +1042,21 @@
       }
     </style>
     <title>The Church of Jesus Christ of Latter-day Saints</title>
-  <script src="./index_files/initLoginPage.pack.215224655bb977e2750090f4a0020b4b.js.download"></script></head>
+  <script src="./index_files/initLoginPage.pack.215224655bb977e2750090f4a0020b4b.js.download"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+    $(window).keydown(function(event){
+      if(event.keyCode == 13) {
+        event.preventDefault();
+        return false;
+      }
+    });
+  });
 
-  <body style="margin: 0px; background: #fff;">
+  </script>
+</head>
+
+  <body style="margin: 0px">
     <div style="
         display: flex;
         justify-content: center;
@@ -1101,24 +1114,14 @@
       <div id="PFnavContainer" data-breadcrumbs="false">&nbsp;</div>
     </header>
     <div id="okta-login-container" style="margin-top: 0px">
-      <div style="text-align: center; color: red; font-weight: 900; font-size: 22px;margin-top: -34px;
-      margin-bottom: -17px;">* THIS IS A TEST *</div>
+    <div style="text-align: center; color: red; font-weight: 900; font-size: 22px;margin-top: -34px;
+    margin-bottom: -17px;">* THIS IS A TEST *</div>
 
-      <main data-se="auth-container" tabindex="-1" id="okta-sign-in" class="auth-container main-container" style="display: block; margin-top:30px;"><div class="okta-sign-in-header auth-header" style="display: block;"><h1><img src="https://ok7static.oktacdn.com/assets/img/logos/okta-logo.47066819ac7db5c13f4c431b2687cef6.png" class="auth-org-logo" alt="Church of Jesus Christ of Latter-Day Saints logo logo" aria-label="Church of Jesus Christ of Latter-Day Saints logo logo"></h1><div data-type="beacon-container" class="beacon-container" style="transform: scale(1, 1); text-indent: 1px;"><div><div class="beacon-blank auth-beacon"><div class="beacon-blank js-blank-beacon-border auth-beacon-border"></div></div>
-        <style>
-          #okta-sign-in.auth-container .mfa-okta-password {
-            background-image: url(image.png)
-          }
-        </style>
-        <div class="bg-helper auth-beacon auth-beacon-factor mfa-okta-password" data-se="factor-beacon"><div class="okta-sign-in-beacon-border auth-beacon-border"></div></div><div data-type="factor-types-dropdown" class="factors-dropdown-wrap"></div></div></div></div><div class="auth-content"><div class="auth-content-inner"><div class="mfa-verify"><form data-se="factor-password" method="POST" action="/signin/verify/okta/password" slot="content" id="form7" class="mfa-verify-password o-form o-form-edit-mode"><div data-se="o-form-content" class="o-form-content o-form-theme clearfix"><h2 data-se="o-form-head" class="okta-form-title o-form-head">Password</h2><div class="o-form-error-container" data-se="o-form-error-container"></div><div class="o-form-fieldset-container" data-se="o-form-fieldset-container"><div data-se="o-form-fieldset" class="o-form-fieldset o-form-label-top auth-passcode"><div data-se="o-form-label" class="okta-form-label o-form-label"><label for="input9">Password&nbsp;</label></div><div data-se="o-form-input-container" class="o-form-input"><span data-se="o-form-input-password" class="o-form-input-name-password o-form-control okta-form-input-field input-fix"><input type="password" placeholder="Password" name="password" id="input9" value="thisismychurchpassword" aria-label="" autocomplete="off" class="password-with-toggle" disabled><span class="password-toggle"><span class="eyeicon visibility-16 button-show"></span><span class="eyeicon visibility-off-16 button-hide"></span></span></span></div></div></div></div><div class="o-form-button-bar">
+      <main data-se="auth-container" tabindex="-1" id="okta-sign-in" class="auth-container main-container no-beacon" style="display: block; margin-top:30px;"><div class="okta-sign-in-header auth-header" style="display: none;"><h1><img src="./index_files/okta-logo.47066819ac7db5c13f4c431b2687cef6.png" class="auth-org-logo" alt="Church of Jesus Christ of Latter-Day Saints logo logo" aria-label="Church of Jesus Christ of Latter-Day Saints logo logo"></h1><div data-type="beacon-container" class="beacon-container" style="transform: scale(0, 0); text-indent: 0px;"></div></div><div class="auth-content"><div class="auth-content-inner"><div class="primary-auth"><form novalidate="novalidate" method="POST" action="https://id.churchofjesuschrist.org/" data-se="o-form" slot="content" id="form2" class="primary-auth-form o-form o-form-edit-mode"><div data-se="o-form-content" class="o-form-content o-form-theme clearfix"><h2 data-se="o-form-head" class="okta-form-title o-form-head">Sign In</h2><div class="o-form-error-container" data-se="o-form-error-container"></div><div class="o-form-fieldset-container" data-se="o-form-fieldset-container"><div data-se="o-form-fieldset" class="o-form-fieldset o-form-label-top margin-btm-5"><div data-se="o-form-label" class="okta-form-label o-form-label"><label for="okta-signin-username">Username&nbsp;</label></div><div data-se="o-form-input-container" class="o-form-input"><span data-se="o-form-input-username" class="o-form-input-name-username o-form-control okta-form-input-field input-fix">
+      <input type="text" placeholder="Username" name="username" id="okta-signin-username" value="" aria-label="" autocomplete="username" aria-required="true" required=""></span></div></div><div data-se="o-form-fieldset" class="o-form-fieldset o-form-label-top margin-btm-0"><div data-se="o-form-input-container" class="o-form-input"><span data-se="o-form-input-remember" class="o-form-input-name-remember"><div class="custom-checkbox"><input type="checkbox" name="remember" id="input6" style="opacity:100;"><label for="input6" data-se-for-name="remember" class="">Remember me</label></div></span></div></div></div></div><div class="o-form-button-bar">
+      <a href="../cojc-password/" class="button button-primary" type="submit" value="Next" id="okta-signin-submit" data-type="save">Next</a>
 
-        <a href="../mypathway-account.html" class="button button-primary" type="submit" value="Verify" data-type="save">Verify</a>
-
-      </div></form><div class="auth-footer clearfix"><p style="font-size: 14px">By clicking "Verify" I agree to the <a href="https://www.churchofjesuschrist.org/legal/terms-of-use?lang=eng&amp;country=go" target="_blank">Terms of Use (Updated 2021-04-13)</a> and have read the <a href="https://www.churchofjesuschrist.org/legal/privacy-notice?lang=eng&amp;country=go" target="_blank">Privacy Notice (Updated 2021-04-06).</a></p><br><a target="_blank" id="pwdForgotPasswordNav" href="https://account.churchofjesuschrist.org/help?lang=eng" data-se="forgot-password" class="link js-forgot-password">I forgot my username or password.</a><br><a href="#" class="link goto" data-se="signout-link">Back to sign in</a></div></div></div></div></main></div>
-
-
-
-
+    </div></form><a target="_blank" id="pwdForgotPasswordNav" href="https://account.churchofjesuschrist.org/recoverylang=eng" data-se="forgot-password" class="link js-forgot-password">I forgot my username or password.</a><br><div class="auth-footer" style="display: none;"><a href="https://id.churchofjesuschrist.org/#" data-se="needhelp" aria-expanded="false" aria-controls="help-links-container" class="link help js-help">Need help signing in?</a><ul class="help-links js-help-links" id="help-links-container" style="display: none;"><li><a href="https://id.churchofjesuschrist.org/#" data-se="forgot-password" class="link js-forgot-password">Forgot password?</a></li><li><a href="https://account.churchofjesuschrist.org/help?lang=eng" data-se="help-link" class="link js-help-link" rel="noopener noreferrer" target="_blank">Help</a></li></ul></div><div class="registration-container"><div class="content-container"><span class="registration-label">Don't have an account?</span><a title="Sign up" aria-label="Sign up" class="registration-link" href="https://id.churchofjesuschrist.org/#">Sign up</a></div></div></div></div></div></main></div>
     <footer id="PFmainFooter" class="LDSORGFooter" role="contentinfo" style="text-align: center; margin-top:40px; background:#f1f1f3;">
       <div id="PFfooterLogo">
         <a class="PFhomeLink" href="https://www.churchofjesuschrist.org/?lang=eng" style="position: relative" target="_blank" id="footerLink">
@@ -1154,7 +1157,7 @@
 
 <!-- <script type="text/javascript">
   var signInSuccessCallBackFunction;
-  var oktaData = {"redirectUri":"https\x3A\x2F\x2Fid.churchofjesuschrist.org","isMobileSso":false,"fromUri":"","isMobileClientLogin":false,"signIn":{"logoText":"Church\x20of\x20Jesus\x20Christ\x20of\x20Latter\x2DDay\x20Saints\x20logo","features":{"emailRecovery":true,"restrictRedirectToForeground":true,"deviceFingerprinting":true,"consent":true,"useDeviceFingerprintForSecurityImage":true,"customExpiredPassword":true,"router":true,"showPasswordToggleOnSignInPage":false,"securityImage":true,"autoPush":true,"smsRecovery":true,"idpDiscovery":false,"selfServiceUnlock":false,"webauthn":true,"passwordlessAuth":true,"showPasswordRequirementsAsHtmlList":true,"registration":false,"rememberMe":true,"callRecovery":false,"multiOptionalFactorEnroll":true},"baseUrl":"https\x3A\x2F\x2Fid.churchofjesuschrist.org","assets":{"baseUrl":"https\x3A\x2F\x2Fok7static.oktacdn.com\x2Fassets\x2Fjs\x2Fsdk\x2Fokta\x2Dsignin\x2Dwidget\x2F5.12.2"},"customButtons":[],"idpDiscovery":{"requestContext":""},"logo":"https\x3A\x2F\x2Fok7static.oktacdn.com\x2Fassets\x2Fimg\x2Flogos\x2Fokta\x2Dlogo.47066819ac7db5c13f4c431b2687cef6.png","language":"en","helpLinks":{"help":"","forgotPassword":"","unlock":"","custom":[]},"piv":{},"i18n":{"en":{"mfa.challenge.password.placeholder":"Password","help":"Help","password.forgot.email.or.username.tooltip":"Email\x20or\x20Username","needhelp":"Need\x20help\x20signing\x20in\x3F","primaryauth.username.placeholder":"Username","password.forgot.email.or.username.placeholder":"Email\x20or\x20Username","account.unlock.email.or.username.tooltip":"Email\x20or\x20Username","unlockaccount":"Unlock\x20account\x3F","account.unlock.email.or.username.placeholder":"Email\x20or\x20Username","primaryauth.password.placeholder":"Password","primaryauth.title":"Sign\x20In","forgotpassword":"Forgot\x20password\x3F"}}},"accountChooserDiscoveryUrl":"https\x3A\x2F\x2Flogin.okta.com\x2Fdiscovery\x2Fiframe.html"};
+  var oktaData = {"redirectUri":"https\x3A\x2F\x2Fid.churchofjesuschrist.org\x2Foauth2\x2Fv1\x2Fauthorize\x2Fredirect\x3Fokta_key\x3D5C1munbmYXMros0PtbuC675okxR9OsWVGXo4C2GO4\x2Ds","isMobileSso":false,"fromUri":"\x2Foauth2\x2Fv1\x2Fauthorize\x2Fredirect\x3Fokta_key\x3D5C1munbmYXMros0PtbuC675okxR9OsWVGXo4C2GO4\x2Ds","isMobileClientLogin":false,"requestContext":{"target":{"clientId":"0oa5b6krts7UNNkID357","name":"oidc_client","links":{},"label":"OIDC\x20\x2D\x20Header\x2FFooter\x20Service","type":{}},"authentication":{"request":{"scope":"openid\x20profile","response_type":"code","state":"https\x3A\x2F\x2Fwww.churchofjesuschrist.org\x2Fmy\x2Dhome\x2Fdashboard\x3Flang\x3Deng","redirect_uri":"https\x3A\x2F\x2Fwww.churchofjesuschrist.org\x2Fservices\x2Fplatform\x2Fv4\x2Flogin","response_mode":"query"},"protocol":{},"amr":[],"client":{"name":"OIDC\x20\x2D\x20Header\x2FFooter\x20Service","links":{},"id":"0oa5b6krts7UNNkID357"},"issuer":{"name":"default","id":"aus109y7e1rZeP5vG357","uri":"https\x3A\x2F\x2Fid.churchofjesuschrist.org\x2Foauth2\x2Fdefault"}}},"signIn":{"logoText":"Church\x20of\x20Jesus\x20Christ\x20of\x20Latter\x2DDay\x20Saints\x20logo","language":"en","consent":{"cancel":function(){window.location.href='https\x3A\x2F\x2Fid.churchofjesuschrist.org\x2Flogin\x2Fstep\x2Dup\x2Fredirect\x3FstateToken\x3D00wO\x2DZlPLoY4in7IxSi1CoPPsDRwseP632XtOgH\x2D1V';}},"i18n":{"en":{"mfa.challenge.password.placeholder":"Password","help":"Help","password.forgot.email.or.username.tooltip":"Email\x20or\x20Username","needhelp":"Need\x20help\x20signing\x20in\x3F","primaryauth.username.placeholder":"Username","password.forgot.email.or.username.placeholder":"Email\x20or\x20Username","account.unlock.email.or.username.tooltip":"Email\x20or\x20Username","unlockaccount":"Unlock\x20account\x3F","account.unlock.email.or.username.placeholder":"Email\x20or\x20Username","primaryauth.password.placeholder":"Password","primaryauth.title":"Sign\x20In","forgotpassword":"Forgot\x20password\x3F"}},"relayState":"\x2Foauth2\x2Fv1\x2Fauthorize\x2Fredirect\x3Fokta_key\x3D5C1munbmYXMros0PtbuC675okxR9OsWVGXo4C2GO4\x2Ds","features":{"emailRecovery":true,"restrictRedirectToForeground":true,"deviceFingerprinting":true,"consent":true,"useDeviceFingerprintForSecurityImage":true,"customExpiredPassword":true,"router":true,"showPasswordToggleOnSignInPage":false,"securityImage":true,"autoPush":true,"smsRecovery":true,"idpDiscovery":false,"selfServiceUnlock":false,"webauthn":true,"passwordlessAuth":true,"showPasswordRequirementsAsHtmlList":true,"registration":false,"rememberMe":true,"callRecovery":false,"multiOptionalFactorEnroll":true},"baseUrl":"https\x3A\x2F\x2Fid.churchofjesuschrist.org","assets":{"baseUrl":"https\x3A\x2F\x2Fok7static.oktacdn.com\x2Fassets\x2Fjs\x2Fsdk\x2Fokta\x2Dsignin\x2Dwidget\x2F5.12.2"},"customButtons":[],"idpDiscovery":{"requestContext":"\x2Foauth2\x2Fv1\x2Fauthorize\x2Fredirect\x3Fokta_key\x3D5C1munbmYXMros0PtbuC675okxR9OsWVGXo4C2GO4\x2Ds"},"logo":"https\x3A\x2F\x2Fok7static.oktacdn.com\x2Fassets\x2Fimg\x2Flogos\x2Fokta\x2Dlogo.47066819ac7db5c13f4c431b2687cef6.png","stateToken":"00wO\x2DZlPLoY4in7IxSi1CoPPsDRwseP632XtOgH\x2D1V","helpLinks":{"help":"","forgotPassword":"","unlock":"","custom":[]},"piv":{}},"accountChooserDiscoveryUrl":"https\x3A\x2F\x2Flogin.okta.com\x2Fdiscovery\x2Fiframe.html"};
 
   var runLoginPage = function(fn) {
     var mainScript = document.createElement('script');
