@@ -17,3 +17,7 @@
  .navbar-default {
    border-bottom: 4px solid #107f8e;
  }
+
+ body {
+  font-size: 18px;
+ }
