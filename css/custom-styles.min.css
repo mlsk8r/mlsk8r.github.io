@@ -21,3 +21,12 @@
  body {
   font-size: 18px;
  }
+
+ figcaption {
+  background: #eee;
+  margin-top: -22px;
+  font-size: 15px;
+  font-style: italic;
+  margin-bottom: 22px;
+  padding: 9px;
+}

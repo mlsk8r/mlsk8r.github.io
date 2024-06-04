@@ -134,13 +134,20 @@
             
             <p>This project was heavier in research, SEO, and managing multiple departments who consider themselves owners of the content.</p>
 
-            <p>The Account Recovery website was missing a feature that existed on a much older BYU webpage. This was the ability to create a temporary password in order to recover an account. This older webpage to create a temporary password had been in existence for more than 15 years at BYU. For that reason, the page was indexed by all search engines and trusted. When a user would search the term, “reset my byu password” this legacy BYU temporary password page would show as a top three result.</p>
+            <p>The first issue we discovered was that at the bottom of the Account Recovery website on every page, there was a help section that gave users three help options. The first being the phone number to the BYU helpdesk. BYU wants users to have that help, but they didn't want Google to index that text as a "snippet" and put it at the very top of Google searches for "reset my byu password" (see image below). That meant that users would search to reset their BYU password, and as far as they thought, BYU was telling them to call that number. So, the number of helpdesk calls for password reset was very high. I changed the site so that there was a link at the top of every page that says, "I Need Help". If users clicked that link, they would be taken to a single page that had those three help options, like the phone number. This made it so that Google no longer indexed that help text on every page of the site, deemed it important, and made it a "snippet" at the very top of search engine results. Thus, increasing the number of calls the helpdesk would get.</p>
+
+            <img class="project-main-banner" src="img/google-snippet-example.png" style="border:1px solid grey;">
+            <figcaption>Original Google search results would put a "snippet" at the very top telling users to call the helpdesk before trying any self-help options. This was not by design.</figcaption>
+
+            <p>The Account Recovery website was missing a feature that existed on a much older BYU webpage (see image below). This was the ability to create a temporary password in order to recover an account. This older webpage to create a temporary password had been in existence for more than 15 years at BYU. For that reason, the page was indexed by all search engines and trusted. When a user would search the term, “reset my byu password” this legacy BYU temporary password page would show as a top three result.</p>
 
             <img class="project-main-banner" src="img/old-temporary-password-page-screenshot.png" style="border:1px solid grey;">
+            <figcaption>Old temporary password page causing search result issues.</figcaption>
 
-            <p>Along with the legacy temporary password page, another BYU page that belonged to the Multicultural Center Department also listed as a top three result for “reset my byu password” in search engines. But this page was also a legacy page that pertained to resetting your password for a SOAR application.</p>
+            <p>Along with the legacy temporary password page, another BYU page that belonged to the Multicultural Center Department also listed as a top three result for “reset my byu password” in search engines. But this page was also a legacy page that pertained to resetting your password for a SOAR application. (see image below)</p>
 
             <img class="project-main-banner" src="img/old-soar-application-page.png" style="border:1px solid grey;">
+            <figcaption>Old SOAR application site confusing changing your SOAR application password with changing your BYU account password.</figcaption>
 
             <p>So, a user would search terms similar to, “reset my byu password” and they would get results that had two pages that the search engine listed titles as “reset your byu password”, but two of those sites were incorrect listings. This was not the fault of the search engine, but the fault of BYU not retiring older pages and using vague terms on their page headings and HTML such as “Reset your password”. When those two erroneous pages were not meant to reset your password at all. Often those tow pages would show up as top one and two results and the true Account Recovery webpage were a user CAN reset their password would be a lower result in search engines.</p>
 
@@ -157,6 +164,7 @@
             <p>The SEO of the Account Recovery website improved very quickly. And the safety and security of the temporary password feature was improved by migrating it to the new website and removing the older webpage where that feature was hosted.</p>
 
             <img class="project-main-banner" src="img/old-seo-vs-new-seo.jpg" style="border:1px solid grey;">
+            <figcaption>Google search results before any SEO improvements and legacy sites being retired (left). Google results after my work was complete (right).</figcaption>
             
 
 
