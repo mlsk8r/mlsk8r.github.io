@@ -32,9 +32,9 @@
         color: #fff;
         font-size: 20px;
         font-weight: 900;
-        letter-spacing: .125px;
+        letter-spacing: .8px;
         margin: 12px;
-        padding: 10px 22px;
+        padding: 10px 35px;
         text-decoration: none;
         transition: all .2s;
     }
@@ -52,7 +52,7 @@
         font-weight: 900;
         letter-spacing: .125px;
         margin: 12px;
-        padding: 10px 22px;
+        padding: 10px 30px;
         text-decoration: none;
         transition: all .2s;
     }
@@ -63,13 +63,22 @@
 
     .btn-grid {
         display: flex;
-        gap: 180px;
+        gap: 440px;
         justify-content: center;
         text-align: center;
     }
 
+    .content-grid {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 35px;
+        text-align: center;
+
+    }
+
     .wrapper {
         text-align: center;
+        padding: 0 30px;
     }
 
   </style>
@@ -80,23 +89,22 @@
   <div style="width: 800px; height: 800px; margin: auto; border:2px solid grey; padding: 30px;">
     
     <div class="wrapper">
-        <img src="img/okta-verify-logo.png" style="max-width: 80px">
-        <h1>Download Okta Verify On Your Mobile Device</h1>
-        <div style="margin: 0px auto; max-width: 380px;">
-            <p>Scan the QR code below.</p>
-            <p>Download the Okta Verify app.</p>
-            <p>Click "Close" and continue to Step 2.</p>
-        </div>
         
-        <img src="img/apple-qr-code.png" style="max-width: 200px; margin:20px 0;">
-        <br />
-        <br />
-        <br />
+        <div class="content-grid">
+            <div style="margin: 0px auto; max-width: 380px; align-content: center; padding: 0 35px;">
+                <p>Open the Okta Verify app after it has been installed.</p>
+                <p>Click "Get Started" on the first screen.</p>
+            </div>
+
+            <img src="img/step-1-img.png" style="margin:5px 0; width: 350px;">
+                            
+        </div>
+       
 
         <div class="btn-grid">
-        <a href="#" class="btn-grey">Back</a>
-        <a href="#" class="btn">Close</a>
-      </div>
+            <a href="#" class="btn-grey">Back</a>
+            <a href="#" class="btn">Next</a>
+        </div>
 
     </div>
       
